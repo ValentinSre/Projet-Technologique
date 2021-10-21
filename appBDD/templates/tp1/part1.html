@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+      		<div class="row">
+			<div id="div0" class="col-sm-12">
+				<img src="/static/img/architectureglobale.png" style="width: 710px"> 
+				<button class="page" id="btn1">Réponse</button>
+                      	</div>
+
+			<!-- Display explication : Internet et Web-->
+			<div class="col-sm-12" id="div1" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/internetweb.gif"> 			
+				<button class="page" id="btn2">Question</button>
+			</div>
+
+			<!-- Display question 2-->
+			<div class="col-sm-12" id="div2" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/communicationinternet.png" style="width: 710px"> 
+				<button class="page" id="btn3">Réponse</button>
+			</div>
+
+			<!-- Display explication : Adresses IP-->
+			<div class="col-sm-12" id="div3" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/adresseip.gif"> 			
+				<button class="page" id="btn4">Question</button>
+			</div>
+
+			<!-- Display question 3-->
+			<div class="col-sm-12" id="div4" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/communicationweb.png" style="width: 710px"> 
+				<button class="page" id="btn5">Réponse</button>
+			</div>
+
+			<!-- Display explication : Hyperliens-->
+			<div class="col-sm-12"id="div5" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/hyperliens.gif"> 			
+				<button class="page" onclick="window.location.href = '/tp1/eval1'">Continuer</button>
+			</div>
+      		</div>
+
+      		<div class="row">
+        		<div class="intro-text">
+          			<h1 class="name">Tu as déjà terminé tous les exercices ?</h1>
+          			<hr class="star-light">
+        		</div>
+        		<div class="col-lg-8 col-lg-offset-2 text-center">
+          			<p> N'hésite pas à pratiquer par librement les bases de données grâce à notre interface ! </p>
+          			<p style="margin-top: 20px;">
+          			</p>
+        		</div>
+      		</div>
+
+    	</div>
+</header>
+
+<script>
+	let btn1 = document.getElementById("btn1");
+	let btn2 = document.getElementById("btn2");
+	let btn3 = document.getElementById("btn3");
+	let btn4 = document.getElementById("btn4");
+	let btn5 = document.getElementById("btn5");
+	let div0 = document.getElementById("div0");
+	let div1 = document.getElementById("div1");
+	let div2 = document.getElementById("div2");
+	let div3 = document.getElementById("div3");
+	let div4 = document.getElementById("div4");
+	let div5 = document.getElementById("div5");
+
+	btn1.addEventListener("click", () => {
+	  	if(getComputedStyle(div1).display != "none"){
+	    		div1.style.display = "none";
+	  	} else {
+	    		div1.style.display = "block";
+	  	}
+	})
+
+	btn2.addEventListener("click", () => {
+	  	if(getComputedStyle(div2).display != "none"){
+			div2.style.display = "none";
+	  	} else {
+	    		div2.style.display = "block";
+	  	}
+	})
+
+	btn3.addEventListener("click", () => {
+	  	if(getComputedStyle(div3).display != "none"){
+	    		div3.style.display = "none";
+	  	} else {
+	    		div3.style.display = "block";
+
+	  	}
+	})
+
+	btn4.addEventListener("click", () => {
+	  	if(getComputedStyle(div4).display != "none"){
+	    		div4.style.display = "none";
+	  	} else {
+	    		div4.style.display = "block";
+	  	}
+	})
+
+	btn5.addEventListener("click", () => {
+	  	if(getComputedStyle(div5).display != "none"){
+	    		div5.style.display = "none";
+	  	} else {
+	    		div5.style.display = "block";
+	  	}
+	})
+
+</script>
+
+{% endblock %}
