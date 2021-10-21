@@ -37,12 +37,33 @@
 				<button class="page" id="btn5">Manipulation</button>
 			</div>
 
-			<!-- Display explication : Hyperliens-->
+			<!-- Display Manipulation HTML-->
 			<div class="col-sm-12"id="div5" style="display:none">
 				<br><br><br><br>
-				<img src="/static/img/hyperliens.gif"> 			
-				<button class="page" onclick="window.location.href = '/tp1/eval1'">Continuer</button>
+				<img src="/static/img/html1.png" style="width: 710px"> 			
+				<button class="page" id="btn6">Réponse</button>
 			</div>
+
+			<!-- Display Réponse HTML-->
+			<div class="col-sm-12"id="div6" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/html2.png" style="width: 710px"> 			
+				<button class="page" id="btn7">Question</button>
+			</div>
+
+			<!-- Display Question Href-->
+			<div class="col-sm-12"id="div7" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/href1.png" style="width: 710px"> 			
+				<button class="page" id="btn8">Réponse</button>
+			</div>	
+
+			<!-- Display Réponse Href-->
+			<div class="col-sm-12"id="div8" style="display:none">
+				<br><br><br><br>
+				<img src="/static/img/href2.png" style="width: 710px"> 			
+				<button class="page" onclick="window.location.href = '/tp1/part2-1'">Continuer</button>
+			</div>				
       		</div>
 
       		<div class="row">
@@ -66,19 +87,27 @@
 	let btn3 = document.getElementById("btn3");
 	let btn4 = document.getElementById("btn4");
 	let btn5 = document.getElementById("btn5");
+	let btn6 = document.getElementById("btn6");   
+	let btn7 = document.getElementById("btn7");   
+	let btn8 = document.getElementById("btn8");   
+	let btn9 = document.getElementById("btn9");   
 	let div0 = document.getElementById("div0");
 	let div1 = document.getElementById("div1");
 	let div2 = document.getElementById("div2");
 	let div3 = document.getElementById("div3");
 	let div4 = document.getElementById("div4");
 	let div5 = document.getElementById("div5");
+	let div6 = document.getElementById("div6");
+	let div7 = document.getElementById("div7");
+	let div8 = document.getElementById("div8");   
+
 
 	btn1.addEventListener("click", () => {
 	  	if(getComputedStyle(div1).display != "none"){
 	    		div1.style.display = "none";
 	  	} else {
 			div0.style.display = "none";
-	    		div1.style.display = "block";
+	    	div1.style.display = "block";
 	  	}
 	})
 
@@ -95,7 +124,7 @@
 	    		div3.style.display = "none";
 	  	} else {
 			div2.style.display = "none";
-	    		div3.style.display = "block";
+	    	div3.style.display = "block";
 
 	  	}
 	})
@@ -105,7 +134,7 @@
 	    		div4.style.display = "none";
 	  	} else {
 			div3.style.display = "none";
-	    		div4.style.display = "block";
+	    	div4.style.display = "block";
 	  	}
 	})
 
@@ -117,6 +146,33 @@
 	  	}
 	})
 
+	btn6.addEventListener("click", () => {
+	  	if(getComputedStyle(div6).display != "none"){
+	    		div6.style.display = "none";
+	  	} else {
+			  	div5.style.display = "none";
+	    		div6.style.display = "block";
+	  	}
+	})
+
+	btn7.addEventListener("click", () => {
+	  	if(getComputedStyle(div7).display != "none"){
+	    		div7.style.display = "none";
+	  	} else {
+	    		div7.style.display = "block";
+	  	}
+	})
+
+	btn8.addEventListener("click", () => {
+	  	if(getComputedStyle(div8).display != "none"){
+	    		div8.style.display = "none";
+	  	} else {
+			  	div7.style.display = "none";
+	    		div8.style.display = "block";
+	  	}
+	})
+
+	
 </script>
 
 {% endblock %}
