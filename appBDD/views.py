@@ -15,8 +15,17 @@ def index():
 
 @app.route('/tp1/')
 @app.route('/tp1/part1')
-def tp1_q1():
+def tp1_par1():
     return render_template('/tp1/part1.html')
+
+@app.route('/tp1/eval1')
+@app.route('/tp1/quiz1')
+def tp1_quiz1():
+    return render_template('/tp1/quiz1.html');
+
+@app.route('/tp1/part2')
+def tp1_part2():
+    return render_template('/tp1/part2.html');
 
 @app.route('/result/')
 def result():

@@ -6,34 +6,35 @@
 	<div class="container" id="maincontent" tabindex="-1">
       		<div class="row">
 			<div id="div0" class="col-sm-12">
-				<img src="/static/img/architectureglobale.png" style="width: 710px"> 
+				<img src="/static/img/navigateur1.png" style="width: 710px"> 
 				<button class="page" id="btn1">Réponse</button>
                       	</div>
 
-			<!-- Display explication : Internet et Web-->
+			<!-- Display explication : Navigateur-->
 			<div class="col-sm-12" id="div1" style="display:none">
-				<br><br><br><br>
-				<img src="/static/img/internetweb.gif"> 			
-				<button class="page" id="btn2">Question</button>
+				<img src="/static/img/navigateur2.png" style="width: 710px"> 			
+				<button class="page" id="btn2">Manipulation</button>
 			</div>
 
-			<!-- Display question 2-->
+			<!-- Display Manipulation URL-->
 			<div class="col-sm-12" id="div2" style="display:none">
-				<img src="/static/img/communicationinternet.png" style="width: 710px"> 
-				<button class="page" id="btn3">Réponse</button>
+				<br><br><br><br>
+				<img src="/static/img/url1.png" style="width: 710px"> 
+				<button class="page" id="btn3">Question</button>
 			</div>
 
-			<!-- Display explication : Adresses IP-->
+			<!-- Display Question URL-->
 			<div class="col-sm-12" id="div3" style="display:none">
 				<br><br><br><br>
-				<img src="/static/img/adresseip.gif"> 			
-				<button class="page" id="btn4">Question</button>
+				<img src="/static/img/url2.png" style="width: 710px"> 			
+				<button class="page" id="btn4">Réponse</button>
 			</div>
 
-			<!-- Display question 3-->
+			<!-- Display Réponse URL-->
 			<div class="col-sm-12" id="div4" style="display:none">
-				<img src="/static/img/communicationweb.png" style="width: 710px"> 
-				<button class="page" id="btn5">Réponse</button>
+				<br><br><br><br>
+				<img src="/static/img/url3.png" style="width: 710px"> 
+				<button class="page" id="btn5">Manipulation</button>
 			</div>
 
 			<!-- Display explication : Hyperliens-->
@@ -76,6 +77,7 @@
 	  	if(getComputedStyle(div1).display != "none"){
 	    		div1.style.display = "none";
 	  	} else {
+			div0.style.display = "none";
 	    		div1.style.display = "block";
 	  	}
 	})
@@ -84,8 +86,6 @@
 	  	if(getComputedStyle(div2).display != "none"){
 			div2.style.display = "none";
 	  	} else {
-			div1.style.display = "none";
-			div0.style.display = "none";
 	    		div2.style.display = "block";
 	  	}
 	})
@@ -94,6 +94,7 @@
 	  	if(getComputedStyle(div3).display != "none"){
 	    		div3.style.display = "none";
 	  	} else {
+			div2.style.display = "none";
 	    		div3.style.display = "block";
 
 	  	}
@@ -103,7 +104,6 @@
 	  	if(getComputedStyle(div4).display != "none"){
 	    		div4.style.display = "none";
 	  	} else {
-			div2.style.display = "none";
 			div3.style.display = "none";
 	    		div4.style.display = "block";
 	  	}
