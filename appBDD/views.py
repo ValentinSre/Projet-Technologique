@@ -45,16 +45,6 @@ def tp1_part3():
 def tp1_quiz3():
     return render_template('/tp1/quiz3.html');
 
-@app.route('/result/')
-def result():
-    style = request.args.get('style')
-    user_name = request.args.get('first_name')
-    uid = request.args.get('id')
-    titre = find_content(style).titre
-    return render_template('result.html',
-                            user_name=user_name,
-                            titre=titre)
-
 
 # @app.route('/contents/<int:content_id>/')
 # def content(content_id):
