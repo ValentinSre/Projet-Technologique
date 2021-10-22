@@ -5,8 +5,59 @@
 <header>
 	<div class="container" id="maincontent" tabindex="-1">
       		<div class="row">
-			<p> Page moteur de recherche </p>
-			<button class="page" onclick="window.location.href = '/tp1/eval2'">Continuer</button>
+                <div id="div0" class="col-sm-12">
+                    <img src="/static/img/moteurrecherche1.png" style="width: 710px"> 
+                    <button class="page" id="btn1">Réponse</button>
+                            </div>
+
+                <!-- Display explication : Moteur de recherche-->
+                <div class="col-sm-12" id="div1" style="display:none">
+                    <img src="/static/img/moteurrecherche2.png" style="width: 710px"> 			
+                    <button class="page" id="btn2">Question</button>
+                </div>
+
+                <!-- Display Manipulation Recherche-->
+                <div class="col-sm-12" id="div2" style="display:none">
+                    <br><br><br><br>
+                    <img src="/static/img/recherche1.png" style="width: 710px"> 
+                    <button class="page" id="btn3">Réponse</button>
+                </div>
+
+                <!-- Display Explication fonctionnement moteur de recherche-->
+                <div class="col-sm-12" id="div3" style="display:none">
+                    <br><br><br><br>
+                    <img src="/static/img/moteurrecherche.gif">  			
+                    <button class="page" id="btn4">Manipulation</button>
+                </div>
+
+                <!-- Display Manipulation différences moteurs de recherche-->
+                <div class="col-sm-12" id="div4" style="display:none">
+                    <br><br><br><br>
+                    <img src="/static/img/comparaison1.png" style="width: 710px"> 
+                    <button class="page" id="btn5">Réponse</button>
+                </div>
+
+                <!-- Display Manipulation différences moteurs de recherche-->
+                <div class="col-sm-12"id="div5" style="display:none">
+                    <br><br><br><br>
+                    <img src="/static/img/comparaison2.png" style="width: 710px"> 			
+                    <button class="page" id="btn6">Question</button>
+                </div>
+
+                <!-- Display Question : Limites-->
+                <div class="col-sm-12"id="div6" style="display:none">
+                    <br><br><br><br>
+                    <img src="/static/img/limitesmoteur1.png" style="width: 710px"> 				
+                    <button class="page" id="btn7">Réponse</button>
+                </div>
+                
+                <!-- Display Réponse : Limites-->
+                    <div class="col-sm-12"id="div7" style="display:none">
+                        <br><br><br><br>
+                        <img src="/static/img/limitesmoteur2.png" style="width: 710px"> 
+						<img src="/static/img/transition.png" style="width: 710px"> 				
+                        <button class="page" onclick="window.location.href = '/tp1/eval2'">Continuer</button>
+                    </div>
       		</div>
 
       		<div class="row">
@@ -23,5 +74,88 @@
 
     	</div>
 </header>
+
+<script>
+	let btn1 = document.getElementById("btn1");
+	let btn2 = document.getElementById("btn2");
+	let btn3 = document.getElementById("btn3");
+	let btn4 = document.getElementById("btn4");
+	let btn5 = document.getElementById("btn5");
+	let btn6 = document.getElementById("btn6");   
+	let btn7 = document.getElementById("btn7");   
+	let btn8 = document.getElementById("btn8");   
+	let btn9 = document.getElementById("btn9");   
+	let div0 = document.getElementById("div0");
+	let div1 = document.getElementById("div1");
+	let div2 = document.getElementById("div2");
+	let div3 = document.getElementById("div3");
+	let div4 = document.getElementById("div4");
+	let div5 = document.getElementById("div5");
+	let div6 = document.getElementById("div6");
+	let div7 = document.getElementById("div7");
+	let div8 = document.getElementById("div8");   
+
+
+	btn1.addEventListener("click", () => {
+	  	if(getComputedStyle(div1).display != "none"){
+	    		div1.style.display = "none";
+	  	} else {
+			div0.style.display = "none";
+	    	div1.style.display = "block";
+	  	}
+	})
+
+	btn2.addEventListener("click", () => {
+	  	if(getComputedStyle(div2).display != "none"){
+			div2.style.display = "none";
+	  	} else {
+	    	div2.style.display = "block";
+	  	}
+	})
+
+	btn3.addEventListener("click", () => {
+	  	if(getComputedStyle(div3).display != "none"){
+	    	div3.style.display = "none";
+	  	} else {
+	    	div3.style.display = "block";
+
+	  	}
+	})
+
+	btn4.addEventListener("click", () => {
+	  	if(getComputedStyle(div4).display != "none"){
+	    		div4.style.display = "none";
+	  	} else {
+	    	div4.style.display = "block";
+	  	}
+	})
+
+	btn5.addEventListener("click", () => {
+	  	if(getComputedStyle(div5).display != "none"){
+	    	div5.style.display = "none";
+	  	} else {
+            div4.style.display = "none";
+	    		div5.style.display = "block";
+	  	}
+	})
+
+	btn6.addEventListener("click", () => {
+	  	if(getComputedStyle(div6).display != "none"){
+	    		div6.style.display = "none";
+	  	} else {
+	    		div6.style.display = "block";
+	  	}
+	})
+
+	btn7.addEventListener("click", () => {
+	  	if(getComputedStyle(div7).display != "none"){
+	    	div7.style.display = "none";
+	  	} else {
+            div6.style.display = "none";
+	    	div7.style.display = "block";
+	  	}
+	})
+	
+</script>
 
 {% endblock %}

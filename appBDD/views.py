@@ -36,6 +36,15 @@ def tp1_part2_1():
 def tp1_quiz2():
     return render_template('/tp1/quiz2.html');
 
+@app.route('/tp1/part3')
+def tp1_part3():
+    return render_template('/tp1/part3.html');
+
+@app.route('/tp1/eval3')
+@app.route('/tp1/quiz3')
+def tp1_quiz3():
+    return render_template('/tp1/quiz3.html');
+
 @app.route('/result/')
 def result():
     style = request.args.get('style')
