@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 from flask_sqlalchemy import SQLAlchemy
 import logging as lg
 import enum
@@ -20,6 +22,7 @@ class Livre(db.Model):
         self.titre = titre
         self.style = style
 
+#Initialisation BDD
 def initdb():
     db.drop_all()
     db.create_all()
