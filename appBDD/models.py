@@ -20,7 +20,6 @@ class Livre(db.Model):
         self.titre = titre
         self.style = style
 
-#Exemple création BDD
 def initdb():
     db.drop_all()
     db.create_all()
