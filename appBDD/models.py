@@ -17,7 +17,8 @@ class Livre(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     titre = db.Column(db.String(200), nullable=False)
     style = db.Column(db.Enum(Style), nullable=False)
-
+    type = db.Column(db.Enum("min", "max", "opt", name="ValueTypes"), default="opt")
+    
     def __init__(self, titre, style):
         self.titre = titre
         self.style = style
