@@ -8,21 +8,29 @@ app.config.from_object('config')
 
 from .utils import find_content
 
+#Accueil
 @app.route('/')
 @app.route('/index/')
 def index():
     return render_template('index.html')
 
+#TP1 partie 1.1
 @app.route('/tp1/')
 @app.route('/tp1/part1')
 def tp1_par1():
     return render_template('/tp1/part1.html')
 
-@app.route('/tp1/eval1')
-@app.route('/tp1/quiz1')
-def tp1_quiz1():
-    return render_template('/tp1/quiz1.html');
+#TP1 partie 1.2
+@app.route('/tp1/part1-1')
+def tp1_par1_1():
+    return render_template('/tp1/part1-1.html')
 
+#TP1 partie 1.3
+@app.route('/tp1/part1-2')
+def tp1_par1_2():
+    return render_template('/tp1/part1-2.html')
+
+#TP1 partie 2.1
 @app.route('/tp1/part2')
 def tp1_part2():
     return render_template('/tp1/part2.html');
@@ -31,19 +39,10 @@ def tp1_part2():
 def tp1_part2_1():
     return render_template('/tp1/part2-1.html');
 
-@app.route('/tp1/eval2')
-@app.route('/tp1/quiz2')
-def tp1_quiz2():
-    return render_template('/tp1/quiz2.html');
 
 @app.route('/tp1/part3')
 def tp1_part3():
     return render_template('/tp1/part3.html');
-
-@app.route('/tp1/eval3')
-@app.route('/tp1/quiz3')
-def tp1_quiz3():
-    return render_template('/tp1/quiz3.html');
 
 
 # @app.route('/contents/<int:content_id>/')
