@@ -123,6 +123,29 @@ div.research {
   font-size: 2.5rem;
 }
 
+div.info {
+	margin:auto;
+	padding: 10px;
+	text-align: center;
+	border-radius: 15px;
+  border: 2px solid #90c45e;
+	color: #1c1c3d;
+  font-family: "Ubuntu";
+  font-size: 1.1rem;
+	background: white;
+}
+
+div.logo {
+	text-align: center;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #90c45e;
+	color: #90c45e;
+  font-size: 2.2rem;
+	background: white;
+}
 img.boutons {
   float: left;
   width: 30px;
