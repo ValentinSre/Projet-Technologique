@@ -35,14 +35,20 @@ def tp1_par1_2():
 def tp1_part2():
     return render_template('/tp1/part2.html');
 
+#TP1 partie 2.2
 @app.route('/tp1/part2-1')
 def tp1_part2_1():
     return render_template('/tp1/part2-1.html');
 
-
+#TP1 partie 3.1
 @app.route('/tp1/part3')
 def tp1_part3():
     return render_template('/tp1/part3.html');
+
+#TP1 partie 3.2
+@app.route('/tp1/part3-1')
+def tp1_part3_1():
+    return render_template('/tp1/part3-1.html');
 
 
 # @app.route('/contents/<int:content_id>/')

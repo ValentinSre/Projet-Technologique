@@ -5,7 +5,7 @@
     function buildQuiz(){
       // variable to store the HTML output
       const output = [];
-      monQuiz2.forEach((currentQuestion, questionNumber) => {
+      monQuiz5.forEach((currentQuestion, questionNumber) => {
           const answers = []; // pour stocker la liste des réponses possibles
           // On ajoute un bouton 'radio' pour chaque lettre-réponse possible
           for(letter in currentQuestion.answers){
@@ -31,7 +31,7 @@
     function showResults(){
       const answerContainers = quizContainer.querySelectorAll('.answers'); // on rassemble les containers réponses 
       let numCorrect = 0;
-      monQuiz2.forEach( (currentQuestion, questionNumber) => { // pour chaque question
+      monQuiz5.forEach( (currentQuestion, questionNumber) => { // pour chaque question
         const answerContainer = answerContainers[questionNumber]; // on cherche la réponse sélectionnée
         const selector = `input[name=question${questionNumber}]:checked`;
         const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -43,20 +43,20 @@
           answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
         }
       });
-      resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz2.length} <br>`; // on affiche le nb total de bonnes réponses
+      resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz5.length} <br>`; // on affiche le nb total de bonnes réponses
     }
   
     function showSlide(n) {
     }
   
     // Variables
-    const quizContainer = document.getElementById('quiz2');
+    const quizContainer = document.getElementById('quiz5');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
-    const monQuiz2 = [
-      { question: "Comment communiquent deux ordinateurs ?",
-        answers: { a: "Par magie", b: "Grâce à TROUVER RÉPONSE", c: "Grâce à des adresses IP", d: "Par e-mail" },
-        correctAnswer: "c" }
+    const monQuiz5 = [
+      { question: "Qu'est-ce qu'un moteur de recherche ?",
+        answers: { a: "Une voiture expérimentale", b: "Une application pour chercher des informations sur le Web", c: "Un site qui traduit le HTML pour moi"},
+        correctAnswer: "b" }
     ];
   
     buildQuiz();
@@ -67,6 +67,3 @@
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })()
-
-
-
