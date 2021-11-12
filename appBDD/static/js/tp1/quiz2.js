@@ -55,7 +55,7 @@
     const submitButton = document.getElementById('submit');
     const monQuiz2 = [
       { question: "Comment communiquent deux ordinateurs ?",
-        answers: { a: "Par magie", b: "Grâce à TROUVER RÉPONSE", c: "Grâce à des adresses IP", d: "Par e-mail" },
+        answers: { a: "Par magie", b: "Grâce au WiFi", c: "Grâce à des adresses IP", d: "Par e-mail" },
         correctAnswer: "c" }
     ];
   
