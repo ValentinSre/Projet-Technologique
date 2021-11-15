@@ -8,15 +8,12 @@ app.config.from_object('config')
 
 from .utils import find_content
 
-@app.route('/sql')
-def sql():
-    return render_template('sql.html')
     
 #Accueil
 @app.route('/')
 @app.route('/index/')
 def index():
-    return render_template('index.html')
+    return render_template('home.html')
 
 #TP1 partie 1.1
 @app.route('/tp1/')

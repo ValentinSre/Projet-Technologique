@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>sql.js demo: Online SQL interpreter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+  <link rel="stylesheet" href="../static/demo.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Test</h1>
+
+  <main>
+    <label for='commands'>Tableau de requêtes</label>
+    <br>
+
+    <textarea id="commands">DROP TABLE IF EXISTS agents;
+CREATE TABLE agents( id          integer,  name    text);
+
+  INSERT INTO agents VALUES (1,'Coulson');
+  INSERT INTO agents VALUES (2,'Johnson');
+
+SELECT * FROM agents</textarea>
+
+    <button id="execute" class="button">Executer</button>
+    <label class="button">Charger un fichier<input type='file' id='dbfile'></label>
+
+    <div id="error" class="error"></div>
+
+    <pre id="output">Résultats</pre>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
+
+  <script type="text/javascript" src="../static/gui.js"></script>
+</body>
+
+</html>
