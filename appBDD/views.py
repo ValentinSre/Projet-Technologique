@@ -8,6 +8,10 @@ app.config.from_object('config')
 
 from .utils import find_content
 
+@app.route('/sql')
+def sql():
+    return render_template('sql.html')
+    
 #Accueil
 @app.route('/')
 @app.route('/index/')

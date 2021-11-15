@@ -3,3 +3,8 @@ __pycache__
 env/
 app.db
 .cache/
+
+
+# Added by cargo
+
+/target
