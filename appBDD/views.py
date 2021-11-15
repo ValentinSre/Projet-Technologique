@@ -13,7 +13,7 @@ from .utils import find_content
 @app.route('/')
 @app.route('/index/')
 def index():
-    return render_template('home.html')
+    return render_template('index.html')
 
 #TP1 partie 1.1
 @app.route('/tp1/')
