@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Projet Technologique</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{ url_for('static', filename='css/freelancer-theme.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <script src="https://use.fontawesome.com/470b91f216.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="{{ url_for('static', filename='js/jquery/jquery.min.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+    <script src="{{ url_for('static', filename='js/sql/interpreteursql.js') }}"></script>
+
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Contenu principal</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                  <a class="navbar-brand" href="/">Découvrir le Web des données !</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </nav>
+  </div>
+ <h1> Interpréteur SQL</h1>
+  <main>
+      <div class="fenetre" style="text-align: left;">
+    <label for='input'>Champ de requête</label>
+    <br>
+
+    <textarea id="input">
+ DROP TABLE IF EXISTS films;
+ CREATE TABLE films (id integer, titre text, sortie date, studio text);
+
+ INSERT INTO films VALUES (1,'Avengers','2012-05-01','Marvel Studios');
+ INSERT INTO films VALUES (2,'Star Wars','1977-10-19','Lucasfilm');
+
+ SELECT * FROM films;
+ SELECT titre FROM films WHERE sortie = (SELECT MIN(sortie) FROM films)</textarea>
+
+    <button id="interpreter" class="quiz">Interpréter</button>
+    <button id='savedb' class="button" style="display:none">Exporter la BDD</button>
+    <label class="button" style="display:none">Charger une BDD SQLite<input type='file' id='dbfile'></label>
+
+    <div id="echec" class="echec"></div>
+
+    <pre id="output">Résultats</pre>
+</div>
+  </main>
+
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="https://enssat.fr" class="btn-social btn-outline" target="_blank"><span class="sr-only">ENSSAT</span><i class="fa fa-fw fa-rebel"></i></a>
+                        <hr class="star-light">
+                        <span class="italic">Réalisé par Valentin SÉRÉE</span>
+                        <p style="font-style:italic; font-size: 14px;"><a href="https://startbootstrap.com/template-overviews/freelancer/">Thème Bootstrap</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{ url_for('static', filename='js/freelancer-theme.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sql/interpreteursql.js') }}"></script>
+
+</body>
+
+<script>
+    // Code extérieur pour mettre en forme le texte SQL
+var textZone = CodeMirror.fromTextArea(commandsElm, {
+  mode: 'text/x-mysql',
+  viewportMargin: Infinity,
+  indentWithTabs: true,
+  smartIndent: true,
+  lineNumbers: true,
+  matchBrackets: true,
+  autofocus: true,
+  extraKeys: {
+      "Ctrl-Enter": executionComm,
+      "Ctrl-S": savedb,
+  }
+});
+</script>
+
+<style>
+#execute {
+	margin-top: 5px;;
+	width: 10%;
+	min-width:100px;
+}
+
+.CodeMirror {
+  border: 1px solid #222;
+  height: auto;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+main{
+    background-color: #90c45e;
+}
+h1{
+    background-color: #90c45e;
+}
+html{
+    background-color: #90c45e;
+}
+.echec {
+	color:red;
+	transition:.5s;
+	overflow:hidden;
+	margin: 15px;
+}
+
+#output {
+	overflow: auto;
+}
+
+table {
+	width:auto;
+	margin:auto;
+	border:1px solid black;
+ 	border-collapse:collapse;
+ 	margin-bottom:10px;
+}
+
+th, td {
+	border:1px solid #777;
+}
+
+</style>
+
+</html>

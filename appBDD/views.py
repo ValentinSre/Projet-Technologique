@@ -51,6 +51,11 @@ def tp1_part3():
 def tp1_part3_1():
     return render_template('/tp1/part3-1.html');
 
+# Interface SQL
+@app.route('/sql')
+def sql():
+    return render_template('/sql.html')
+
 
 # @app.route('/contents/<int:content_id>/')
 # def content(content_id):
