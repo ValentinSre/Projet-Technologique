@@ -5,7 +5,7 @@
   function buildQuiz(){
     // variable to store the HTML output
     const output = [];
-    monQuiz41.forEach((currentQuestion, questionNumber) => {
+    monQuiz11.forEach((currentQuestion, questionNumber) => {
         const answers = []; // pour stocker la liste des réponses possibles
         // On ajoute un bouton 'radio' pour chaque lettre-réponse possible
         for(letter in currentQuestion.answers){
@@ -31,7 +31,7 @@
   function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers'); // on rassemble les containers réponses 
     let numCorrect = 0;
-    monQuiz41.forEach( (currentQuestion, questionNumber) => { // pour chaque question
+    monQuiz11.forEach( (currentQuestion, questionNumber) => { // pour chaque question
       const answerContainer = answerContainers[questionNumber]; // on cherche la réponse sélectionnée
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -43,7 +43,7 @@
         answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
       }
     });
-    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz41.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
+    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz11.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
   }
 
   function showSlide(n) {
@@ -73,19 +73,19 @@
   }
 
   // Variables
-  const quizContainer = document.getElementById('quiz41');
-  const resultsContainer = document.getElementById('results41');
-  const submitButton = document.getElementById('submit41');
-  const monQuiz41 = [
+  const quizContainer = document.getElementById('quiz11');
+  const resultsContainer = document.getElementById('results11');
+  const submitButton = document.getElementById('submit11');
+  const monQuiz11 = [
     { question: "Qu'est-ce que le Web ?",
-        answers: { a: "L'ensemble des données accessible via Internet", b: "Le lien entre tous les ordinateurs", c: "Le réseau comprenant Internet" },
+        answers: { a: "L'ensemble des données accessibles via Internet", b: "Le lien entre tous les ordinateurs", c: "Le réseau comprenant Internet" },
         correctAnswer: "a" }
   ];
 
   buildQuiz();
 
-  const previousButton = document.getElementById("previous41");
-  const nextButton = document.getElementById("next41");
+  const previousButton = document.getElementById("previous11");
+  const nextButton = document.getElementById("next11");
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 1;
   showSlide(currentSlide);

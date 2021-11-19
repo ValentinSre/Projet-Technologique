@@ -4,127 +4,139 @@
 <!-- Header -->
 <header>
 	<div class="container" id="maincontent" tabindex="-1">
-      	<!-- Proposition de menu -->
-		<div class="fenetre"> 
-			<img class="boutons" src="/static/img/boutons.png" >
-			<br>
-			<div class="research" style="color: #34a853ff"> 
-				<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-				<select name="pays" id="pays" style="border: none;">
-					<optgroup label="1. Clarification des notions">
-						<option onclick="window.location.href = '/tp1/'">1.1. Architecture globale</option>
-						<option onclick="window.location.href = '/tp1/part1-1'" >1.2. Communication sur Internet</option>
-						<option onclick="window.location.href = '/tp1/part1-2'">1.3. Communication sur le Web</option>
-					</optgroup>
-					<optgroup label="2. Atteindre un document recherché">
-						<option onclick="window.location.href = '/tp1/part2'" >2.1. Consulter un document sur le Web</option>
-						<option onclick="window.location.href = '/tp1/part2-1'">2.2. Utiliser un moteur de recherche</option>
-					</optgroup>
-					<optgroup label="3. Les niveaux d'interrogation">
-						<option onclick="window.location.href = '/tp1/part3'" selected>3.1. Je sais où est l'information</option>
-						<option onclick="window.location.href = '/tp1/part3-1'">3.2. Je dois être moteur</option>
-					</optgroup>
-				</select>
-			</div>
-		</div>
 
-		<br>
-
-		<div id="div0" class="fenetre"> 
-			<img class="boutons" src="/static/img/boutons.png" >
-			<br>
-			<div class="research"> 
-				<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-				Les niveaux d'interrogation
-			</div>
-			<br>
-			<div style="font-family:'Ubuntu'; color: #7c7c7c; font-size: 16px; padding:15px">
-				Il existe différentes façons de chercher les données sur le Web. 
-				Nous avons vu précédemment qu’il existait plusieurs moyens de parvenir 
-				à la réponse cherchée mais, généralement, la route ne s’arrête pas là...
-				<br><br>
-                En tâchant de rester sur Wikipédia et sans recherche (seule la navigation par hyperlien est autorisée), cherchez à répondre aux questions suivantes :
-
-			</div>
-
-			<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 23px; color: #34a853ff">
-                Deuxième niveau : je dois être moteur dans la recherche
-			</p>
-
-            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-				<div style = "padding-left: 10px; width: 420px">
-					<div class = "quiz-container" style="margin-top:10px">
-						<div id="quiz7" ></div>
-					</div>   
-					<div id="results"></div>
+		<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- =================== DIV DROITE : CONTENU ======================= -->
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<div style = "padding-left: 30px;">
+			  
+				<!-- ====================== DIV TITRE ============================ -->
+				<div class="fenetre"> 
+					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
-					<button class="quiz" id="previous" >Précédent</button>
-					<button class="quiz" id="next">Suivant</button>
-					<button class="quiz" id="submit">Corriger</button>
-					<br><br>
-           		</div>
-				<div>
-					<br><br>
-					<img src="/static/img/habillage5.png">
+					<div class="research" style="color: #34a853ff"> 
+						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+						<select name="pays" id="pays" style="border: none;">
+							<optgroup label="1. Clarification des notions">
+								<option onclick="window.location.href = '/tp1/'">1.1. Architecture globale</option>
+								<option onclick="window.location.href = '/tp1/part1-1'" >1.2. Communication sur Internet</option>
+								<option onclick="window.location.href = '/tp1/part1-2'">1.3. Communication sur le Web</option>
+							</optgroup>
+							<optgroup label="2. Atteindre un document recherché">
+								<option onclick="window.location.href = '/tp1/part2'" >2.1. Consulter un document sur le Web</option>
+								<option onclick="window.location.href = '/tp1/part2-1'">2.2. Utiliser un moteur de recherche</option>
+							</optgroup>
+							<optgroup label="3. Les niveaux d'interrogation">
+								<option onclick="window.location.href = '/tp1/part3'" >3.1. Je sais où est l'information</option>
+								<option onclick="window.location.href = '/tp1/part3-1'" selected>3.2. Je dois être moteur</option>
+							</optgroup>
+						</select>
+					</div>
 				</div>
-			</div>
-		</div>
 
-		<br>
-		
-		<div id="div1" style="display:none" class="fenetre"> 
-			<img class="boutons" src="/static/img/boutons.png" >
-			<br>
-			<div class="research"> 
-				<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-				Recherche de second niveau
-			</div>
-			<br>
-
-            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-				<div style = "padding-left: 10px">
-					<div style="margin:auto">
-						<br><br><br>
-						<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
-					  				background: white; font-family: 'Ubuntu'; color: #34a853ff; text-align: left; font-size: 2rem;">
-							<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
-							2008
-						</div>
-						<br>
-						<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #90c45e;
-					  				background: white; font-family: 'Ubuntu'; color: #90c45e; text-align: left; font-size: 2rem;">
-							<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #90c45e;"> </i>
-							Stan Lee / Jack Kirby
-						</div>
-					</div>   
-           		</div>
-				<div style="padding-right: 15px;">
-					<div class = "info" style ="font-size: 1.4rem; ">
-						<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-						Cette fois, la recherche est plus compliquée puisque <b>la page principale ne contient 
-                        pas les informations recherchées</b> : il est nécessaire de <b>naviguer</b> d’une page à l’autre 
-                        pour trouver l’information. Il s’agit d’une recherche de <b>second niveau</b> qui repose sur 
-                        ce que l’on appelle une <b>jointure</b>.
-
-						<br><br>
-						<button class="quiz" onclick="window.location.href = '/tp1/part3-1'">Continuer</button>
+				<br>
+				
+				<!-- ====================== DIV QUESTION ========================= -->
+				<div id="div0" class="fenetre"> 
+					<img class="boutons" src="/static/img/boutons.png" >
+					<br>
+					<div class="research"> 
+						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+						Les niveaux d'interrogation
 					</div>
 					<br>
+					<div style="font-family:'Ubuntu'; color: #7c7c7c; font-size: 16px; padding:15px">
+						Il existe différentes façons de chercher les données sur le Web. 
+						Nous avons vu précédemment qu’il existait plusieurs moyens de parvenir 
+						à la réponse cherchée mais, généralement, la route ne s’arrête pas là...
+						<br><br>
+						En tâchant de rester sur Wikipédia et sans recherche (seule la navigation par hyperlien est autorisée), cherchez à répondre aux questions suivantes :
+
+					</div>
+
+					<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 23px; color: #34a853ff">
+						Deuxième niveau : je dois être moteur dans la recherche
+					</p>
+
+					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+						<div style = "padding-left: 10px; width: 420px">
+							<div class = "quiz-container" style="margin-top:10px">
+								<div id="quiz7" ></div>
+							</div>   
+							<div id="results"></div>
+							<br>
+							<button class="quiz" id="previous" >Précédent</button>
+							<button class="quiz" id="next">Suivant</button>
+							<button class="quiz" id="submit">Corriger</button>
+							<br><br>
+						</div>
+						<div>
+							<br><br>
+							<img src="/static/img/habillage5.png">
+						</div>
+					</div>
 				</div>
+
+				<br>
+		
+				<!-- ====================== DIV REPONSE ========================= -->
+				<div id="div1" style="display:none" class="fenetre"> 
+					<img class="boutons" src="/static/img/boutons.png" >
+					<br>
+					<div class="research"> 
+						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+						Recherche de second niveau
+					</div>
+					<br>
+
+					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+						<div style = "padding-left: 10px">
+							<div style="margin:auto">
+								<br><br><br>
+								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
+											background: white; font-family: 'Ubuntu'; color: #34a853ff; text-align: left; font-size: 2rem;">
+									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
+									2008
+								</div>
+								<br>
+								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #90c45e;
+											background: white; font-family: 'Ubuntu'; color: #90c45e; text-align: left; font-size: 2rem;">
+									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #90c45e;"> </i>
+									Stan Lee / Jack Kirby
+								</div>
+							</div>   
+						</div>
+						<div style="padding-right: 15px;">
+							<div class = "info" style ="font-size: 1.4rem; ">
+								<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+								Cette fois, la recherche est plus compliquée puisque <b>la page principale ne contient 
+								pas les informations recherchées</b> : il est nécessaire de <b>naviguer</b> d’une page à l’autre 
+								pour trouver l’information. Il s’agit d’une recherche de <b>second niveau</b> qui repose sur 
+								ce que l’on appelle une <b>jointure</b>.
+
+								<br><br>
+								<button class="quiz" onclick="window.location.href = '/tp1/part3-1'">Continuer</button>
+							</div>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- ====================== DIV GAUCHE : MENU ======================= -->
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<div >
+				{% include 'tp1/menus/menu3.html' %}
 			</div>
 		</div>
 
-      	<div class="row">
-    		<div class="intro-text">
-       			<h1 class="name">Tu as déjà terminé tous les exercices ?</h1>
-       			<hr class="star-light">
-       		</div>
-       		<div class="col-lg-8 col-lg-offset-2 text-center">
-       			<p> N'hésite pas à pratiquer par librement les bases de données grâce à notre interface ! </p>
-       			<p style="margin-top: 20px;">
-       			</p>
-       		</div>
-    	</div>
+		<br>
+
+		{% include 'interface.html' %}
+
     </div>
 </header>
 

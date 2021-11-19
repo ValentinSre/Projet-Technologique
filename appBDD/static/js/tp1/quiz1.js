@@ -43,7 +43,6 @@
           answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
         }
       });
-      resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz1.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
     }
   
     function showSlide(n) {
@@ -78,14 +77,8 @@
     const submitButton = document.getElementById('submit');
     const monQuiz1 = [
       { question: "Qu'est-ce qu'Internet ?",
-        answers: { a: "Un sous-espace du Web", b: "Le lien entre tous les ordinateurs", c: "Un ensemble de sites" },
-        correctAnswer: "b" },
-      { question: "Qu'est-ce que le Web ?",
-        answers: { a: "L'ensemble des données accessible via Internet", b: "Le lien entre tous les ordinateurs", c: "Le réseau comprenant Internet" },
-        correctAnswer: "a" },
-      { question: "Quelle est la relation entre Internet et le Web ?",
-        answers: { a: "Le Web utilise forcément Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses" },
-        correctAnswer: "a" }
+        answers: { a: "Un sous-espace du Web", b: "Le réseau entre tous les ordinateurs", c: "Un ensemble de sites" },
+        correctAnswer: "b" }
     ];
   
     buildQuiz();
@@ -104,12 +97,16 @@
 
   let btn1 = document.getElementById("submit");
 	let btn2 = document.getElementById("btn2");
-	let btn3 = document.getElementById("btn3");
+	let btn3 = document.getElementById("submit11");
+  let btn4 = document.getElementById("btn4");
+  let btn5 = document.getElementById("submit12");
 	let div0 = document.getElementById("div0");
 	let div1 = document.getElementById("div1");
 	let div2 = document.getElementById("div2");
 	let div3 = document.getElementById("div3");
 	let div4 = document.getElementById("div4");
+  let div5 = document.getElementById("div5");
+  let div6 = document.getElementById("div6");
 
 	btn1.addEventListener("click", () => {
 	  	if(getComputedStyle(div1).display != "none"){
@@ -129,10 +126,20 @@
 	})
 
 	btn3.addEventListener("click", () => {
-	  	if(getComputedStyle(div4).display != "none"){
-	    		div4.style.display = "none";
-	  	} else {
-          div3.style.display = "none";
+	  	if(getComputedStyle(div4).display == "none"){
 	    		div4.style.display = "block";
-	  	}
+      }
 	})
+
+  btn4.addEventListener("click", () => {
+    if (getComputedStyle(div5).display == "none"){
+      div5.style.display = "block";
+      div3.style.display = "none";
+    }
+  })
+
+  btn5.addEventListener("click", () => {
+    if (getComputedStyle(div6).display == "none"){
+      div6.style.display = "block";
+    }
+  })

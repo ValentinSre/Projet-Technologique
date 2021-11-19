@@ -222,3 +222,21 @@ p.fenetre{
   height: 150px;
   margin-top: 40px;
 }
+
+.titre{
+  font-size: 17px;
+  color: #1c1c3d;
+  font-weight: bolder;
+}
+
+.soustitre{
+  font-size: 16px;
+  color: #1c1c3d;  
+  padding-left: 20px;
+}
+
+.souspartie{
+  font-size: 15px;
+  color: #7c7c7c;  
+  padding-left: 30px;
+}

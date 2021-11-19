@@ -5,7 +5,7 @@
   function buildQuiz(){
     // variable to store the HTML output
     const output = [];
-    monQuiz41.forEach((currentQuestion, questionNumber) => {
+    monQuiz12.forEach((currentQuestion, questionNumber) => {
         const answers = []; // pour stocker la liste des réponses possibles
         // On ajoute un bouton 'radio' pour chaque lettre-réponse possible
         for(letter in currentQuestion.answers){
@@ -31,7 +31,7 @@
   function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers'); // on rassemble les containers réponses 
     let numCorrect = 0;
-    monQuiz41.forEach( (currentQuestion, questionNumber) => { // pour chaque question
+    monQuiz12.forEach( (currentQuestion, questionNumber) => { // pour chaque question
       const answerContainer = answerContainers[questionNumber]; // on cherche la réponse sélectionnée
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -43,7 +43,7 @@
         answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
       }
     });
-    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz41.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
+    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz12.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
   }
 
   function showSlide(n) {
@@ -73,21 +73,21 @@
   }
 
   // Variables
-  const quizContainer = document.getElementById('quiz41');
-  const resultsContainer = document.getElementById('results41');
-  const submitButton = document.getElementById('submit41');
-  const monQuiz41 = [
-    { question: "Qu'est-ce que le Web ?",
-        answers: { a: "L'ensemble des données accessible via Internet", b: "Le lien entre tous les ordinateurs", c: "Le réseau comprenant Internet" },
+  const quizContainer = document.getElementById('quiz12');
+  const resultsContainer = document.getElementById('results12');
+  const submitButton = document.getElementById('submit12');
+  const monQuiz12 = [
+    { question: "Quelle est la relation entre Internet et le Web ?",
+        answers: { a: "Le Web repose sur Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses" },
         correctAnswer: "a" }
   ];
 
   buildQuiz();
 
-  const previousButton = document.getElementById("previous41");
-  const nextButton = document.getElementById("next41");
+  const previousButton = document.getElementById("previous12");
+  const nextButton = document.getElementById("next12");
   const slides = document.querySelectorAll(".slide");
-  let currentSlide = 1;
+  let currentSlide = 2;
   showSlide(currentSlide);
   submitButton.addEventListener('click', showResults);
   previousButton.addEventListener("click", showPreviousSlide);

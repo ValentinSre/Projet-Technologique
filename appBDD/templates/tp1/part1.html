@@ -7,148 +7,187 @@
 	<div class="container" id="maincontent" tabindex="-1">
 
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV DROITE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
         
+        <!-- ====================== DIV TITRE ============================ -->
+        <div class="fenetre"> 
+          <img class="boutons" src="/static/img/boutons.png" >
+          <br>
+          <div class="research" style="color: #34a853ff"> 
+            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+            Architecture globale
+          </div>
+        </div>
 
+        <br>
 
+        <!-- ====================== DIV INTERNET ============================ -->
+        <div id = "div2">
+          <!-- Display question : Internet-->
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Connaissez-vous vraiment Internet ?
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 30px;">
+                <div class="quiz-container">
+                  <div id="quiz1"></div>
+                </div>
 
-    <!-- Proposition de menu -->
-    <div class="fenetre"> 
-			<img class="boutons" src="/static/img/boutons.png" >
-			<br>
-			<div class="research" style="color: #34a853ff"> 
-			  <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-        <select name="pays" id="pays" style="border: none; background-color: white">
-          <optgroup label="1. Clarification des notions">
-            <option onclick="window.location.href = '/tp1/'" selected>1.1. Architecture globale</option>
-            <option onclick="window.location.href = '/tp1/part1-1'">1.2. Communication sur Internet</option>
-            <option onclick="window.location.href = '/tp1/part1-2'">1.3. Communication sur le Web</option>
-          </optgroup>
-          <optgroup label="2. Atteindre un document recherché">
-            <option onclick="window.location.href = '/tp1/part2'">2.1. Consulter un document sur le Web</option>
-            <option onclick="window.location.href = '/tp1/part2-1'">2.2. Utiliser un moteur de recherche</option>
-          </optgroup>
-          <optgroup label="3. Les niveaux d'interrogation">
-            <option onclick="window.location.href = '/tp1/part3'">3.1. Je sais où est l'information</option>
-            <option onclick="window.location.href = '/tp1/part3-1'">3.2. Je dois être moteur</option>
-          </optgroup>
-        </select>
-      </div>
-		</div>
-
-    <br>
-    <!-- Display question : Internet et Web-->
-    <div id="div0" class="fenetre"> 
-			<img class="boutons" src="/static/img/boutons.png" >
-			<br>
-			<div class="research"> 
-				<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-				Que sont Internet et le Web ?
-			</div>
-      <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
-        <div style = "padding-left: 30px;">
-          <div class="quiz-container">
-            <div id="quiz1"></div>
+                <div id="results"></div>
+                <br>
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+                <br>
+              </div>
+              <div>
+                <br>
+                <img src="/static/img/habillage1.png">
+              </div>
+            </div>
           </div>
 
-          <div id="results"></div>
           <br>
-          <button class="quiz" id="previous" >Précédent</button>
-          <button class="quiz" id="next">Suivant</button>
-          <button class="quiz" id="submit">Corriger</button>
-          <br>
+
+          <!-- Display explication : Internet et Web-->
+          <div class="fenetre" id="div1" style="height: 420px; display:none"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div id="div2">
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Internet
+              </div>
+              <br>
+              <img src="/static/img/internet.gif" style="width: 680px; margin:auto;">
+              <button class="quiz" id="btn2">Continuer</button>
+            </div>
+          </div>
         </div>
-        <div>
+
+        <!-- ====================== DIV WEB ============================ -->
+        <div id="div3" style = "display:none">
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Connaissez-vous vraiment le Web ?
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 30px;">
+                <div class="quiz-container">
+                  <div id="quiz11"></div>
+                </div>
+      
+                <div id="results"></div>
+                <br>
+                <button class="quiz" id="previous11" >Précédent</button>
+                <button class="quiz" id="next11">Suivant</button>
+                <button class="quiz" id="submit11">Corriger</button>
+                <br>
+              </div>
+              <div>
+                <br>
+                <img src="/static/img/habillage1.png">
+              </div>
+            </div>
+          </div>
+      
           <br>
-          <img src="/static/img/habillage1.png">
+      
+          <!-- Display explication : Web-->
+          <div class="fenetre" id="div4" style="height: 420px; display:none"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div id="div2">
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Internet
+              </div>
+              <br>
+              <img src="/static/img/web.gif" style="width: 680px; margin:auto;">
+              <button class="quiz" id="btn4">Continuer</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================== DIV SUIVANTE ============================ -->
+
+        <div id="div5" style = "display:none">
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Quel lien entre les deux ?
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 30px;">
+                <div class="quiz-container">
+                  <div id="quiz12"></div>
+                </div>
+      
+                <div id="results"></div>
+                <br>
+                <button class="quiz" id="previous12" >Précédent</button>
+                <button class="quiz" id="next12">Suivant</button>
+                <button class="quiz" id="submit12">Corriger</button>
+                <br>
+              </div>
+              <div>
+                <br>
+                <img src="/static/img/habillage1.png">
+              </div>
+            </div>
+          </div>
+      
+          <br>
+      
+          <!-- Display explication : Web-->
+          <div class="fenetre" id="div6" style="height: 420px; display:none"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div id="div2">
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Internet
+              </div>
+              <br>
+              <img src="/static/img/internetweb.gif" style="width: 680px; margin:auto;">
+              <button class="quiz" onclick="window.location.href = '/tp1/part1-1'">Continuer</button>
+              
+            </div>
+          </div>
         </div>
       </div>
-		</div>
 
-    <br>
-
-    <!-- Display explication : Internet et Web-->
-    <div class="fenetre" id="div1" style="height: 440px; display:none"> 
-			<img class="boutons" src="/static/img/boutons.png" >
-			<br>
-      <div id="div2">
-        <div class="research"> 
-          <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-          Internet et le Web
-        </div>
-        <br>
-        <img src="/static/img/internetweb.gif" style="width: 650px; margin:auto;">
-        <br>
-        <button class="fenetre" onclick="window.location.href = '/tp1/part1-1'">Continuer</button>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include '/tp1/menus/menu1.html' %}
       </div>
-		</div>
-
-
-
-  </div>
-  <div >
-    <div class="fenetre" style = "width: 400px; text-align: left; padding-left: 30px; padding-top:20px; padding-right: 30px">
-      <a class="titre" href="/"><i class="fa fa-fw fa-home"></i> Accueil</a><br>
-      <hr style = "border-top: 1px dashed #7c7c7c7c; margin-top: 10px; margin-bottom: 10px">
-      <a class="titre" href="/tp1"><i class="fa fa-fw fa-desktop"></i> TP1 : Comprendre le Web</a><br>
-      <a class="soustitre" href="/tp1">1. Clarification des notions</a><br>
-      <a class="souspartie" href="/tp1/part1">1. Architecture globale</a><br>
-      <a class="souspartie" href="/tp1/part1-1">2. Communication sur Internet</a><br>
-      <a class="souspartie" href="/tp1/part1-2">3. Communication sur le Web</a><br>
-      <a class="soustitre" href="/tp1/part2">2. Atteindre un document recherché</a><br>
-      <a class="soustitre" href="/tp1/part3">3. Les niveaux d'interrogation</a><br>  
-      <hr style = "border-top: 1px dashed #7c7c7c7c; margin-top: 10px; margin-bottom: 10px">
-      <a class="titre" href="/"><i class="fa fa-fw fa-cogs"></i> TP2 : Le Web des données</a><br>
-      <a class="soustitre" href="/">1. Représenter la donnée individuellement</a><br>
-      <a class="soustitre" href="/">2. Relier les données entre elles</a><br>
-      <a class="soustitre" href="/">3. Apports du Web des données</a><br>
-      <hr style = "border-top: 1px dashed #7c7c7c7c; margin-top: 10px; margin-bottom: 10px">
-      <a class="titre" href="/"><i class="fa fa-fw fa-database"></i> TP3 : Le langage SQL</a><br>
-      <a class="soustitre" href="/">1. Partie 1</a><br>
-      <a class="soustitre" href="/">2. Partie 2</a><br>
-      <a class="soustitre" href="/">3. Partie 3</a><br><br>
     </div>
-  </div>
-</div>
-
-
 
 		<br>
-    <div class="row">
-      <div class="intro-text">
-        <h1 class="name">Tu as déjà terminé tous les exercices ?</h1>
-          <hr class="star-light">
-      </div>
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-        <p> N'hésite pas à pratiquer par librement les bases de données grâce à notre interface ! </p>
-        <p style="margin-top: 20px;">
-        </p>
-      </div>
-    </div>
+
+    {% include 'interface.html' %}
+
   </div>
 </header>
 
 <script src="{{ url_for('static', filename='js/tp1/quiz1.js') }}"></script>
-<style>
-
-.titre{
-  font-size: 17px;
-  color: #1c1c3d;
-  font-weight: bolder;
-}
-
-.soustitre{
-  font-size: 16px;
-  color: #1c1c3d;  
-  padding-left: 20px;
-}
-
-.souspartie{
-  font-size: 15px;
-  color: #7c7c7c;  
-  padding-left: 30px;
-}
-</style>
+<script src="{{ url_for('static', filename='js/tp1/quiz1-1.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp1/quiz1-2.js') }}"></script>
 
 {% endblock %}
 

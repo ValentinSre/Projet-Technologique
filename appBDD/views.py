@@ -8,7 +8,6 @@ app.config.from_object('config')
 
 from .utils import find_content
 
-    
 #Accueil
 @app.route('/')
 @app.route('/index/')
