@@ -77,9 +77,15 @@
   const resultsContainer = document.getElementById('results41');
   const submitButton = document.getElementById('submit41');
   const monQuiz41 = [
-    { question: "Qu'est-ce que le Web ?",
-        answers: { a: "L'ensemble des données accessible via Internet", b: "Le lien entre tous les ordinateurs", c: "Le réseau comprenant Internet" },
-        correctAnswer: "a" }
+    { question: "Comment appelle-t-on l’adresse renseignée ?",
+    answers: { a: "Une URL", b: "Un hyperlien", c: "Un ULM" },
+    correctAnswer: "a" },
+    { question: "Quelle est la page du site affichée ?",
+    answers: { a: "/accueil", b: "/manga", c: "/comics" },
+    correctAnswer: "b" },
+    { question: "Comment est-ce possible ?",
+    answers: { a: "Le navigateur est magique", b: "Le navigateur récupère l'IP du serveur et affiche la page", c: "Le navigateur contient la page avant qu'on lui demande" },
+    correctAnswer: "b" }
   ];
 
   buildQuiz();

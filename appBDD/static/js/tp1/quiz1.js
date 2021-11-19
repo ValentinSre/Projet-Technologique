@@ -77,7 +77,7 @@
     const submitButton = document.getElementById('submit');
     const monQuiz1 = [
       { question: "Qu'est-ce qu'Internet ?",
-        answers: { a: "Un sous-espace du Web", b: "Le réseau entre tous les ordinateurs", c: "Un ensemble de sites" },
+        answers: { a: "Un sous-espace du Web", b: "Le réseau entre des ordinateurs", c: "Un ensemble de sites" },
         correctAnswer: "b" }
     ];
   
