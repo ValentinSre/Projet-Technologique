@@ -25,83 +25,86 @@
 				<br>
 
 				<!-- ====================== DIV NAVIGATEUR ========================= -->
-				<div id="div0" class="fenetre"> 
-					<img class="boutons" src="/static/img/boutons.png" >
-					<br>
-					<div class="research"> 
-						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Navigateur
-					</div>
-					<br>
-					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-						<div style = "padding:10px">
-							<div class = "info" style="color:#7c7c7c">
-								<div class="quiz-container" style="margin-top:5px">
-									<div id="quiz4"></div>
+				<div id="div0">
+					<div class="fenetre"> 
+						<img class="boutons" src="/static/img/boutons.png" >
+						<br>
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Navigateur
+						</div>
+						<br>
+						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+							<div style = "padding:10px">
+								<div class = "info" style="color:#7c7c7c">
+									<div class="quiz-container" style="margin-top:5px">
+										<div id="quiz4"></div>
+									</div>
+															
+									<button class="quiz" id="submit">Corriger</button>
+									<br>
 								</div>
-														
-								<button class="quiz" id="submit">Corriger</button>
-								<br>
 							</div>
-						</div>
-						<div style="padding:10px; margin:auto">
-							<div class = "info" id="div1" style ="display : none; font-size: 1.6rem">
-								<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-								Un navigateur est un logiciel qui permet de <b>consulter des pages Web.</b>
-								<br>
-								Chrome, Firefox, Safari, Edge en sont des exemples.
-								<br><br>
-								<button class="quiz" id="btn2">Continuer</button>
+							<div style="padding:10px; margin:auto">
+								<div class = "info" id="div1" style ="display : none; font-size: 1.6rem">
+									<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+									Un navigateur est un logiciel qui permet de <b>consulter des pages Web.</b>
+									<br>
+									Chrome, Firefox, Safari, Edge en sont des exemples.
+									<br><br>
+									<button class="quiz" id="btn2">Continuer</button>
+								</div>
 							</div>
 						</div>
 					</div>
+					<br>
 				</div>
 
-				<br>
 
 				<!-- ====================== DIV URL ========================= -->
-				<div id="div2" class="fenetre" style="display:none"> 
-					<img class="boutons" src="/static/img/boutons.png" >
-					<br>
-					<div class="research"> 
-						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Consultation d'un document
-					</div>
-					<br>
-					<div class = "info" style ="font-size: 1.6rem; width: 500px">
-						<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
-						Ouvrez un navigateur Web et entrez « <a href="https://www.glenat.com/manga" style="color:#34a853ff; font-weight: bold;">www.glenat.com/manga</a> » dans la barre d’adresse.
-					</div>
-					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-						<div style = "padding:10px">
-							<div class = "info" style="color:#7c7c7c">
-								<div class="quiz-container" style="margin-top:5px">
-									<div id="quiz41"></div>
+				<div id="div2" style="display:none;">
+					<div class="fenetre"> 
+						<img class="boutons" src="/static/img/boutons.png" >
+						<br>
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Consultation d'un document
+						</div>
+						<br>
+						<div class = "info" style ="font-size: 1.6rem; width: 500px">
+							<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
+							Ouvrez un navigateur Web et entrez « <a href="https://www.glenat.com/manga" style="color:#34a853ff; font-weight: bold;">www.glenat.com/manga</a> » dans la barre d’adresse.
+						</div>
+						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+							<div style = "padding:10px">
+								<div class = "info" style="color:#7c7c7c">
+									<div class="quiz-container" style="margin-top:5px">
+										<div id="quiz41"></div>
+									</div>
+									<br>
+									<div id="results41"></div>
+									<br>
+									<button class="quiz" id="previous41" >Précédent</button>
+									<button class="quiz" id="next41">Suivant</button>
+									<button class="quiz" id="submit41">Corriger</button>
+									<br>
+
 								</div>
-								<br>
-								<div id="results41"></div>
-								<br>
-								<button class="quiz" id="previous41" >Précédent</button>
-								<button class="quiz" id="next41">Suivant</button>
-								<button class="quiz" id="submit41">Corriger</button>
-								<br>
-
 							</div>
-						</div>
-						<div style="padding:10px; margin:auto">
-							<div class = "info" id="div3" style ="display : none; font-size: 1.4rem;">
-								<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-								L’adresse est appelée une <b>URL</b> (Uniform Resource Locator). Elle se compose d’un <b>nom du serveur Web</b> qui contient toutes les informations recherchées (glenat.com) et d’une <b>page Web</b> à afficher (/manga).
-								<br> 
-								Grâce au nom du serveur, <b>le navigateur récupère l’adresse IP du serveur et lui demande la page recherchée</b>. 
-								<br><br>
-								<button class="quiz" id="btn4">Continuer</button>
+							<div style="padding:10px; margin:auto">
+								<div class = "info" id="div3" style ="display : none; font-size: 1.4rem;">
+									<p style ="font-family: 'Ubuntu'; font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+									L’adresse est appelée une <b>URL</b> (Uniform Resource Locator). Elle se compose d’un <b>nom du serveur Web</b> qui contient toutes les informations recherchées (glenat.com) et d’une <b>page Web</b> à afficher (/manga).
+									<br> 
+									Grâce au nom du serveur, <b>le navigateur récupère l’adresse IP du serveur et lui demande la page recherchée</b>. 
+									<br><br>
+									<button class="quiz" id="btn4">Continuer</button>
+								</div>
 							</div>
 						</div>
 					</div>
+					<br>
 				</div>
-
-				<br>
 
 				<!-- ================== DIV CODE SOURCE ===================== -->
 				<div id="div4" class="fenetre" style="display:none"> 
