@@ -1,36 +1,37 @@
-{% extends 'base.html' %}
-
-{% block content %}
-  <!-- Header -->
-  <header>
-    <div class="container" id="maincontent" tabindex="-1">
-      <div class="row">
-          <div>
-            {% include 'accueil.html' %}
+<div class="conteneur">
+  <h2>
+    <a href="#menu">Découvrez le Web des données</a>
+  </h2>
+     
+  <div id="menu" class="openMenu" >
+    <div class = "content">
+      <a href="/" class="fermeture"></a>
+      <div class = "nav">
+        <ul class = "listeChoix">
+          <div class = "choixMenu">
+            <li>
+              <a href="/tp1">TP1 : Comprendre le Web</a>
+            </li>
           </div>
-      </div> 
-      <div class="row">
-        <div class="intro-text">
-          <h1 class="name">Tu as déjà terminé tous les exercices ?</h1>
-          <hr class="star-light">
-        </div>
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p>
-            N'hésite pas à pratiquer par librement les bases de données grâce à notre interface !
-          </p>
-          <button class="quiz" onclick="window.location.href='/sql'"> Test </button>
-          <p style="margin-top: 20px;">
-          </p>
-        </div>
+          <div class = "choixMenu">
+            <li>
+              <a href="#">TP2 : Le Web des données</a>
+            </li>
+          </div>
+          <div class = "choixMenu">
+            <li>
+              <a href="#">TP3 : Le langage SQL</a>
+            </li>
+          </div>
+          <div class = "choixMenu">
+            <li>
+              <a href="/sql">Interpréteur SQL</a>
+            </li>
+          </div>
+        </ul>
       </div>
     </div>
-<<<<<<< Updated upstream
-  </header>
-
-{% endblock %}
-=======
   </div>
 </div>
 
 <link href="{{ url_for('static', filename='css/accueil.css') }}" rel="stylesheet">
->>>>>>> Stashed changes
