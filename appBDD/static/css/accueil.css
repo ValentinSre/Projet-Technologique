@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes grow {
+    100% {
+      height: 90%;
+      width: 90%;
+   }
+  }
+  
+  @keyframes fadeIn {
+  100% {
+    opacity: 1;
+   }
+  }
+  
+  @keyframes slideUp {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .conteneur {
+    display: flex;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;  
+    background: #34a853;
+    font-family:"Ubuntu";
+  }
+  
+  h2 a {
+    font-size: 60px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Ubuntu";
+  }
+  
+  .openMenu {
+     display: none;
+     box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
+  }
+  
+  .openMenu:target {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .openMenu .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 0;
+    height: 0;
+    color: #fff;
+    background-color: #90c45e;
+    animation: 1s grow ease forwards;
+    text-align: center;
+  }
+  
+  .listeChoix  {
+    list-style-type: none;
+  }
+  
+  .listeChoix a {
+    font-size: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-weight:bold;
+  }
+  
+  .choixMenu {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .listeChoix li {
+    padding: 15px 0;
+    text-transform: uppercase;
+    transform: translateY(200px);
+    opacity: 0;
+    animation: 2s slideUp ease forwards .5s;
+    position: relative;
+  }
+  
+  .listeChoix li::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    left: 0;
+    bottom: 10px;
+    background: #34a853; 
+    transition: all .5s ease;
+  }
+  
+  .listeChoix li:hover:before {
+        width: 100%;
+  }
+  
+  .openMenu p {
+    padding: 50px;
+    opacity: 0;
+    animation: 1s fadeIn ease forwards 1s;
+  }
+  
+  .openMenu .fermeture::after {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #34a853;
+    color: #fff;
+    cursor: pointer;
+    content: "×";
+    opacity: 0; 
+    animation: 1s fadeIn ease forwards .5s;
+  }
