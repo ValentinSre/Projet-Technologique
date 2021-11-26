@@ -54,9 +54,9 @@
   const resultsContainer = document.getElementById('results51');
   const submitButton = document.getElementById('submit51');
   const monQuiz51 = [
-    { question: "Qu'est-ce qu'un moteur de recherche ?",
-      answers: { a: "Une voiture expérimentale", b: "Une application pour chercher des informations sur le Web", c: "Un site qui traduit le HTML pour moi"},
-      correctAnswer: "b" }
+    { question: "Comment appele-t-on les termes tapés ?",
+      answers: { a: "Les mots clés", b: "La formule magique", c: "Les indexs"},
+      correctAnswer: "a" }
   ];
 
   buildQuiz();
