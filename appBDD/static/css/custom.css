@@ -224,20 +224,20 @@ p.fenetre{
 
 .titre{
   font-size: 17px;
-  font-family: Helvetica;
+  font-family: "Helvetica";
   color: #1c1c3d;
   font-weight: bolder;
 }
 
 .soustitre{
   font-size: 16px;
-  font-family: Helvetica;
+  font-family: "Helvetica";
   color: #1c1c3d;  
   padding-left: 20px;
 }
 
 .souspartie{
-  font-family: Helvetica;
+  font-family: "Helvetica";
   font-size: 15px;
   color: #7c7c7c;  
   padding-left: 30px;
