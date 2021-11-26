@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: center;  
     background: #34a853;
-    font-family: Helvetica;
+    font-family: Ubuntu;
   }
   
   h2 a {
@@ -38,7 +38,7 @@
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: Helvetica;
+    font-family: Ubuntu;
   }
   
   .openMenu {
