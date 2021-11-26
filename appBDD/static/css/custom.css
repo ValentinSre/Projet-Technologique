@@ -116,7 +116,7 @@ div.research {
 	box-shadow: 1px 1px 2px 1px rgba(49, 49, 53, 0.2);
   background: white;
 
-  font-family: "Ubuntu";
+  font-family: "Helvetica";
   font-weight: bold;
 	color: #90c45e;
   text-align: left;
@@ -130,7 +130,7 @@ div.info {
 	border-radius: 15px;
   border: 2px solid #90c45e;
 	color: #1c1c3d;
-  font-family: "Ubuntu";
+  font-family: "Helvetica";
   font-size: 1.1rem;
 	background: white;
 }
@@ -159,7 +159,7 @@ div.fenetre-txt{
 
 
 h3.fenetre{
-  font-family: "Ubuntu";
+  font-family: "Helvetica";
 	color: #34a853;
   text-align: left;
   font-size: 2.1rem;
@@ -167,7 +167,7 @@ h3.fenetre{
 }
 
 p.fenetre{
-  font-family: "Ubuntu";
+  font-family: "Helvetica";
   padding-left: 3px;
 	color: #7c7c7c;
   text-align: left;
@@ -175,15 +175,14 @@ p.fenetre{
 }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Helvetica';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.woff) format('woff');
 }
 
 .question{
   font-size: 20px;
-  font-family : "Ubuntu";
+  font-family : "Helvetica";
   font-weight: bold;
   color: #34a853;
   margin-bottom: 10px;
@@ -191,7 +190,7 @@ p.fenetre{
 
 .answers {
   margin-bottom: 20px;
-  font-family: "Ubuntu";
+  font-family: "Helvetica";
   font-size: 14px;
   text-align: left;
   display: inline-block;
