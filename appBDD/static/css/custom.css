@@ -116,7 +116,7 @@ div.research {
 	box-shadow: 1px 1px 2px 1px rgba(49, 49, 53, 0.2);
   background: white;
 
-  font-family: "Helvetica";
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
 	color: #90c45e;
   text-align: left;
@@ -130,7 +130,7 @@ div.info {
 	border-radius: 15px;
   border: 2px solid #90c45e;
 	color: #1c1c3d;
-  font-family: "Helvetica";
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
 	background: white;
 }
@@ -159,7 +159,7 @@ div.fenetre-txt{
 
 
 h3.fenetre{
-  font-family: "Helvetica";
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #34a853;
   text-align: left;
   font-size: 2.1rem;
@@ -167,7 +167,7 @@ h3.fenetre{
 }
 
 p.fenetre{
-  font-family: "Helvetica";
+  font-family:"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-left: 3px;
 	color: #7c7c7c;
   text-align: left;
@@ -175,14 +175,14 @@ p.fenetre{
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .question{
   font-size: 20px;
-  font-family : "Helvetica";
+  font-family : "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   color: #34a853;
   margin-bottom: 10px;
@@ -190,7 +190,7 @@ p.fenetre{
 
 .answers {
   margin-bottom: 20px;
-  font-family: "Helvetica";
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   text-align: left;
   display: inline-block;
@@ -224,20 +224,20 @@ p.fenetre{
 
 .titre{
   font-size: 17px;
-  font-family: "Helvetica";
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #1c1c3d;
   font-weight: bolder;
 }
 
 .soustitre{
   font-size: 16px;
-  font-family: "Helvetica";
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #1c1c3d;  
   padding-left: 20px;
 }
 
 .souspartie{
-  font-family: "Helvetica";
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #7c7c7c;  
   padding-left: 30px;
