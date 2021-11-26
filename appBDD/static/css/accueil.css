@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: center;  
     background: #34a853;
-    font-family:"Ubuntu";
+    font-family: "Ubuntu";
   }
   
   h2 a {
@@ -38,7 +38,7 @@
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Ubuntu";
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   
   .openMenu {
@@ -133,4 +133,8 @@
     content: "×";
     opacity: 0; 
     animation: 1s fadeIn ease forwards .5s;
+  }
+
+  a {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
