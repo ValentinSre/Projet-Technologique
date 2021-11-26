@@ -50,12 +50,12 @@
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    if(currentSlide === 1){
+    if(currentSlide == 2){
       previousButton.style.display = 'none';
     } else {
-      previousButton.style.display = 'inline-block';
+      previousButton.style.display = 'none';
     }
-    if(currentSlide === slides.length-1){
+    if(currentSlide == slides.length-1){
       nextButton.style.display = 'none';
       submitButton.style.display = 'inline-block';
     } else {
@@ -78,7 +78,7 @@
   const submitButton = document.getElementById('submit12');
   const monQuiz12 = [
     { question: "Quelle est la relation entre Internet et le Web ?",
-        answers: { a: "Le Web repose sur Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses" },
+        answers: { a: "Le Web repose sur Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses !" },
         correctAnswer: "a" }
   ];
 

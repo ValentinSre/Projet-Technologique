@@ -43,7 +43,7 @@
           answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
         }
       });
-      resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz6.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
+      resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz6.length} <br>`; // on affiche le nb total de bonnes réponses
     }
   
     function showSlide(n) {
