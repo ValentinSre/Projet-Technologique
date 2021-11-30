@@ -102,11 +102,14 @@
   let btn1 = document.getElementById("submit");
 	let btn2 = document.getElementById("btn2");
 	let btn3 = document.getElementById("btn3");
+  let btn4 = document.getElementById("submit31");
 	let div0 = document.getElementById("div0");
 	let div1 = document.getElementById("div1");
 	let div2 = document.getElementById("div2");
 	let div3 = document.getElementById("div3");
 	let div4 = document.getElementById("div4");
+  let div5 = document.getElementById("div5");
+  let div6 = document.getElementById("div6");
 
 	btn1.addEventListener("click", () => {
 	  	if(getComputedStyle(div1).display == "none"){
@@ -124,10 +127,14 @@
 	})
 
 	btn3.addEventListener("click", () => {
-	  	if(getComputedStyle(div4).display != "none"){
-	    		div4.style.display = "none";
-	  	} else {
-          div3.style.display = "none";
-	    		div4.style.display = "block";
+	  	if(getComputedStyle(div0).display == "none"){
+	    		div0.style.display = "block";
+          div6.style.display = "none";
 	  	}
 	})
+
+  btn4.addEventListener("click", () => {
+    if(getComputedStyle(div5).display == "none"){
+        div5.style.display = "block";
+    }
+  })

@@ -8,22 +8,10 @@
 		<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-			<!-- =================== DIV DROITE : CONTENU ======================= -->
+			<!-- =================== DIV GAUCHE : CONTENU ======================= -->
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div style = "padding-left: 30px;">
-			  
-				<!-- ====================== DIV TITRE ============================ -->
-				<div class="fenetre"> 
-					<img class="boutons" src="/static/img/boutons.png" >
-					<br>
-					<div class="research" style="color: #34a853ff"> 
-						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Utiliser un moteur de recherche
-					</div>
-				</div>
-
-				<br>
-
+				
 				<!-- ====================== DIV MOTEUR =========================== -->
 				<div id="div0" class="fenetre"> 
 					<img class="boutons" src="/static/img/boutons.png" >
@@ -47,7 +35,8 @@
 						<div style="padding:10px; margin:auto">
 							<div class = "info" id="div1" style ="display : none; font-size: 1.6rem">
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-								Un moteur de recherche est une application permettant de <b>rechercher des informations</b>, du contenu, des documents (...) <b>sur le Web</b>.
+								Un moteur de recherche est une application permettant de <b>rechercher des informations</b>
+								sur la base de <b>mots-clés</b> saisis par l'utilisateur.
 								<br>
 								Google, Yahoo!, Bing ou Qwant en sont des exemples.
 								<br><br>
@@ -58,68 +47,66 @@
 				</div>
 
 				<!-- ================== DIV MANIP. MOTEUR ======================== -->
-				<div id="div2" class="fenetre" style="display:none"> 
-					<img class="boutons" src="/static/img/boutons.png" >
-					<br>
-					<div class="research"> 
-						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Utiliser un moteur
-					</div>
-					<br>
-					<div style ="font-size: 1.7rem; width: 500px; margin:auto; border: 2px solid #34a853ff; border-radius: 30px;">
-						Ouvrez un moteur de recherche et effectuez une recherche simple de votre choix.
-					</div>
-					<br>
-					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-						<div style = "padding:10px">
-							<div class = "info" style="color:#7c7c7c">
-								<div class="quiz-container" style="margin-top:5px">
-									<div id="quiz51"></div>
-								</div>
-								<br>
-								<br><br>
-								<button class="quiz" id="submit51">Corriger</button>
-								<br>
-
-							</div>
-						</div>
-						<div style="padding:10px; margin:auto">
-							<img src="/static/img/habillage4.png">
-						</div>
-					</div>
-				</div>
-
-				<br>
-
-				<!-- ================== DIV FONCT. MOTEUR ======================== -->
-				<div id="div3" class="fenetre" style="display:none"> 
-					<img class="boutons" src="/static/img/boutons.png" >
-					<br>
-					<div class="research"> 
-						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Fonctionnement d'un moteur
-					</div>
-					<br>
-					<div class = "info" style="font-size: 1.5rem; width: 600px">
+				<div id="div2" style="display: none;">
+					<div class="fenetre"> 
+						<img class="boutons" src="/static/img/boutons.png" >
 						<br>
-						Les termes renseignés sont appelés des <b>mots-clés</b>. Ils sont essentiels
-						dans le fonctionnement d’un moteur de recherche : ces mots-clés sont en effet 
-						utilisés par <b>des algorithmes</b> propres à chaque moteur de recherche. 
-						<br><br>
-						Cela permet en outre de <b>référencer plus rapidement toutes les pages Web</b> 
-						puisqu’un mot-clé est associé à plusieurs pages.
-						<br><br>
-					</div>
-					<br>
-							<div style="margin:auto;">
-								<img src="/static/img/moteurrecherche.gif" style=" margin:auto;">
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Utiliser un moteur
+						</div>
+						<br>
+						<div style ="font-size: 1.7rem; width: 500px; margin:auto; border: 2px solid #34a853ff; border-radius: 30px;">
+							Ouvrez un moteur de recherche et effectuez une recherche simple de votre choix.
+						</div>
+						<br>
+						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+							<div style = "padding:10px">
+								<div class = "info" style="color:#7c7c7c">
+									<div class="quiz-container" style="margin-top:5px">
+										<div id="quiz51"></div>
+									</div>
+									<br>
+									<br><br>
+									<button class="quiz" id="submit51">Corriger</button>
+									<br>
+
+								</div>
 							</div>
+							<div style="padding:10px; margin:auto">
+								<img src="/static/img/habillage4.png">
+							</div>
+						</div>
+					</div>
 
-							<button class="quiz" id="btn4">Continuer</button>
+					<br>
 
+					<!-- ================== DIV FONCT. MOTEUR ======================== -->
+					<div id="div3" class="fenetre" style="display:none"> 
+						<img class="boutons" src="/static/img/boutons.png" >
+						<br>
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Fonctionnement d'un moteur
+						</div>
+						<br>
+						<div class = "info" style="font-size: 1.5rem; width: 600px">
+							<br>
+							Les termes renseignés sont appelés des <b>mots-clés</b>. Ils sont essentiels
+							dans le fonctionnement d’un moteur de recherche : ces mots-clés sont en effet 
+							utilisés par <b>des algorithmes</b> propres à chaque moteur de recherche. 
+							<br><br>
+							Cela permet en outre de <b>référencer plus rapidement toutes les pages Web</b> 
+							puisqu’un mot-clé est associé à plusieurs pages.
+							<br><br>
+						</div>
+						<br>
+						<div style="margin:auto;">
+							<img src="/static/img/moteurrecherche.gif" style=" margin:auto;">
+						</div>
+						<button class="quiz" id="btn4">Continuer</button>
+					</div>
 				</div>
-
-				<br>
 
 				<!-- =================== DIV COMP. MOTEUR ======================== -->
 				<div id="div4" class="fenetre" style="display:none"> 
@@ -190,7 +177,7 @@
 							« Avengers Infinity War ». Cliquez ensuite sur le lien Wikipédia associé. 
 							Vous avez atteint une page dont vous ne connaissiez a priori pas l’adresse URL !
 							<br><br>
-							<button class="quiz" onclick="window.location.href = '/tp1/part3'">Partie 3</button>
+							<button class="quiz" onclick="window.location.href = '/tp1/part3'">Continuer</button>
 						</div>
 					</div>
 				</div>

@@ -9,47 +9,40 @@
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- =================== DIV DROITE : CONTENU ======================= -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
-        
-        <!-- ====================== DIV TITRE ============================ -->
-        <div class="fenetre"> 
-			    <img class="boutons" src="/static/img/boutons.png" >
-          <br>
-          <div class="research" style="color: #34a853ff"> 
-            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Communication sur le Web
-          </div>
-        </div>
-
-        <br>
 
         <!-- ====================== DIV HREF ============================ -->
         <!-- Display question : Communication entre deux docs -->
-        <div id="div0" class="fenetre"> 
+        <div id="div0" style="" class="fenetre"> 
 			    <img class="boutons" src="/static/img/boutons.png" >
           <br>
           <div class="research"> 
             <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
             Communication entre deux documents
           </div>
-                <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-                <div style = "padding-left: 30px;">
-                    <div class="quiz-container">
-                        <div id="quiz3"></div>
-                    </div>    
-                    <div id="results"></div>
-                    <br>
-                    <button class="quiz" id="previous" >Précédent</button>
-                    <button class="quiz" id="next">Suivant</button>
-                    <button class="quiz" id="submit">Corriger</button>
-                    <br>
-                </div>
-                <div>
-                    <br>
-                    <img src="/static/img/habillage3.png">
-                </div>
+          <br>
+          <p style = "width: 500px; margin: auto">
+            Le Web est donc constitué d'un ensemble de documents liés entre eux.
+            Mais comment ?
+          </p>
+          <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+            <div style = "padding-left: 30px; width : 380px">
+              <div class="quiz-container">
+                <div id="quiz3"></div>
+              </div>    
+              <div id="results"></div>
+              <br>
+              <button class="quiz" id="previous" >Précédent</button>
+              <button class="quiz" id="next">Suivant</button>
+              <button class="quiz" id="submit">Corriger</button>
+              <br>
+            </div>
+            <div>
+              <br>
+              <img src="/static/img/habillage3.png">
+            </div>
           </div>
         </div>
 
@@ -61,7 +54,7 @@
 		      <br>
           <div class="research"> 
               <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-              Adresses IP
+              Hyperliens
           </div>
           <br>
           <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
@@ -82,7 +75,7 @@
                   </div>
               </div>
           </div>
-          <button class="fenetre" onclick="window.location.href = '/tp1/part2'">Partie 2</button>
+          <button class="quiz" onclick="window.location.href = '/tp1/part2'">Continuer</button>
 	      </div>
       </div>
       
@@ -102,16 +95,5 @@
 </header>
 
 <script src="{{ url_for('static', filename='js/tp1/quiz3.js') }}"></script>
-<script>
-    let btn1 = document.getElementById("submit");
-	let div0 = document.getElementById("div0");
-	let div1 = document.getElementById("div1");
-
-	btn1.addEventListener("click", () => {
-	  	if(getComputedStyle(div1).display == "none"){
-	    		div1.style.display = "block";
-	  	}
-	})
-</script>
 
 {% endblock %}

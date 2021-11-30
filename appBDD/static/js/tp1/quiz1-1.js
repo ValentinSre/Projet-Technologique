@@ -43,19 +43,19 @@
         answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
       }
     });
-    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz11.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
+    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz11.length} <br>`; // on affiche le nb total de bonnes réponses
   }
 
   function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    if(currentSlide === 1){
+    if(currentSlide == 2){
       previousButton.style.display = 'none';
     } else {
-      previousButton.style.display = 'inline-block';
+      previousButton.style.display = 'none';
     }
-    if(currentSlide === slides.length-1){
+    if(currentSlide == slides.length-1){
       nextButton.style.display = 'none';
       submitButton.style.display = 'inline-block';
     } else {
@@ -77,8 +77,8 @@
   const resultsContainer = document.getElementById('results11');
   const submitButton = document.getElementById('submit11');
   const monQuiz11 = [
-    { question: "Qu'est-ce que le Web ?",
-        answers: { a: "L'ensemble des données accessibles via Internet", b: "Le lien entre tous les ordinateurs", c: "Le réseau comprenant Internet" },
+    { question: "Quelle est la relation entre Internet et le Web ?",
+        answers: { a: "Le Web repose sur Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses !" },
         correctAnswer: "a" }
   ];
 

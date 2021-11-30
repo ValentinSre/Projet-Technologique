@@ -5,7 +5,7 @@
   function buildQuiz(){
     // variable to store the HTML output
     const output = [];
-    monQuiz12.forEach((currentQuestion, questionNumber) => {
+    monQuiz11.forEach((currentQuestion, questionNumber) => {
         const answers = []; // pour stocker la liste des réponses possibles
         // On ajoute un bouton 'radio' pour chaque lettre-réponse possible
         for(letter in currentQuestion.answers){
@@ -31,7 +31,7 @@
   function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers'); // on rassemble les containers réponses 
     let numCorrect = 0;
-    monQuiz12.forEach( (currentQuestion, questionNumber) => { // pour chaque question
+    monQuiz11.forEach( (currentQuestion, questionNumber) => { // pour chaque question
       const answerContainer = answerContainers[questionNumber]; // on cherche la réponse sélectionnée
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -43,14 +43,14 @@
         answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
       }
     });
-    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz12.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
+    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz11.length} <br>`; // on affiche le nb total de bonnes réponses
   }
 
   function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    if(currentSlide == 2){
+    if(currentSlide == 0){
       previousButton.style.display = 'none';
     } else {
       previousButton.style.display = 'none';
@@ -73,10 +73,10 @@
   }
 
   // Variables
-  const quizContainer = document.getElementById('quiz12');
-  const resultsContainer = document.getElementById('results12');
-  const submitButton = document.getElementById('submit12');
-  const monQuiz12 = [
+  const quizContainer = document.getElementById('quiz11');
+  const resultsContainer = document.getElementById('results11');
+  const submitButton = document.getElementById('submit11');
+  const monQuiz11 = [
     { question: "Quelle est la relation entre Internet et le Web ?",
         answers: { a: "Le Web repose sur Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses !" },
         correctAnswer: "a" }
@@ -84,13 +84,22 @@
 
   buildQuiz();
 
-  const previousButton = document.getElementById("previous12");
-  const nextButton = document.getElementById("next12");
+  const previousButton = document.getElementById("previous11");
+  const nextButton = document.getElementById("next11");
   const slides = document.querySelectorAll(".slide");
-  let currentSlide = 2;
+  let currentSlide = 0;
   showSlide(currentSlide);
   submitButton.addEventListener('click', showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
 })()
 
+
+let btn = document.getElementById("submit11");
+let div = document.getElementById("div0");
+
+btn.addEventListener("click", () => {
+  if(getComputedStyle(div).display == "none"){
+    div.style.display = "block"
+  }
+})

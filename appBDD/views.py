@@ -26,6 +26,10 @@ def tp1_par1_1():
     return render_template('/tp1/part1-1.html')
 
 #TP1 partie 1.3
+@app.route('/tp1/part1-2-0')
+def tp1_par1_2_0():
+    return render_template('/tp1/part1-2-0.html')
+
 @app.route('/tp1/part1-2')
 def tp1_par1_2():
     return render_template('/tp1/part1-2.html')

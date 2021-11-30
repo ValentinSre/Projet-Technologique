@@ -8,22 +8,10 @@
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- =================== DIV DROITE : CONTENU ======================= -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
         
-        <!-- ====================== DIV TITRE ============================ -->
-        <div class="fenetre"> 
-          <img class="boutons" src="/static/img/boutons.png" >
-          <br>
-          <div class="research" style="color: #34a853ff"> 
-            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Communication sur Internet
-          </div>
-        </div>
-
-        <br>
-
         <!-- ====================== DIV IP ============================ -->
         <!-- Display question : Communication entre deux ordis -->
         <div id="div0" class="fenetre"> 
@@ -33,19 +21,22 @@
             <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
             Communication entre deux ordinateurs
           </div>
+          <br>
+          <p>Deux ordinateurs sont reliés entre eux par un lien de communication filaire ou non filaire.</p>
           <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
             <div >
-                <br>
-                <br>
+                <br><br>
                 <img src="/static/img/habillage2.png" style = "width: 150px;">
             </div>
-            <div style = "padding-right : 30px;">
+            <div style = "width: 400px; padding-right : 50px;">
               <div class="quiz-container">
                 <div id="quiz2"></div>
               </div>
               <br><br>
               <div id="results"></div>
               <br>
+              <button class="quiz" id="previous" >Précédent</button>
+              <button class="quiz" id="next">Suivant</button>
               <button class="quiz" id="submit">Corriger</button>
               <br><br>
             </div>
@@ -77,7 +68,7 @@
                 </div>
             </div>
           </div>
-          <button class="fenetre" onclick="window.location.href = '/tp1/part1-2'">Continuer</button>
+          <button class="quiz" onclick="window.location.href = '/tp1/part1-2-0'">Continuer</button>
 	      </div>
       </div>
       
