@@ -109,10 +109,8 @@
   let div6 = document.getElementById("div6");
 
 	btn1.addEventListener("click", () => {
-	  	if(getComputedStyle(div1).display != "none"){
-	    		div1.style.display = "none";
-	  	} else {
-	    		div1.style.display = "block";
+	  	if(getComputedStyle(div1).display == "none"){
+	    	div1.style.display = "block";
 	  	}
 	})
 
