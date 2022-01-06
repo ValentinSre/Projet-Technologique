@@ -64,6 +64,5 @@
     const slides = document.querySelectorAll(".slide");
     slides[0].classList.add('active-slide');
     submitButton.addEventListener('click', showResults);
-    previousButton.addEventListener("click", showPreviousSlide);
-    nextButton.addEventListener("click", showNextSlide);
+  
   })()

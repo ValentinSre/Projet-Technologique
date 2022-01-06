@@ -5,7 +5,7 @@
     function buildQuiz(){
       // variable to store the HTML output
       const output = [];
-      monQuiz7.forEach((currentQuestion, questionNumber) => {
+      monQuiz1.forEach((currentQuestion, questionNumber) => {
           const answers = []; // pour stocker la liste des réponses possibles
           // On ajoute un bouton 'radio' pour chaque lettre-réponse possible
           for(letter in currentQuestion.answers){
@@ -31,7 +31,7 @@
     function showResults(){
       const answerContainers = quizContainer.querySelectorAll('.answers'); // on rassemble les containers réponses 
       let numCorrect = 0;
-      monQuiz7.forEach( (currentQuestion, questionNumber) => { // pour chaque question
+      monQuiz1.forEach( (currentQuestion, questionNumber) => { // pour chaque question
         const answerContainer = answerContainers[questionNumber]; // on cherche la réponse sélectionnée
         const selector = `input[name=question${questionNumber}]:checked`;
         const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -43,7 +43,6 @@
           answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
         }
       });
-      resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz7.length} <br>`; // on affiche le nb total de bonnes réponses
     }
   
     function showSlide(n) {
@@ -73,15 +72,12 @@
     }
   
     // Variables
-    const quizContainer = document.getElementById('quiz7');
+    const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
-    const monQuiz7 = [
-      { question: "Quand est sorti le film 'Iron Man' ?",
-        answers: { a: "2008", b: "2009", c: "2010" },
-        correctAnswer: "a" },
-      { question: "Qui a créé la Sorcière Rouge ?",
-        answers: { a: "Millar/McNiven", b: "Lee/Kirby", c: "Kirkman/Ottley" },
+    const monQuiz1 = [
+      { question: "Que remarquez-vous ?",
+        answers: { a: "Il n'y a aucun point commun", b: "Tout est identique sur les 2 sites", c: "Les données de DBPedia sont celles de Wikipédia agencées différemment" },
         correctAnswer: "b" }
     ];
   
@@ -96,13 +92,3 @@
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })()
-
-	let btn1 = document.getElementById("submit");
-	let div0 = document.getElementById("div0");
-	let div1 = document.getElementById("div1");
-
-	btn1.addEventListener("click", () => {
-	  	if(getComputedStyle(div1).display == "none"){
-			div1.style.display = "block";
-	  	}
-	})

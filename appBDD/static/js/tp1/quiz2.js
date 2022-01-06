@@ -97,3 +97,13 @@
   nextButton.addEventListener("click", showNextSlide);
 })()
 
+
+let btn1 = document.getElementById("submit");
+let div0 = document.getElementById("div0");
+let div1 = document.getElementById("div1");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+        div1.style.display = "block";
+    }
+})

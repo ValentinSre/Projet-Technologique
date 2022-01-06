@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div style="height: 380px;" class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Le Web des données
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Tout cela converge donc vers la notion de Web des données... 
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 20px; width : 340px">
+                <div class="quiz-container">
+                  <div id="quiz4"></div>
+                </div>
+                <br>    
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+              </div>
+              <div style = "padding-right: 30px">
+                <br><br>
+                <img src="/static/img/habillage4.png">
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Display explication : Définition URI -->
+          <div class="fenetre" id="div1" style="display: none; "> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Web des données et documentaire
+            </div>
+            <br>
+              <div  style="padding: 10px; width: 650px; margin:auto">
+                <div class = "info" style="font-size: 14px; padding: 15px">
+                  Le <b>Web des données</b> est une initiative visant à <b>favoriser la publication de données structurées</b> 
+                  sur le Web, en évitant de les représenter sous forme d’un gros bloc décorrélé et plutôt en les 
+                  <b>reliant entre elles</b> pour constituer un réseau global d'informations. <br><br>
+                  On parle de Web de données par opposition au Web "des origines" : un <b>Web dit documentaire</b>, 
+                  autrement dit un <b>ensemble de documents interconnectés et accessibles grâce à Internet</b>, à destination 
+                  des utilisateurs humains qui allaient naviguer d’un document à l’autre pour en traiter eux-mêmes le 
+                  contenu informatif. <b>Le Web des données 'repose' donc sur le Web documentaire classique.</b>
+                </div>
+              </div>
+              <div>
+               <!-- <img src="/static/img/uri.gif" style="width: 600px; margin:auto"> -->
+               [ ANIMATION À VENIR ]
+              </div>
+              <br>
+            <button class="quiz" onclick="window.location.href = '/tp2/part2'">Continuer</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include '/tp2/menus/menu1.html' %}
+      </div>
+    </div>
+	
+    <br>
+    
+    {% include 'interface.html' %}
+  
+  </div>
+</header>
+<script src="{{ url_for('static', filename='js/tp2/quiz4.js') }}"></script>
+
+{% endblock %}

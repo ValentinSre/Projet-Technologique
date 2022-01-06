@@ -5,7 +5,7 @@
   function buildQuiz(){
     // variable to store the HTML output
     const output = [];
-    monQuiz11.forEach((currentQuestion, questionNumber) => {
+    monQuiz2.forEach((currentQuestion, questionNumber) => {
         const answers = []; // pour stocker la liste des réponses possibles
         // On ajoute un bouton 'radio' pour chaque lettre-réponse possible
         for(letter in currentQuestion.answers){
@@ -31,7 +31,7 @@
   function showResults(){
     const answerContainers = quizContainer.querySelectorAll('.answers'); // on rassemble les containers réponses 
     let numCorrect = 0;
-    monQuiz11.forEach( (currentQuestion, questionNumber) => { // pour chaque question
+    monQuiz2.forEach( (currentQuestion, questionNumber) => { // pour chaque question
       const answerContainer = answerContainers[questionNumber]; // on cherche la réponse sélectionnée
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -43,19 +43,19 @@
         answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
       }
     });
-    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz11.length} <br>`; // on affiche le nb total de bonnes réponses
+    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz2.length} <br> (tu peux revenir en arrière)`; // on affiche le nb total de bonnes réponses
   }
 
   function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    if(currentSlide == 0){
+    if(currentSlide === 0){
       previousButton.style.display = 'none';
     } else {
-      previousButton.style.display = 'none';
+      previousButton.style.display = 'inline-block';
     }
-    if(currentSlide == slides.length-1){
+    if(currentSlide === slides.length-1){
       nextButton.style.display = 'none';
       submitButton.style.display = 'inline-block';
     } else {
@@ -73,21 +73,37 @@
   }
 
   // Variables
-  const quizContainer = document.getElementById('quiz11');
-  const resultsContainer = document.getElementById('results11');
-  const submitButton = document.getElementById('submit11');
-  const monQuiz11 = [
-    { question: "Qu'est-ce que le Web selon vous ?",
-      answers: { a: "L'ensemble des données accessibles via Internet", b: "Un lien entre des ordinateurs", c: "Le réseau comprenant Internet" },
-      correctAnswer: "a" }
+  const quizContainer = document.getElementById('quiz1');
+  const resultsContainer = document.getElementById('results1');
+  const submitButton = document.getElementById('submit1');
+  const monQuiz2 = [
+    { question: "MOT 1",
+    answers: { a: "C'est une donnée", b: "C'est une information"},
+    correctAnswer: "a" },
+    { question: "MOT 2",
+    answers: { a: "C'est une donnée", b: "C'est une information"},
+    correctAnswer: "a" },
+    { question: "MOT 3",
+    answers: { a: "C'est une donnée", b: "C'est une information"},
+    correctAnswer: "a" },
+    { question: "MOT 4",
+    answers: { a: "C'est une donnée", b: "C'est une information"},
+    correctAnswer: "a" },
+    { question: "MOT 5",
+    answers: { a: "C'est une donnée", b: "C'est une information"},
+    correctAnswer: "a" },
+    { question: "MOT 6",
+    answers: { a: "C'est une donnée", b: "C'est une information"},
+    correctAnswer: "a" },
+    
   ];
 
   buildQuiz();
 
-  const previousButton = document.getElementById("previous11");
-  const nextButton = document.getElementById("next11");
+  const previousButton = document.getElementById("previous1");
+  const nextButton = document.getElementById("next1");
   const slides = document.querySelectorAll(".slide");
-  let currentSlide = 0;
+  let currentSlide = 2;
   showSlide(currentSlide);
   submitButton.addEventListener('click', showResults);
   previousButton.addEventListener("click", showPreviousSlide);
@@ -95,11 +111,3 @@
 })()
 
 
-let btn = document.getElementById("submit11");
-let div = document.getElementById("div0");
-
-btn.addEventListener("click", () => {
-  if(getComputedStyle(div).display == "none"){
-    div.style.display = "block"
-  }
-})

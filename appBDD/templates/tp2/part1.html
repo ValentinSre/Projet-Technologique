@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV DONNÉE ============================ -->
+        <div id = "divX">
+          <!-- Display question : Données -->
+					<div class="fenetre"> 
+						<img class="boutons" src="/static/img/boutons.png" >
+						<br>
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Les différents formats de donnée
+						</div>
+						<br>
+						<div class = "info" style ="font-size: 1.6rem; width: 520px">
+							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
+							Ouvrez un navigateur Web et consultez les sites <br>« 
+              <a href="https://www.siteA.com" style="color:#34a853ff; font-weight: bold;">www.siteA.com</a> »,
+              <a href="https://www.siteB.com" style="color:#34a853ff; font-weight: bold;">www.siteB.com</a> » et 
+              <a href="https://www.siteC.com" style="color:#34a853ff; font-weight: bold;">www.siteC.com</a> ».
+						</div>
+						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+							<div style = "padding:10px">
+								<div class = "info" style="color:#7c7c7c">
+									<div class="quiz-container" style="margin-top:5px">
+										<div id="quiz"></div>
+									</div>
+									<br>
+									<div id="results"></div>
+									<button class="quiz" id="previous" >Précédent</button>
+									<button class="quiz" id="next">Suivant</button>
+									<button class="quiz" id="submit">Corriger</button>
+									<br>
+
+								</div>
+							</div>
+							<div style="padding:10px; margin:auto">
+								<div class = "info" id="divX" style =" font-size: 1.4rem;">
+									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+									Explications. 
+									<br><br>
+									<button class="quiz" id="btnX">Continuer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+          <br>
+
+          <!-- Display explication : La donnée-->
+          <div class="fenetre" id="divX" style="display:block"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div>
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                La donnée
+              </div>
+              <br>
+              <div style="width: 550px; margin:auto">
+                Comme nous avons pu le voir, le Web est une <b>bibliothèque géante de données</b>, aux formats divers et variés.
+                Il convient par conséquent de comprendre ce que représente le terme de <b>donnée</b>.
+              </div>
+              <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+                <div style = "padding-left: 10px">
+                  <br>
+                  <div class = "info" >
+                    <br>
+                    La <b>donnée</b> est une notion généralement <b>confondue avec l'information</b>. Une donnée peut être un <b>chiffre brut</b>,
+                    un <b>fait</b>, une <b>valeur</b> ou encore une <b>mesure</b>. Une information correspond elle à l'<b>interprétation d'une donnée</b> 
+                    (c'est-à-dire à la signification que l'on donne à la donnée, en tant qu'humain).
+                    <br><br>
+                    Les données peuvent être <b>conservées et classées sous différentes formes</b> : textuelles (chaîne), numériques, images... 
+                    Elles représentent donc tout ce qui <b>constitue le Web au plus bas niveau</b>.
+                    <br>
+                    <br>
+                  </div>
+                  <br>
+                </div>
+                <div style = "padding-right: 10px;">
+                  <br>
+                  <div class = "info" >
+                    <div class="quiz-container" style="margin-top:5px">
+                      <div id="quiz1"></div>
+                    </div>
+                    <div id="results1"></div>
+                    <br>
+                    <button class="quiz" id="previous1" >Précédent</button>
+                    <button class="quiz" id="next1">Suivant</button>
+                    <button class="quiz" id="submit1">Corriger</button>
+                    <br>
+                  </div>
+                </div>
+              </div>  
+              <br>  
+              <button class="quiz" onclick="window.location.href = '/tp2/part1-1'">Continuer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include '/tp2/menus/menu1.html' %}
+      </div>
+    </div>
+
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/tp2/quiz1.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp2/quiz1-1.js') }}"></script>
+{% endblock %}
+

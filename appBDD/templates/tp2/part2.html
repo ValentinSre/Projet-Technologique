@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Représentation concrète des données
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Tout cela converge donc vers la notion de Web des données... 
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 10px;">
+                <br><br>
+                <img src="/static/img/habillage1.png">
+              </div>
+              <div style = "padding-right: 40px;  width :340px">
+                <div class="quiz-container">
+                    <div id="quiz5"></div>
+                  </div>
+                  <br><br>
+                  <button class="quiz" id="submit">Corriger</button>
+                  <br>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Display explication : Définition URI -->
+          <div class="fenetre" id="div1" style="display: none;"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Notion de triplet
+            </div>
+            <br>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+                <div style = "padding-left: 10px; margin: auto">
+                    <div class = "info" style="font-size: 14px; padding: 15px">
+                        <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Explication</p>
+                        Comme nous l'avons vu précédemment, les données peuvent être représentées sous forme de <b>triplet</b>.
+                        <br>
+                        Le <b>format RDF</b> (Resource Description Framework) est le format utilisé pour décrire les données vues 
+                        précédemment sur DBPedia. Ce format explicite cette notion de <b>triplet</b>.
+                        <br>
+                    </div>
+                </div>
+                <div style = "padding-right: 10px; margin: auto">
+                    <div class = "info" style="font-size: 14px; padding: 15px">
+                        <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Représentation</p>
+                        Les 3 éléments sont les suivants : <br><br>
+                        <ul>
+                            <li style ="text-align: left;">
+                                <b>le sujet</b> = ressource
+                            </li>
+                            <li style ="text-align: left;">
+                                <b>le prédicat</b> = nom de la propriété de la ressource
+                            </li>
+                            <li style ="text-align: left;">
+                                <b>l'objet</b> = valeur = ressource liée ou caractéristique exprimée
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="info" style = "font-size: 16px; margin: auto">
+                Néanmoins, tout ceci pose la question de l'interprétation : il semble difficile de comprendre le lien entre tous ces 
+                triplets. <br>C'est ici qu'intervient la représentation graphique des données !
+                <br><br>
+                <button class="quiz" onclick="window.location.href = '/tp2/part2-1'">Continuer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include '/tp2/menus/menu2.html' %}
+      </div>
+    </div>
+	
+    <br>
+    
+    {% include 'interface.html' %}
+  
+  </div>
+</header>
+<script src="{{ url_for('static', filename='js/tp2/quiz5.js') }}"></script>
+
+{% endblock %}

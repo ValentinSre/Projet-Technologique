@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div style="height: 370px;" class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Composition d'une page
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Chaque élément d'un triplet est défini par ce que l'on appelle une URI.
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 30px; width : 380px">
+                <div class="quiz-container">
+                  <div id="quiz3"></div>
+                </div>    
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+              </div>
+              <div>
+                <br>
+                <img src="/static/img/habillage3.png" style = "height: 70%">
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Display explication : Définition URI -->
+          <div class="fenetre" id="div1" style="display: none; "> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                URI
+            </div>
+            <br>
+              <div  style="padding: 10px; width: 600px; margin:auto">
+                <div class = "info" style="font-size: 14px; padding: 15px">
+                  L'URI (Uniform Resource Identifier) permet d'identifier une entité utilisée 
+                  sur le web. Les URI peuvent être reliées entre elles.
+                  <br><br>
+                  Il s'agit d'une extension de l'URL (qui permet d'identifier les pages du web uniquement).
+                  Ainsi, tout ce qui est identifié par une URI est une ressource du web accessible sur le web.
+                  <br>
+                  Cela rassemble donc les documents du web (identifiés par leur URL) mais aussi toutes les 
+                  choses dont on parle sur le web, par exemple une table, une voiture, un humain ou encore une idée,
+                  un concept abstrait... Si l'on schématise, l'URI correspond à la concaténation entre l'URL pour 
+                  localiser une ressource et de l'URN (Uniform Resource Name) qui est un identifiant unique pour 
+                  une ressource.
+                </div>
+              </div>
+              <div>
+                <img src="/static/img/uri.gif" style="width: 600px; margin:auto">
+              </div>
+              <br>
+            <button class="quiz" id="btn2">Continuer</button>
+          </div>
+        </div>
+
+        <div id = "div2" style = "display:none">
+          <div style="height: 370px;" class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Exemples d'URI
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              [ INSÉRER DES PHOTOS D'EXEMPLES ]
+            </div>
+            <br>
+            <button class="quiz" id="btn3">Continuer</button>
+          </div>
+
+          <br>
+
+          <div style="height: 370px; display: none;" id="div3" class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Comprendre l'URI
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Vérifie ta bonne compréhension de ces notions.
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 10px; width : 320px">
+                <div class="quiz-container">
+                  <div id="quiz31"></div>
+                </div>    
+                <br>
+                <button class="quiz" id="previous31" >Précédent</button>
+                <button class="quiz" id="next31">Suivant</button>
+                <button class="quiz" id="submit31">Corriger</button>
+              </div>
+              <div style = "padding-right: 10px">
+                <br>
+                <div class = "info" style="color:#7c7c7c; font-size: 13px; display:none" id="div4">
+									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Résumé</p>
+                  L'<b>URL</b> permet de <b>localiser une ressource</b> dans le web. <br>
+                  L'<b>URN</b> permet de <b>référencer une ressource</b> sur le web sans la localiser. <br>
+                  L'<b>URI</b> est l'<b>ensemble de ces deux paramètres</b>.
+									<br><br>
+									<button class="quiz" onclick="window.location.href = '/tp2/part1-3'">Continuer</button>
+									<br>
+								</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include '/tp2/menus/menu1.html' %}
+      </div>
+    </div>
+	
+    <br>
+    
+    {% include 'interface.html' %}
+  
+  </div>
+</header>
+<script src="{{ url_for('static', filename='js/tp2/quiz3.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp2/quiz3-1.js') }}"></script>
+
+{% endblock %}

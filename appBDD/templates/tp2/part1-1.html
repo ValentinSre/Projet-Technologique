@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV DONNÉE ============================ -->
+        <div id = "divX">
+          <!-- Display question : Données -->
+					<div class="fenetre"> 
+						<img class="boutons" src="/static/img/boutons.png" >
+						<br>
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Comparaison au Web documentaire
+						</div>
+						<br>
+						<div class = "info" style ="font-size: 1.6rem; width: 520px">
+							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
+							Sur votre navigateur, ouvrez les sites<br>« 
+              <a href="https://fr.wikipedia.org/wiki/Avengers:_Infinity_War" style="color:#34a853ff; font-weight: bold;">
+                https://fr.wikipedia.org/wiki/Avengers:_Infinity_War
+              </a> » <br>et «
+              <a href="https://dbpedia.org/page/Avengers:_Infinity_War" style="color:#34a853ff; font-weight: bold;">
+                https://dbpedia.org/page/Avengers:_Infinity_War
+              </a> ».
+						</div>
+						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+							<div style = "padding:10px">
+								<div class = "info" style="color:#7c7c7c">
+									<div class="quiz-container" style="margin-top:5px">
+										<div id="quiz"></div>
+									</div>
+                  <br><br>
+									<button class="quiz" id="previous" >Précédent</button>
+									<button class="quiz" id="next">Suivant</button>
+									<button class="quiz" id="submit">Corriger</button>
+									<br>
+
+								</div>
+							</div>
+							<div style="padding:10px; margin:auto">
+								<div class = "info" id="divX" style =" font-size: 1.4rem;">
+									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+									Sur DBPedia, les informations sont présentées de <b>manière structurée</b>. 
+                  Les informations sont en effet les mêmes que sur Wikipédia, tout en étant présentées d'une manière différente. 
+									<br><br>
+									<button class="quiz" id="btnX">Continuer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+          <br>
+
+          <!-- Display explication : La donnée-->
+					<div class="fenetre"> 
+						<img class="boutons" src="/static/img/boutons.png" >
+						<br>
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Données liées
+						</div>
+						<br>
+						<div style ="font-size: 1.7rem; width: 450px; margin:auto; border: 2px solid #34a853ff; border-radius: 30px;">
+							Chechez "Kevin Feige" sur les deux pages <br>(Wikipédia et DBPedia).
+						</div>
+						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+							<div style = "padding:10px; margin:auto">
+								<div class = "info" style="color:#7c7c7c; font-size: 16px">
+									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
+                  Quelles informations concernant Kevin Feige pouvez-vous déduire de Wikipédia ? de DBPedia ?
+									<br><br>
+									<button class="quiz" id="divX">Corriger</button>
+									<br>
+								</div>
+							</div>
+							<div style="padding:10px; margin:auto">
+                <div class = "info" style="color:#7c7c7c; font-size: 13px">
+									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+                  On remarque de part et d'autre que le film Avengers: Infinity War est produit par Kevin Feige.
+                  Cependant, la représentation sur DBPedia suit le modèle suivant : un <b>sujet</b> <i>(ici "Avengers: Infinity War")</i> 
+                  est associé par la <b>relation</b> <i>"producer"</i> à un <b>objet</b> <i>(ici "Kevin Feige")</i>.
+									<br><br>
+									<button class="quiz" onclick="window.location.href = '/tp2/part1-2'">Continuer</button>
+									<br>
+								</div>
+              </div>
+						</div>
+					</div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include '/tp2/menus/menu1.html' %}
+      </div>
+    </div>
+
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+<script src="{{ url_for('static', filename='js/tp2/quiz2.js') }}"></script>
+{% endblock %}
+

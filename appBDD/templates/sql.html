@@ -71,7 +71,7 @@
  SELECT * FROM films;
  SELECT titre FROM films WHERE sortie = (SELECT MIN(sortie) FROM films)</textarea>
 
-    <button id="interpreter" class="quiz">Interpréter</button>
+    <button id="interpreter" class="quiz">Exécuter</button>
     <button id='savedb' class="button" style="display:none">Exporter la BDD</button>
     <label class="button" style="display:none">Charger une BDD SQLite<input type='file' id='dbfile'></label>
 

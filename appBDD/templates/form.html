@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV INTERNET ============================ -->
+        <div id = "div2">
+          <!-- Display question : Internet-->
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Formulaire
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 30px;">
+
+                <form action="/test" method="POST">
+
+                    <div class="form-group">
+                      <label>Sujet</label>
+                      <input type="text" class="form-control" id="subject" name="subject" placeholder="Select a username">
+                    </div>
+            
+                    <div class="form-group">
+                      <label>Relation</label>
+                      <input type="text" class="form-control" id="relation" name="relation" placeholder="Enter your email">
+                    </div>
+            
+                    <div class="form-group">
+                      <label>Objet</label>
+                      <input type="text" class="form-control" id="object" name="object" placeholder="Create a password">
+                    </div>
+            
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+            
+                  </form>
+                </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Display explication : Internet et Web-->
+          <div class="fenetre" id="div1" style="display:none"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div id="div2">
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Internet
+              </div>
+              <br>
+              <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+                <div>
+                  <img style="width: 450px" src="/static/img/internet.gif" >
+                </div>
+                <div style = "padding-right: 10px;">
+                  <br>
+                  <div class = "info" >
+                    <br>
+                    Internet est un ensemble d’<b>ordinateurs</b> reliés entre eux. 
+                    Il s’agit donc d’un <b>réseau d'ordinateurs</b> qui permet la communication 
+                    entre les appareils aux quatre coins du monde. 
+                    <br>
+                  </div>
+                  <br>
+                  <button class="quiz" id="btn2">Continuer</button>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================== DIV SUIVANTE ============================ -->
+
+        <div id="div3" style = "display:none">
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Quel lien entre Internet et Web ?
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 30px;">
+                <div class="quiz-container">
+                  <div id="quiz11"></div>
+                </div>
+      
+                <div id="results"></div>
+                <br>
+                <button class="quiz" id="previous11" >Précédent</button>
+                <button class="quiz" id="next11">Suivant</button>
+                <button class="quiz" id="submit11">Corriger</button>
+                <br>
+              </div>
+              <div>
+                <br>
+                <img src="/static/img/habillage1.png">
+              </div>
+            </div>
+          </div>
+      
+          <br>
+      
+          <!-- Display explication : Différences -->
+          <div class="fenetre" id="div4" style="display:none"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div id="div2">
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Internet et le Web
+              </div>
+              <br>
+              <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+                <div style = "padding-left: 10px;">
+                  <br>
+                  <div class = "info" >
+                    <br>
+                    Le Web est à ne pas confondre avec Internet. Les deux sont différents et distincts,
+                    <b>Internet étant le support physique du Web</b>. 
+                    <br><br>
+                    <b>Internet</b> est un <b>réseau informatique que le Web utilise</b> tout comme 
+                    d'autres services, comme <b>les courriels</b> (emails) ou <b>le transfert de fichiers</b>.                    <br><br>
+                  </div>
+                </div>
+                <div>
+                  <img style="width: 450px" src="/static/img/internetweb.png" >
+                </div>
+              </div>
+              <button class="quiz" onclick="window.location.href = '/tp1/part1-1'">Continuer</button>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include '/tp1/menus/menu1.html' %}
+      </div>
+    </div>
+
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/tp1/quiz1.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp1/quiz1-1.js') }}"></script>
+
+{% endblock %}
+
