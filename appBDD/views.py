@@ -110,29 +110,29 @@ from flask import request, redirect
 def form():
     return render_template('form.html')
 
-@app.route('/test', methods = ['GET', 'POST'])
-def test():
-    if request.method == "POST":
-        req = request.form
+#@app.route('/test', methods = ['GET', 'POST'])
+#def test():
+#    if request.method == "POST":
+#        req = request.form
 
-        sujet = req["subject"]
-        relation = req["relation"]
-        objet = req["object"]
+#        sujet = req["subject"]
+#        relation = req["relation"]
+#        objet = req["object"]
 
         #os.environ["PATH"] += os.pathsep + "C:\\users\\valen\\anaconda3\Library\\bin\\graphviz"
         # create file-object in memory
-        file_object = io.BytesIO()
-        d = graphviz.Graph()
-        d.edge("Peter Parker", "Spider-Man")
-        d.edge("Peter Parker", "Horizon Labs", "travaille")
-        d.edge("Peter Parker", "Gwen Stacy", "aime")
-        d.edge("Peter Parker", "Harry Osborn", "meilleur ami")
-        d.edge(sujet, objet, relation)
-        test = d._repr_image_png()
-        imageTest = Image.open(io.BytesIO(test))
-        im1 = imageTest.save(r".\appBDD\static\img\graphe.png")
-    image = r".\static\img\graphe.png"
-    return send_file(image, mimetype='image/png')
+#        file_object = io.BytesIO()
+#        d = graphviz.Graph()
+#        d.edge("Peter Parker", "Spider-Man")
+#        d.edge("Peter Parker", "Horizon Labs", "travaille")
+#        d.edge("Peter Parker", "Gwen Stacy", "aime")
+#        d.edge("Peter Parker", "Harry Osborn", "meilleur ami")
+#        d.edge(sujet, objet, relation)
+#        test = d._repr_image_png()
+#        imageTest = Image.open(io.BytesIO(test))
+#        im1 = imageTest.save(r".\appBDD\static\img\graphe.png")
+#    image = r".\static\img\graphe.png"
+#    return send_file(image, mimetype='image/png')
 
 
 
