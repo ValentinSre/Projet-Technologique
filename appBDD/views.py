@@ -99,11 +99,11 @@ def tp2_par2_1():
 # def content(content_id):
 #     return '%s' % content_id
 
-import graphviz
-import os
-import io
-import pydot
-import PIL.Image as Image
+#import graphviz
+#import os
+#import io
+#import pydot
+#import PIL.Image as Image
 from flask import request, redirect
 
 @app.route('/form')
