@@ -119,7 +119,7 @@ def test():
         relation = req["relation"]
         objet = req["object"]
 
-        os.environ["PATH"] += os.pathsep + "C:\\users\\valen\\anaconda3\Library\\bin\\graphviz"
+        #os.environ["PATH"] += os.pathsep + "C:\\users\\valen\\anaconda3\Library\\bin\\graphviz"
         # create file-object in memory
         file_object = io.BytesIO()
         d = graphviz.Graph()
