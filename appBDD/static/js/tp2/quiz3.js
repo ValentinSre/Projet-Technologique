@@ -78,7 +78,7 @@
   const submitButton = document.getElementById('submit');
   const monQuiz3 = [
     { question: "Qu'est-ce qu'une URI ?",
-      answers: { a: "Réponse A", b: "Réponse B", c: "L'identifiant de chaque entité du Web" },
+      answers: { a: "Le réseau où sont stockées les données", b: "Une entreprise qui développe des sites", c: "L'identifiant de chaque entité du Web" },
       correctAnswer: "c" }
   ];
 

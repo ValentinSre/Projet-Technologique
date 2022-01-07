@@ -78,7 +78,7 @@
     const monQuiz1 = [
       { question: "Que remarquez-vous ?",
         answers: { a: "Il n'y a aucun point commun", b: "Tout est identique sur les 2 sites", c: "Les données de DBPedia sont celles de Wikipédia agencées différemment" },
-        correctAnswer: "b" }
+        correctAnswer: "c" }
     ];
   
     buildQuiz();

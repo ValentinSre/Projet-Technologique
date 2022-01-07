@@ -77,8 +77,8 @@
     const submitButton = document.getElementById('submit');
     const monQuiz4 = [
       { question: "Qu'est-ce que le Web des données ?",
-        answers: { a: "Réponse 1", b: "Réponse 2", c: "Réponse 3" },
-        correctAnswer: "b" }
+        answers: { a: "L'ensemble des données structurées du Web", b: "Tous les numéros de téléphone sur le Web", c: "C'est le nom technique du Web classique" },
+        correctAnswer: "a" }
     ];
   
     buildQuiz();
