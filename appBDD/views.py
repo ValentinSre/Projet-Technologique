@@ -1,4 +1,9 @@
 from flask import Flask, render_template, url_for, request, send_file
+import json
+import glob
+import os
+from flask import request, redirect
+
 
 app = Flask(__name__)
 
@@ -93,22 +98,15 @@ def tp2_par2():
 #TP2 partie 2.2
 @app.route('/tp2/part2-1')
 def tp2_par2_1():
-    targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
-    urlFichier = glob.glob(targetPattern)[-1]
-    decompoUrl = urlFichier.split("=")[1]
-    version = int(decompoUrl.split(")")[0])
-    return render_template('/tp2/part2-1.html', id=version)
+    #targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
+    #urlFichier = glob.glob(targetPattern)[-1]
+    #decompoUrl = urlFichier.split("=")[1]
+    #version = int(decompoUrl.split(")")[0])
+    return render_template('/tp2/part2-1.html', id=5)
 
 # @app.route('/contents/<int:content_id>/')
 # def content(content_id):
 #     return '%s' % content_id
-
-
-@app.route('/form')
-def form():
-    return render_template('form.html')
-
-from flask import request, redirect
 
 """"
 import graphviz
@@ -141,9 +139,6 @@ def test():
     image = r".\static\img\graphe.png"
     return send_file(image, mimetype='image/png')
 """
-import json
-import glob
-import os
 
 @app.route('/formulaire', methods = ['GET', 'POST'])
 def test():
