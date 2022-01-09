@@ -93,48 +93,105 @@ def tp2_par2():
 #TP2 partie 2.2
 @app.route('/tp2/part2-1')
 def tp2_par2_1():
-    return render_template('/tp2/part2-1.html')
+    targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
+    urlFichier = glob.glob(targetPattern)[-1]
+    decompoUrl = urlFichier.split("=")[1]
+    version = int(decompoUrl.split(")")[0])
+    return render_template('/tp2/part2-1.html', id=version)
 
 # @app.route('/contents/<int:content_id>/')
 # def content(content_id):
 #     return '%s' % content_id
 
-#import graphviz
-#import os
-#import io
-#import pydot
-#import PIL.Image as Image
-from flask import request, redirect
 
 @app.route('/form')
 def form():
     return render_template('form.html')
 
-#@app.route('/test', methods = ['GET', 'POST'])
-#def test():
-#    if request.method == "POST":
-#        req = request.form
+from flask import request, redirect
 
-#        sujet = req["subject"]
-#        relation = req["relation"]
-#        objet = req["object"]
+""""
+import graphviz
+import os
+import io
+import pydot
+import PIL.Image as Image
+
+@app.route('/test', methods = ['GET', 'POST'])
+def test():
+    if request.method == "POST":
+        req = request.form
+
+        sujet = req["subject"]
+        relation = req["relation"]
+        objet = req["object"]
 
         #os.environ["PATH"] += os.pathsep + "C:\\users\\valen\\anaconda3\Library\\bin\\graphviz"
         # create file-object in memory
-#        file_object = io.BytesIO()
-#        d = graphviz.Graph()
-#        d.edge("Peter Parker", "Spider-Man")
-#        d.edge("Peter Parker", "Horizon Labs", "travaille")
-#        d.edge("Peter Parker", "Gwen Stacy", "aime")
-#        d.edge("Peter Parker", "Harry Osborn", "meilleur ami")
-#        d.edge(sujet, objet, relation)
-#        test = d._repr_image_png()
-#        imageTest = Image.open(io.BytesIO(test))
-#        im1 = imageTest.save(r".\appBDD\static\img\graphe.png")
-#    image = r".\static\img\graphe.png"
-#    return send_file(image, mimetype='image/png')
+        file_object = io.BytesIO()
+        d = graphviz.Graph()
+        d.edge("Peter Parker", "Spider-Man")
+        d.edge("Peter Parker", "Horizon Labs", "travaille")
+        d.edge("Peter Parker", "Gwen Stacy", "aime")
+        d.edge("Peter Parker", "Harry Osborn", "meilleur ami")
+        d.edge(sujet, objet, relation)
+        test = d._repr_image_png()
+        imageTest = Image.open(io.BytesIO(test))
+        im1 = imageTest.save(r".\appBDD\static\img\graphe.png")
+    image = r".\static\img\graphe.png"
+    return send_file(image, mimetype='image/png')
+"""
+import json
+import glob
+import os
 
+@app.route('/formulaire', methods = ['GET', 'POST'])
+def test():
+    if request.method == "POST":
+        req = request.form
 
+        sujet = req["subject"]
+        relation = req["relation"]
+        objet = req["object"]
 
+        targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
+        urlFichier = glob.glob(targetPattern)[-1]
+
+        existeSujet = False
+        existeObjet = False
+        idSujet = -1
+        idObjet = -1
+
+        with open(urlFichier) as json_file:
+            data = json.load(json_file)
+            noeuds = data['nodes']
+            liens = data['links']
+            for p in noeuds:
+                if p['name'] == sujet:
+                    existeSujet = True
+                    idSujet = p['id']
+                if p['name'] == objet:
+                    existeObjet = True
+                    idObjet = p['id']
+        if existeSujet == False:
+            idSujet = len(noeuds) + 1 
+            dic = {'name': sujet, 'id': idSujet}
+            noeuds.append(dic)
+        if existeObjet == False:
+            idObjet = len(noeuds) + 1
+            dic = {'name': objet, 'id': idObjet}
+            noeuds.append(dic)
+        link = {"source": idSujet, "target": idObjet, "type": relation}
+        liens.append(link)
+        file = {"nodes": noeuds, "links": liens}
+
+        decompoUrl = urlFichier.split("=")[1]
+        version = int(decompoUrl.split(")")[0]) + 1
+        os.remove(urlFichier)
+        urlFichier = "./appBDD/static/json/graph(vers=" + str(version) + ").json"
+
+        with open(urlFichier, 'w') as fp:
+            json.dump(file, fp)
+    return render_template('/tp2/part2-1.html', id=version)
 
 
