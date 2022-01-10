@@ -168,7 +168,7 @@ def test():
         idSujet = -1
         idObjet = -1
 
-        with open(urlFichier) as json_file:
+        with open(urlFichier[-1]) as json_file:
             data = json.load(json_file)
             noeuds = data['nodes']
             liens = data['links']
@@ -191,12 +191,11 @@ def test():
         liens.append(link)
         file = {"nodes": noeuds, "links": liens}
 
-        decompoUrl = urlFichier.split("=")[1]
+        decompoUrl = urlFichier[-1].split("=")[1]
         version = int(decompoUrl.split(")")[0]) + 1
-        os.remove(urlFichier)
+        os.remove(urlFichier[-1])
         if production:
             urlFichier = "./app/appBDD/static/json/graph(vers=" + str(version) + ").json"
-
         else:
             urlFichier = "./appBDD/static/json/graph(vers=" + str(version) + ").json"
 
