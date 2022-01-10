@@ -1,1 +1,42 @@
-{"nodes": [{"name": "Peter", "id": 1}, {"name": "Norman", "id": 2}, {"name": "Oscorp", "id": 3}], "links": [{"source": 1, "target": 2, "type": "KNOWS"}, {"source": 2, "target": 3, "type": "FOUNDED"}, {"source": 1, "target": 3, "type": "WORKS_AT"}}
+{
+    "nodes": [
+      {
+        "name": "Peter Parker",
+        "id": 1
+      },
+      {
+        "name": "Norman Osborn",
+        "id": 2
+      },
+      {
+        "name": "Oscorp",
+        "id": 3
+      },
+      {
+        "name": "Marvel",
+        "id": 4
+      }
+    ],
+    "links": [
+      {
+        "source": 1,
+        "target": 2,
+        "type": "KNOWS"
+      },
+      {
+        "source": 1,
+        "target": 3,
+        "type": "FOUNDED"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "WORKS_ON"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "type": "IS_A"
+      }
+    ]
+  }
