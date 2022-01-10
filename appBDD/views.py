@@ -153,9 +153,15 @@ def test():
         sujet = req["subject"]
         relation = req["relation"]
         objet = req["object"]
-
-        targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
-        urlFichier = glob.glob(targetPattern)[-1]
+        production = True
+        path = "/app/appBDD/static/json/graph(vers=[0-9]*).json"
+        #path = "/appBDD/static/json/graph(vers=[0-9]*).json"
+        #targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
+        urlFichier = glob.glob(path)
+        if len(urlFichier) < 1:
+            production = False
+            path = r".\appBDD\static\json\graph(vers=[0-9]*).json"
+            urlFichier = glob.glob(path)
 
         existeSujet = False
         existeObjet = False
@@ -188,7 +194,11 @@ def test():
         decompoUrl = urlFichier.split("=")[1]
         version = int(decompoUrl.split(")")[0]) + 1
         os.remove(urlFichier)
-        urlFichier = "./appBDD/static/json/graph(vers=" + str(version) + ").json"
+        if production:
+            urlFichier = "./app/appBDD/static/json/graph(vers=" + str(version) + ").json"
+
+        else:
+            urlFichier = "./appBDD/static/json/graph(vers=" + str(version) + ").json"
 
         with open(urlFichier, 'w') as fp:
             json.dump(file, fp)
