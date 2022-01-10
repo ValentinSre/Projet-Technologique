@@ -153,10 +153,9 @@ def test():
         sujet = req["subject"]
         relation = req["relation"]
         objet = req["object"]
+
         production = True
         path = "/app/appBDD/static/json/graph(vers=[0-9]*).json"
-        #path = "/appBDD/static/json/graph(vers=[0-9]*).json"
-        #targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
         urlFichier = glob.glob(path)
         if len(urlFichier) < 1:
             production = False
@@ -167,7 +166,7 @@ def test():
         existeObjet = False
         idSujet = -1
         idObjet = -1
-
+        
         with open(urlFichier[-1]) as json_file:
             data = json.load(json_file)
             noeuds = data['nodes']
@@ -193,14 +192,17 @@ def test():
 
         decompoUrl = urlFichier[-1].split("=")[1]
         version = int(decompoUrl.split(")")[0]) + 1
+        
         os.remove(urlFichier[-1])
+    
         if production:
-            urlFichier = "./app/appBDD/static/json/graph(vers=" + str(version) + ").json"
+            urlFichier = "/app/appBDD/static/json/graph(vers=" + str(version) + ").json"
         else:
             urlFichier = "./appBDD/static/json/graph(vers=" + str(version) + ").json"
-
+        
         with open(urlFichier, 'w') as fp:
             json.dump(file, fp)
+        
     return render_template('/tp2/part2-1.html', id=version)
 
 
