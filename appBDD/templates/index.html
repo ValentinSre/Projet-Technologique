@@ -1,34 +1,191 @@
-<div class="conteneur">
-  <h2>
-    <a href="#menu">Découvrez le Web des données</a>
-  </h2>
-     
-  <div id="menu" class="openMenu" >
-    <div class = "content">
-      <a href="/" class="fermeture"></a>
-      <div class = "nav">
-        <ul class = "listeChoix">
-          <br><br><br><br><br><br><br><br><br><br>
-          <div class = "choixMenu" style="margin: auto">
-            <h2>PARTIE 1 : Comprendre le Web</h2>
-            <li>
-              <a href="/tp1"> TP1 : Le Web documentaire</a>
-            </li>
-            <li>
-              <a href="/tp2"> TP2 : Le Web des données</a>
-            </li>
-            <h2>PARTIE 2 : Manipuler les données</h2>
-            <li>
-              <a href="#">TP3 : Données relationnelles</a>
-            </li>
-            <li>
-              <a href="/sql">Interface d'exécution SQL</a>
-            </li>
-          </div>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Projet Technologique</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='css/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- CSS File -->
+  <link href="{{ url_for('static', filename='css/accueil.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html"></a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#top">Accueil</a></li>
+          <li class="dropdown"><a href="/tp1"><span>TP1</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a><span>Clarification des notions</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp1">Architecture globale</a></li>
+                  <li><a href="/tp1/part1-1">Communication sur Internet</a></li>
+                  <li><a href="/tp1/part1-2">Communication sur le Web</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a><span>Parcours du Web</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp1/part2">Consulter le Web</a></li>
+                  <li><a href="/tp1/part2-1">Utiliser un moteur de recherche</a></li>
+                  <li><a href="/tp1/part3">Les niveaux d'interrogation</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>          
+          <li class="dropdown"><a href="/tp2"><span>TP2</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a><span>Les données du Web</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp2/part1">Comparaison au Web documentaire</a></li>
+                  <li><a href="/tp2/part1-2">Composition d'une page</a></li>
+                  <li><a href="/tp2/part1-3">Le Web des données</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a><span>Représenter les données entre elles</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp2/part2">Représentation concrète des données</a></li>
+                  <li><a href="/tp2/part2-1">Représentation graphique des données</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>           
+          <li class="dropdown"><a href="#"><span>TP3</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>PARTIE 1</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">SOUS PARTIE 1</a></li>
+                  <li><a href="#">SOUS PARTIE 2</a></li>
+                  <li><a href="#">SOUS PARTIE 3</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>PARTIE 2</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">SOUS PARTIE 1</a></li>
+                  <li><a href="#">SOUS PARTIE 2</a></li>
+                  <li><a href="#">SOUS PARTIE 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li> 
         </ul>
+      </nav>
+    <!-- .navbar -->
+
+      <a href="/sql" class="interface-btn scrollto"><span class="d-none d-md-inline"></span>Interface d'exécution SQL</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Top Section ======= -->
+  <section id="top" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Découvrir le Web des données</h1>
+      <a href="/tp1" class="btn-demarrer scrollto">Démarrer</a>
+    </div>
+  </section>
+  <!-- End top -->
+
+  <main id="main">
+    <!-- ======= Bottom Section ======= -->
+    <section id="bottom" class="bottom">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Nos objectifs...</h3>
+              <p>
+                À travers trois séances de travaux pratiques, initiez vous à la notion de <i>donnée</i>.
+                Passez en revue les notions inhérentes au Web documentaire pour converger vers le concept 
+                du Web des données, avant de découvrir les données dites relationnelles. N'hésitez pas à 
+                pratiquer ces notions grâce à ces activités et à notre interface d'exécution de requêtes SQL !
+              </p>
+              <!--<div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>-->
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-file-find"></i>
+                    <a href="/tp1"><h4>Le Web documentaire</h4></a>
+                    <p>Clarification de notions importantes et apprentissage du fonctionnement global 
+                      du Web documentaire.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-data"></i>
+                    <a href="/tp2"><h4>Le Web des données</h4></a>
+                    <p>Introduction au Web sémantique et à la donnée sémantique, par opposition à la 
+                      donnée documentaire.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-table"></i>
+                    <a href="#"><h4>Données relationnelles</h4></a>
+                    <p>Exploitation d'une base de données relationnelle et découverte du langage SQL.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Bottom Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Thème par <strong><span>Bootstrap</span></strong>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.youtube.com/channel/UCHu4nXDst8MkC_NPX5i87Ug" class="youtube"><i class="bx bxl-youtube"></i></a>
+        <a href="https://twitter.com/enssat?lang=fr" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/enssat/" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="http://blog.enssat.fr/" class="blogger"><i class="bx bxl-blogger"></i></a>
+        <a href="https://www.linkedin.com/school/enssat/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.instagram.com/enssat_lannion/" class="instagram"><i class="bx bxl-instagram"></i></a>
+
       </div>
     </div>
-  </div>
-</div>
+  </footer><!-- End Footer -->
 
-<link href="{{ url_for('static', filename='css/accueil.css') }}" rel="stylesheet">
+</body>
+
+</html>
