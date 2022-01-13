@@ -78,17 +78,56 @@
         </div>
 
         <div id = "div2" style = "display:none">
-          <div style="height: 370px;" class="fenetre"> 
+          <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
             <div class="research"> 
               <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-              Exemples d'URI
+              Exemple d'URI
             </div>
             <br>
-            <div style = "width: 500px; margin: auto">
-              [ INSÉRER DES PHOTOS D'EXEMPLES ]
+            <div style = "width: 600px; margin: auto">
+              Plaçons nous dans le contexte d'une bibliothèque, à la recherche d'un livre particulier. 
+              La bibliothèque représente le Web, le livre représente une donnée recherchée.
+              <br><br>
+              Si l'on demande <i><b>Amazing Spider-Man N°1</b></i> au bibliothécaire, il ne saura pas spécifiquement
+              quel livre nous souhaitons (plusieurs livres portent ce titre), il ne saura donc pas où chercher. 
+              Nous ne pourrions pas avoir le livre (simplement).
             </div>
+            <br>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 20px; width: 300px; margin:auto">
+                <div class="info" style="font-size: 1.5rem;">
+                  <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Identifier le livre</p>
+                  Pour identifier un livre, il existe un <b>identifiant unique</b>, appelé <b>ISBN</b>. Ce code désigne un 
+                  livre particulier <i>(au sens large)</i> et permet donc d'identifier quel livre <i>Amazing 
+                  Spider-Man N°1 </i> nous souhaitons.<br><br>
+                  
+                  Il s'agit de l'<b>URN</b> du livre : nous pouvons désormais identifier le livre avec précision.
+                </div>
+              </div>
+              <div style = "padding-right: 20px; width: 350px; margin:auto">
+                <div class="info" style="font-size: 1.46rem;">
+                  <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Localiser le livre</p>
+                    Pour localiser le livre dans la bibliothèque, il faut savoir dans quel rayon le chercher 
+                    et sur quelle étagère. Si l'on connaît ces paramètres, on peut savoir où se trouve le livre dans la bibliothèque.
+                    <br><br>
+                    Il s'agit de l'<b>URL</b> du livre : nous pouvons désormais localiser le livre avec précision.
+                    <br><br>
+                    <p style = "font-size: 1.2rem;">
+                      Le rayon pourrait être comparé au site Web, l'étagère pourrait être comparée à la page du site.
+                    </p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div style=" padding-left: 20px; padding-right: 20px;">
+            <div class="info" style="font-size: 1.5rem;">
+              Indépendamment, l'ISBN ne permet pas de trouver le livre et l'emplacement du livre ne permet pas 
+              de savoir quel livre nous cherchons.
+              Combinés, ils permettent de tout savoir du livre : ils forment l'<b>URI</b> du livre.
+            </div>
+          </div>
             <br>
             <button class="quiz" id="btn3">Continuer</button>
           </div>
@@ -108,13 +147,13 @@
             </div>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
               <div style = "padding-left: 10px; width : 320px">
-                <div class="quiz-container">
-                  <div id="quiz31"></div>
-                </div>    
-                <br>
-                <button class="quiz" id="previous31" >Précédent</button>
-                <button class="quiz" id="next31">Suivant</button>
-                <button class="quiz" id="submit31">Corriger</button>
+                  <div class="quiz-container">
+                    <div id="quiz31"></div>
+                  </div>    
+                  <br>
+                  <button class="quiz" id="previous31" >Précédent</button>
+                  <button class="quiz" id="next31">Suivant</button>
+                  <button class="quiz" id="submit31">Corriger</button>
               </div>
               <div style = "padding-right: 10px">
                 <br>

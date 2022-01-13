@@ -5,16 +5,16 @@
 <header>
 	<div class="container" id="maincontent" tabindex="-1">
 
-    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+    	<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
-      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
-      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <div style = "padding-left: 30px;">
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- =================== DIV GAUCHE : CONTENU ======================= -->
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV DONNÉE ============================ -->
-        <div id = "divX">
-          <!-- Display question : Données -->
+				<!-- ====================== DIV DONNÉE ============================ -->
+				<div>
+					<!-- Display question : Données -->
 					<div class="fenetre"> 
 						<img class="boutons" src="/static/img/boutons.png" >
 						<br>
@@ -26,12 +26,12 @@
 						<div class = "info" style ="font-size: 1.6rem; width: 520px">
 							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
 							Sur votre navigateur, ouvrez les sites<br>« 
-              <a href="https://fr.wikipedia.org/wiki/Avengers:_Infinity_War" style="color:#34a853ff; font-weight: bold;">
-                https://fr.wikipedia.org/wiki/Avengers:_Infinity_War
-              </a> » <br>et «
-              <a href="https://dbpedia.org/page/Avengers:_Infinity_War" style="color:#34a853ff; font-weight: bold;">
-                https://dbpedia.org/page/Avengers:_Infinity_War
-              </a> ».
+							<a href="https://fr.wikipedia.org/wiki/Avengers:_Infinity_War" style="color:#34a853ff; font-weight: bold;">
+							https://fr.wikipedia.org/wiki/Avengers:_Infinity_War
+							</a> » <br>et «
+							<a href="https://dbpedia.org/page/Avengers:_Infinity_War" style="color:#34a853ff; font-weight: bold;">
+							https://dbpedia.org/page/Avengers:_Infinity_War
+							</a> ».
 						</div>
 						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 							<div style = "padding:10px">
@@ -39,30 +39,30 @@
 									<div class="quiz-container" style="margin-top:5px">
 										<div id="quiz"></div>
 									</div>
-                  <br><br>
+									<br><br>
 									<button class="quiz" id="previous" >Précédent</button>
 									<button class="quiz" id="next">Suivant</button>
 									<button class="quiz" id="submit">Corriger</button>
 									<br>
-
 								</div>
 							</div>
 							<div style="padding:10px; margin:auto">
-								<div class = "info" id="divX" style =" font-size: 1.4rem;">
+								<div class = "info" id="div1" style ="display:none; font-size: 1.4rem;">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
 									Sur DBPedia, les informations sont présentées de <b>manière structurée</b>. 
-                  Les informations sont en effet les mêmes que sur Wikipédia, tout en étant présentées d'une manière différente. 
+									Les informations sont en effet les mêmes que sur Wikipédia, 
+									tout en étant présentées d'une manière différente. 
 									<br><br>
-									<button class="quiz" id="btnX">Continuer</button>
+									<button class="quiz" id="btn2">Continuer</button>
 								</div>
 							</div>
 						</div>
 					</div>
 
-          <br>
+					<br>
 
-          <!-- Display explication : La donnée-->
-					<div class="fenetre"> 
+					<!-- Display explication : La donnée-->
+					<div class="fenetre" id = "div2" style="display:none"> 
 						<img class="boutons" src="/static/img/boutons.png" >
 						<br>
 						<div class="research"> 
@@ -77,42 +77,67 @@
 							<div style = "padding:10px; margin:auto">
 								<div class = "info" style="color:#7c7c7c; font-size: 16px">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
-                  Quelles informations concernant Kevin Feige pouvez-vous déduire de Wikipédia ? de DBPedia ?
+									Quelles informations concernant <b>Kevin Feige</b> pouvez-vous déduire de Wikipédia ? de DBPedia ?
 									<br><br>
-									<button class="quiz" id="divX">Corriger</button>
+									<button class="quiz" id="btn3">Corriger</button>
 									<br>
 								</div>
 							</div>
 							<div style="padding:10px; margin:auto">
-                <div class = "info" style="color:#7c7c7c; font-size: 13px">
+								<div class = "info" id = "div3" style="display: none; color:#7c7c7c; font-size: 13px">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-                  On remarque de part et d'autre que le film Avengers: Infinity War est produit par Kevin Feige.
-                  Cependant, la représentation sur DBPedia suit le modèle suivant : un <b>sujet</b> <i>(ici "Avengers: Infinity War")</i> 
-                  est associé par la <b>relation</b> <i>"producer"</i> à un <b>objet</b> <i>(ici "Kevin Feige")</i>.
+									On remarque de part et d'autre que le film Avengers: Infinity War est produit par Kevin Feige.
+									Cependant, la représentation sur DBPedia suit le modèle suivant : un <b>sujet</b> <i>(ici "Avengers: Infinity War")</i> 
+									est associé par la <b>relation</b> <i>"producer"</i> à un <b>objet</b> <i>(ici "Kevin Feige")</i>.
 									<br><br>
 									<button class="quiz" onclick="window.location.href = '/tp2/part1-2'">Continuer</button>
 									<br>
 								</div>
-              </div>
+							</div>
 						</div>
 					</div>
-        </div>
-      </div>
+				</div>
+			</div>
 
-      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
-      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <div >
-        {% include '/tp2/menus/menu1.html' %}
-      </div>
-    </div>
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<!-- ====================== DIV GAUCHE : MENU ======================= -->
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<div >
+				{% include '/tp2/menus/menu1.html' %}
+			</div>
+		</div>
 
 		<br>
 
-    {% include 'interface.html' %}
-
-  </div>
+		{% include 'interface.html' %}
+	</div>
 </header>
 <script src="{{ url_for('static', filename='js/tp2/quiz2.js') }}"></script>
+<script>
+let btn1 = document.getElementById("submit");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+let div3 = document.getElementById("div3");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+      div1.style.display = "block";
+    }
+})
+
+btn2.addEventListener("click", () => {
+    if(getComputedStyle(div2).display == "none"){
+      div2.style.display = "block";
+    }
+})
+
+btn3.addEventListener("click", () => {
+    if(getComputedStyle(div3).display == "none"){
+      div3.style.display = "block";
+    }
+})
+</script>
 {% endblock %}
 
