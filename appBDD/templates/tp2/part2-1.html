@@ -232,10 +232,21 @@
                             .on("drag", dragged)
                             //.on("end", dragended)
                     );
-
-                node.append("circle")
-                    .attr("r", 2)
-                    .style("fill", function (d, i) {return colors(i);})
+                node.append('circle').attr("r", 40); //radius
+                svg.selectAll('circle')
+                .on('click', function () { // arrow function will produce this = undefined
+                d3.selectAll('circle')
+                .style("fill", "lightgray");
+                d3.select(this)
+                    .style("fill", "aliceblue");
+                })
+                .on('mouseover', function () {
+                    d3.selectAll('circle')
+                    .style("stroke", "black");
+                    
+                    d3.select(this)
+                    .style("stroke", "green");
+                });
 
                 node.append("title")
                     .text(function (d) {return d.id;});
@@ -292,6 +303,33 @@
             }
 
         </script>
+        <style>
+            svg {
+    font-family: monospace;
+}
+.node {
+
+}
+
+.node circle {
+    fill: lightgray;
+    stroke: black;
+    stroke-opacity: 0.5;
+    cursor: pointer;
+}
+
+.node text {
+    text-anchor: middle;
+}
+
+.node .delete-icon {
+    cursor: pointer;
+    padding-left: 50px;
+    opacity: 0.8;
+}
+
+.link { stroke: #999; stroke-opacity: .6; stroke-width: 2px; }
+        </style>
       </div>
       
       <div>
