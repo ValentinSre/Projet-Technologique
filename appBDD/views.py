@@ -98,9 +98,8 @@ def tp2_par2():
 #TP2 partie 2.2
 @app.route('/tp2/part2-1')
 def tp2_par2_1():
+    regenGraphe()
     path = "/app/appBDD/static/json/graph(vers=[0-9]*).json"
-    #path = "/appBDD/static/json/graph(vers=[0-9]*).json"
-    #targetPattern = r".\appBDD\static\json\graph(vers=[0-9]*).json"
     urlFichier = glob.glob(path)
     if len(urlFichier) < 1:
         path = r".\appBDD\static\json\graph(vers=[0-9]*).json"
@@ -108,6 +107,11 @@ def tp2_par2_1():
     decompoUrl = (urlFichier[-1]).split("=")[1]
     version = int(decompoUrl.split(")")[0])
     return render_template('/tp2/part2-1.html', id=version)
+
+#TP2 partie 2.3
+@app.route('/tp2/part2-2')
+def tp2_par2_2():
+    return render_template('/tp2/part2-2.html')
 
 # @app.route('/contents/<int:content_id>/')
 # def content(content_id):
@@ -205,4 +209,29 @@ def test():
         
     return render_template('/tp2/part2-1.html', id=version)
 
+# Fonction pour regénérer le graphe à 0 (version 1)
+def regenGraphe():
+    # On localise le JSON du graphe
+    production = True
+    path = "/app/appBDD/static/json/graph(vers=[0-9]*).json"
+    urlFichier = glob.glob(path)
+    if len(urlFichier) < 1:
+        production = False
+        path = r".\appBDD\static\json\graph(vers=[0-9]*).json"
+        urlFichier = glob.glob(path)
 
+    # On le supprime
+    os.remove(urlFichier[-1])
+
+    # On en regénère un nouveau JSON
+    file = {
+    "nodes": [{ "name": "Peter Parker", "id": 1 }, { "name": "Norman Osborn", "id": 2 }, { "name": "Oscorp", "id": 3 }, { "name": "Spider-Man", "id": 4 } ],
+    "links": [{ "source": 1, "target": 2, "type": "CONNAIT" }, {"source": 1, "target": 3, "type": "A_CRÉÉ" }, { "source": 2, "target": 3, "type": "TRAVAILLE_CHEZ" }, { "source": 1, "target": 4, "type": "EST" }] }
+
+    if production:
+        urlFichier = "/app/appBDD/static/json/graph(vers=1).json"
+    else:
+        urlFichier = "./appBDD/static/json/graph(vers=1).json"
+
+    with open(urlFichier, 'w') as fp:
+        json.dump(file, fp)

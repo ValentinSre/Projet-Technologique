@@ -96,6 +96,21 @@ button.quiz {
   padding: 5px 20px;
 }
 
+input[type=text] {
+  width:100%;
+  margin:auto;
+  padding: 2px;
+  border-radius: 30px;
+  border: 1px solid rgba(49, 49, 53, 0.2);
+  box-shadow: 1px 1px 2px 1px rgba(49, 49, 53, 0.2);
+  background: white;
+  padding-left:10px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #34a853ff;
+  text-align: left;
+}
+
 div.fenetre {
   width: 700px; 
 	margin:auto;
@@ -249,3 +264,4 @@ p.fenetre{
   font-weight: bolder;
   color: #34a853; 
 }
+
