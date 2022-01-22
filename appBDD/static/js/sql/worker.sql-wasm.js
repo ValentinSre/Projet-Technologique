@@ -205,12 +205,19 @@ else if (typeof exports === 'object'){
 
 "use strict";
 
-var db;
 
 function onModuleReady(SQL) {
     function createDb(data) {
         if (db != null) db.close();
         db = new SQL.Database(data);
+        let sqlstr = 
+        " CREATE TABLE films (id integer, titre text, sortie date, studio text); \
+        INSERT INTO films VALUES (1,'Avengers','2012-05-01','Marvel Studios'); \
+        INSERT INTO films VALUES (2,'Star Wars','1977-10-19','Lucasfilm'); \
+        CREATE TABLE bd (id integer, titre text, sortie date, editeur text); \
+        INSERT INTO bd VALUES (1,'Amazing Spider-Man','2012-05-01','Panini'); ";
+
+        db.run(sqlstr); // Run the query without returning anything 
         return db;
     }
 
@@ -293,3 +300,4 @@ if (typeof importScripts === "function") {
             .catch(onError.bind(event));
     };
 }
+
