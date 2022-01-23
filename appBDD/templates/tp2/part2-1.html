@@ -7,12 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
-    <style type="text/css">
-      .node {}
-
-      .link { stroke: #999; stroke-opacity: .6; stroke-width: 1px; }
-    </style>
-
     <title>Projet Technologique</title>
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
@@ -42,14 +36,14 @@
 </head>
 
 <body id="page-top" class="index">
-<div id="skipnav"><a href="#maincontent">Contenu principal</a></div>
+    <div id="skipnav"><a href="#maincontent">Contenu principal</a></div>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                  <a class="navbar-brand" href="/">Découvrir le Web des données</a>
+                <a class="navbar-brand" href="/">Découvrir le Web des données</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,296 +57,280 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-
     </nav>
 
-    
-<header>
-	<div class="container" id="maincontent" tabindex="-1">
-    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
-      <div>
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+                <div>
+                    <div class="fenetre"> 
+                        <img class="boutons" src="/static/img/boutons.png" >
+                        <br>
+                        <div class="research"> 
+                            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                            Ajouter au graphe
+                        </div>
+                        <br>
+                        <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 15px;">
+                            <div style="width:320px; padding-left: 15px; margin:auto">
+                                <div class="info" style = "font-size: 1.4rem;">
+                                    Observez le graphe ci-dessous et effectuez les manipulations.
+                                    <br><br>
+                                    Ajoutez les triplets <i>(l'un après l'autre)</i> pour définir que...
+                                    <br><br>
+                                    <ul style = "text-align: left; text-decoration:none; ">
+                                        <li>Tom Holland JOUE Spider-Man</li>
+                                        <li>Willem Dafoe JOUE Bouffon Vert</li>
+                                        <li>Norman Osborn EST Bouffon Vert</li>
+                                        <li>(triplet de votre choix)</li>
+                                    </ul>
+                                    <br>
+                                    <p style="font-size: 1.2rem;"><i>Attention à l'orthographe et aux majuscules...</i></p>
+                                </div>
+                             </div>
 
-        <div class="fenetre"> 
-          <img class="boutons" src="/static/img/boutons.png" >
-          <br>
-          <div class="research"> 
-            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Ajouter au graphe
-          </div>
-          <br>
-          <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 15px;">
-            <div style="width:320px; padding-left: 15px; margin:auto">
-            <div class="info" style = "font-size: 1.4rem;">
-                Observez le graphe ci-dessous et effectuez les manipulations.
-                <br><br>
-                Ajoutez les triplets <i>(l'un après l'autre)</i> pour définir que...
-                <br><br>
-                <ul style = "text-align: left; text-decoration:none; ">
-                    <li>Tom Holland JOUE Spider-Man</li>
-                    <li>Willem Dafoe JOUE Bouffon Vert</li>
-                    <li>Norman Osborn EST Bouffon Vert</li>
-                    <li>(triplet de votre choix)</li>
-                </ul>
-                <br>
-                <p style="font-size: 1.2rem;"><i>Attention à l'orthographe et aux majuscules...</i></p>
-            </div>
-            </div>
-
-          <div style="width:330px; padding-right: 15px; margin:auto">
-            <div class="info">
-            <form action="/formulaire" method="POST"> 
- 
-              <div class="form-group"> 
-                <label style="font-size: 1.4rem;">Sujet</label> 
-                <input type="text" class="research" id="subject" name="subject" placeholder="Quel est le sujet de la relation ?">
-              </div> 
+                            <div style="width:330px; padding-right: 15px; margin:auto">
+                                <div class="info">
+                                    <form action="/formulaire" method="POST"> 
+                        
+                                    <div class="form-group"> 
+                                        <label style="font-size: 1.4rem;">Sujet</label> 
+                                        <input type="text" class="research" id="subject" name="subject" placeholder="Quel est le sujet de la relation ?">
+                                    </div> 
+                            
+                                    <div class="form-group"> 
+                                        <label style="font-size: 1.4rem;">Relation</label> 
+                                        <input type="text" class="research" id="relation" name="relation" placeholder="Quelle est la relation/propriété ?"> 
+                                    </div> 
+                            
+                                    <div class="form-group"> 
+                                        <label style="font-size: 1.4rem;">Objet</label> 
+                                        <input type="text" class="research" id="object" name="object" placeholder="Quel est l'objet de la relation ?"> 
+                                    </div> 
        
-              <div class="form-group"> 
-                <label style="font-size: 1.4rem;">Relation</label> 
-                <input type="text" class="research" id="relation" name="relation" placeholder="Quelle est la relation/propriété ?"> 
-              </div> 
+                                    <button type="submit" class="quiz">Ajouter</button> 
        
-              <div class="form-group"> 
-                <label style="font-size: 1.4rem;">Objet</label> 
-                <input type="text" class="research" id="object" name="object" placeholder="Quel est l'objet de la relation ?"> 
-              </div> 
-       
-              <button type="submit" class="quiz">Ajouter</button> 
-       
-            </form> 
-        </div>
-          </div>
-          </div>
-        </div>
-        <br>
-        <div class="fenetre"> 
-            <img class="boutons" src="/static/img/boutons.png" >
-            <br>
-            <div class="research"> 
-              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-              Visualiser le graphe
-            </div>
-            <br>
-            <div style = "margin: auto">
-              <svg width="650" height="400" fill></svg>
-            </div>
-            <button class="quiz" onclick="window.location.href = '/tp2/part2-2'">Continuer</button>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="fenetre"> 
+                        <img class="boutons" src="/static/img/boutons.png" >
+                        <br>
+                        <div class="research"> 
+                            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                            Visualiser le graphe
+                        </div>
+                        <br>
+                        <div style = "margin: auto">
+                            <svg width="650" height="400" fill></svg>
+                        </div>
+                        <button class="quiz" onclick="window.location.href = '/tp2/part2-2'">Continuer</button>
+                    </div>
 
-          </div>
-          
+                    <script src="http://d3js.org/d3.v4.min.js" type="text/javascript"></script>
+                    <script src="http://d3js.org/d3-selection-multi.v1.js"></script>
 
-        <script src="http://d3js.org/d3.v4.min.js" type="text/javascript"></script>
-        <script src="http://d3js.org/d3-selection-multi.v1.js"></script>
+                    <script type="text/javascript">   
+                        var colors = d3.scaleOrdinal(d3.schemeCategory10);
+                        var identifiant = {{id}}
+                        var adress = "/static/json/graph(vers="
+                        var path = adress.concat(identifiant, ").json")
 
-        <script type="text/javascript">   
-            var colors = d3.scaleOrdinal(d3.schemeCategory10);
-            var identifiant = {{id}}
-            var adress = "/static/json/graph(vers="
-            var path = adress.concat(identifiant, ").json")
+                        var svg = d3.select("svg"),
+                            width = +svg.attr("width"),
+                            height = +svg.attr("height"),
+                            node,
+                            link;
 
-            var svg = d3.select("svg"),
-                width = +svg.attr("width"),
-                height = +svg.attr("height"),
-                node,
-                link;
+                        svg.append('defs').append('marker')
+                            .attrs({'id':'arrowhead',
+                                'viewBox':'-0 -5 10 10',
+                                'refX':40,
+                                'refY':0,
+                                'orient':'auto',
+                                'markerWidth':5,
+                                'markerHeight':5,
+                                'xoverflow':'visible'})
+                            .append('svg:path')
+                            .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+                            .attr('fill', '#999')
+                            .style('stroke','none');
 
-            svg.append('defs').append('marker')
-                .attrs({'id':'arrowhead',
-                    'viewBox':'-0 -5 10 10',
-                    'refX':13,
-                    'refY':0,
-                    'orient':'auto',
-                    'markerWidth':13,
-                    'markerHeight':13,
-                    'xoverflow':'visible'})
-                .append('svg:path')
-                .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-                .attr('fill', '#999')
-                .style('stroke','none');
+                        var simulation = d3.forceSimulation()
+                            .force("link", d3.forceLink().id(function (d) {return d.id;}).distance(200).strength(1))
+                            .force("charge", d3.forceManyBody())
+                            .force("center", d3.forceCenter(width / 2, height / 2));
+                        
+                        d3.json(path, function (error, graph) {
+                            if (error) throw error;
+                            update(graph.links, graph.nodes);
+                        })
 
-            var simulation = d3.forceSimulation()
-                .force("link", d3.forceLink().id(function (d) {return d.id;}).distance(100).strength(1))
-                .force("charge", d3.forceManyBody())
-                .force("center", d3.forceCenter(width / 2, height / 2));
-            
-            d3.json(path, function (error, graph) {
-                if (error) throw error;
-                update(graph.links, graph.nodes);
-            })
+                        function update(links, nodes) {
+                            link = svg.selectAll(".link")
+                                .data(links)
+                                .enter()
+                                .append("line")
+                                .attr("class", "link")
+                                .attr('marker-end','url(#arrowhead)')
 
-            function update(links, nodes) {
-                link = svg.selectAll(".link")
-                    .data(links)
-                    .enter()
-                    .append("line")
-                    .attr("class", "link")
-                    .attr('marker-end','url(#arrowhead)')
+                            link.append("title")
+                                .text(function (d) {return d.type;});
 
-                link.append("title")
-                    .text(function (d) {return d.type;});
+                            edgepaths = svg.selectAll(".edgepath")
+                                .data(links)
+                                .enter()
+                                .append('path')
+                                .attrs({
+                                    'class': 'edgepath',
+                                    'fill-opacity': 0,
+                                    'stroke-opacity': 0,
+                                    'id': function (d, i) {return 'edgepath' + i}
+                                })
+                                .style("pointer-events", "none");
 
-                edgepaths = svg.selectAll(".edgepath")
-                    .data(links)
-                    .enter()
-                    .append('path')
-                    .attrs({
-                        'class': 'edgepath',
-                        'fill-opacity': 0,
-                        'stroke-opacity': 0,
-                        'id': function (d, i) {return 'edgepath' + i}
-                    })
-                    .style("pointer-events", "none");
+                            edgelabels = svg.selectAll(".edgelabel")
+                                .data(links)
+                                .enter()
+                                .append('text')
+                                .style("pointer-events", "none")
+                                .attrs({
+                                    'class': 'edgelabel',
+                                    'id': function (d, i) {return 'edgelabel' + i},
+                                    'font-size': 8,
+                                    'fill': 'black'
+                                });
 
-                edgelabels = svg.selectAll(".edgelabel")
-                    .data(links)
-                    .enter()
-                    .append('text')
-                    .style("pointer-events", "none")
-                    .attrs({
-                        'class': 'edgelabel',
-                        'id': function (d, i) {return 'edgelabel' + i},
-                        'font-size': 10,
-                        'fill': '#aaa'
-                    });
+                            edgelabels.append('textPath')
+                                .attr('xlink:href', function (d, i) {return '#edgepath' + i})
+                                .style("text-anchor", "middle")
+                                .style("pointer-events", "none")
+                                .attr("startOffset", "50%")
+                                .text(function (d) {return d.type});
 
-                edgelabels.append('textPath')
-                    .attr('xlink:href', function (d, i) {return '#edgepath' + i})
-                    .style("text-anchor", "middle")
-                    .style("pointer-events", "none")
-                    .attr("startOffset", "50%")
-                    .text(function (d) {return d.type});
+                            node = svg.selectAll(".node")
+                                .data(nodes)
+                                .enter()
+                                .append("g")
+                                .attr("class", "node")
+                                .call(d3.drag()
+                                        .on("start", dragstarted)
+                                        .on("drag", dragged)
+                                        //.on("end", dragended)
+                                );
+                            node.append('circle').attr("r", 30); //radius
+                            svg.selectAll('circle')
+                            .on('click', function () { // arrow function will produce this = undefined
+                            d3.selectAll('circle')
+                            .style("fill", "lightgray");
+                            d3.select(this)
+                                .style("fill", "aliceblue");
+                            })
+                            .on('mouseover', function () {
+                                d3.selectAll('circle')
+                                .style("stroke", "black");
+                                
+                                d3.select(this)
+                                .style("stroke", "green");
+                            });
 
-                node = svg.selectAll(".node")
-                    .data(nodes)
-                    .enter()
-                    .append("g")
-                    .attr("class", "node")
-                    .call(d3.drag()
-                            .on("start", dragstarted)
-                            .on("drag", dragged)
-                            //.on("end", dragended)
-                    );
-                node.append('circle').attr("r", 40); //radius
-                svg.selectAll('circle')
-                .on('click', function () { // arrow function will produce this = undefined
-                d3.selectAll('circle')
-                .style("fill", "lightgray");
-                d3.select(this)
-                    .style("fill", "aliceblue");
-                })
-                .on('mouseover', function () {
-                    d3.selectAll('circle')
-                    .style("stroke", "black");
-                    
-                    d3.select(this)
-                    .style("stroke", "green");
-                });
+                            nodeText = node.append("text")
+                                .attr("dy", -3)
+                                .attr("y", -25);
 
-                nodeText = node.append("text")
-                .attr("dy", -3)
-                .attr("y", -25);
+                            nodeText.selectAll("tspan.text")
+                                .data((d) =>  d.name.split(" "))
+                                .enter()
+                                .append("tspan")
+                                .attr("class", "text")
+                                .text(d => d)
+                                .attr("x", -10)
+                                .attr("dx", 10)
+                                .attr("dy", 22);
 
-    nodeText.selectAll("tspan.text")
-    .data((d) =>  d.name.split(" "))
-    .enter()
-    .append("tspan")
-    .attr("class", "text")
-    .text(d => d)
-    .attr("x", -10)
-    .attr("dx", 10)
-    .attr("dy", 22);
+                            node.append("title")
+                                .text(function (d) {return d.id;});
 
-    node.append("title")
-        .text(function (d) {return d.id;});
+                            simulation
+                                .nodes(nodes)
+                                .on("tick", ticked);
 
-                simulation
-                    .nodes(nodes)
-                    .on("tick", ticked);
+                            simulation.force("link")
+                                .links(links);
+                        }
 
-                simulation.force("link")
-                    .links(links);
-            }
+                        function ticked() {
+                            link
+                                .attr("x1", function (d) {return d.source.x;})
+                                .attr("y1", function (d) {return d.source.y;})
+                                .attr("x2", function (d) {return d.target.x;})
+                                .attr("y2", function (d) {return d.target.y;});
 
-            function ticked() {
-                link
-                    .attr("x1", function (d) {return d.source.x;})
-                    .attr("y1", function (d) {return d.source.y;})
-                    .attr("x2", function (d) {return d.target.x;})
-                    .attr("y2", function (d) {return d.target.y;});
+                            node
+                                .attr("transform", function (d) {return "translate(" + d.x + ", " + d.y + ")";});
 
-                node
-                    .attr("transform", function (d) {return "translate(" + d.x + ", " + d.y + ")";});
+                            edgepaths.attr('d', function (d) {
+                                return 'M ' + d.source.x + ' ' + d.source.y + ' L ' + d.target.x + ' ' + d.target.y;
+                            });
 
-                edgepaths.attr('d', function (d) {
-                    return 'M ' + d.source.x + ' ' + d.source.y + ' L ' + d.target.x + ' ' + d.target.y;
-                });
+                            edgelabels.attr('transform', function (d) {
+                                if (d.target.x < d.source.x) {
+                                    var bbox = this.getBBox();
 
-                edgelabels.attr('transform', function (d) {
-                    if (d.target.x < d.source.x) {
-                        var bbox = this.getBBox();
+                                    rx = bbox.x + bbox.width / 2;
+                                    ry = bbox.y + bbox.height / 2;
+                                    return 'rotate(180 ' + rx + ' ' + ry + ')';
+                                }
+                                else {
+                                    return 'rotate(0)';
+                                }
+                            });
+                        }
 
-                        rx = bbox.x + bbox.width / 2;
-                        ry = bbox.y + bbox.height / 2;
-                        return 'rotate(180 ' + rx + ' ' + ry + ')';
-                    }
-                    else {
-                        return 'rotate(0)';
-                    }
-                });
-            }
+                        function dragstarted(d) {
+                            if (!d3.event.active) simulation.alphaTarget(0.3).restart()
+                            d.fx = d.x;
+                            d.fy = d.y;
+                        }
 
-            function dragstarted(d) {
-                if (!d3.event.active) simulation.alphaTarget(0.3).restart()
-                d.fx = d.x;
-                d.fy = d.y;
-            }
+                        function dragged(d) {
+                            d.fx = d3.event.x;
+                            d.fy = d3.event.y;
+                        }
 
-            function dragged(d) {
-                d.fx = d3.event.x;
-                d.fy = d3.event.y;
-            }
+                    </script>
+        
+                    <style>
+                        .node circle {
+                            fill: lightgray;
+                            stroke: black;
+                            stroke-opacity: 0.5;
+                            cursor: pointer;
+                        }
 
-        </script>
-        <style>
-            svg {
-    font-family: monospace;
-}
-.node {
+                        .node text {
+                            text-anchor: middle;
+                            text-align: justify;
+                            font-size: 0.8rem;
+                        }
 
-}
-
-.node circle {
-    fill: lightgray;
-    stroke: black;
-    stroke-opacity: 0.5;
-    cursor: pointer;
-}
-
-.node text {
-    text-anchor: middle;
-    font-size: 1rem;
-}
-
-.node .delete-icon {
-    cursor: pointer;
-    padding-left: 50px;
-    opacity: 0.8;
-}
-
-.link { stroke: #999; stroke-opacity: .6; stroke-width: 2px; }
-        </style>
-      </div>
+                        .link { 
+                            stroke: #999; 
+                            stroke-opacity: .6; 
+                            stroke-width: 2px; 
+                        }
+                    </style>
+                </div>
       
-      <div>
-        {% include '/tp2/menus/menu2.html' %}
-      </div>
-    </div>
-  </div>
-</header>
-
-
-
-
+                <div>
+                    {% include '/tp2/menus/menu2.html' %}
+                 </div>
+            </div>
+        </div>
+    </header>
 
     <footer class="text-center">
         <div class="footer-below">
