@@ -11,132 +11,127 @@
 			<!-- =================== DIV GAUCHE : CONTENU ======================= -->
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div style = "padding-left: 30px;">
-				
-				<!-- ====================== DIV MOTEUR =========================== -->
-				<div id="div0" class="fenetre"> 
-					<img class="boutons" src="/static/img/boutons.png" >
-					<br>
-					<div class="research"> 
-						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Moteur de recherche
-					</div>
-					<br>
-					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-						<div style = "padding:10px">
-							<div class = "info" style="color:#7c7c7c">
-								<div class="quiz-container" style="margin-top:5px">
-									<div id="quiz5"></div>
-								</div>
-								<br><br><br><br>					
-								<button class="quiz" id="submit">Corriger</button>
-								<br>
-							</div>
-						</div>
-						<div style="padding:10px; margin:auto">
-							<div class = "info" id="div1" style ="display : none; font-size: 1.6rem">
-								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-								Un moteur de recherche est une application permettant de <b>rechercher des informations</b>
-								sur la base de <b>mots-clés</b> saisis par l'utilisateur.
-								<br>
-								Google, Yahoo!, Bing ou Qwant en sont des exemples.
-								<br><br>
-								<button class="quiz" id="btn2">Continuer</button>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<!-- ================== DIV MANIP. MOTEUR ======================== -->
-				<div id="div2" style="display: none;">
+				<!-- ====================== DIV NAVIGATEUR ========================= -->
+				<div id="div0">
 					<div class="fenetre"> 
 						<img class="boutons" src="/static/img/boutons.png" >
 						<br>
 						<div class="research"> 
 							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-							Utiliser un moteur
-						</div>
-						<br>
-						<div style ="font-size: 1.7rem; width: 500px; margin:auto; border: 2px solid #34a853ff; border-radius: 30px;">
-							Ouvrez un moteur de recherche et effectuez une recherche simple de votre choix.
+							Qu'est-ce qu'un navigateur ?
 						</div>
 						<br>
 						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 							<div style = "padding:10px">
+								<div class = "info" style="color:#7c7c7c; width: 350px;">
+									<div class="quiz-container" style="margin-top:5px">
+										<div id="quiz4"></div>
+									</div>
+									<br>					
+									<button class="quiz" id="submit">Corriger</button>
+									<br>
+								</div>
+							</div>
+							<div style="padding:10px; margin:auto">
+								<div class = "info" id="div1" style ="display : none; font-size: 1.6rem">
+									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+									Un navigateur est un logiciel qui permet de <b>consulter des pages Web.</b>
+									<br>
+									Chrome, Firefox, Safari, Edge en sont des exemples.
+									<br><br>
+									<button class="quiz" id="btn2">Continuer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+				</div>
+
+
+				<!-- ====================== DIV URL ========================= -->
+				<div id="div2" style="display:none;">
+					<div class="fenetre"> 
+						<img class="boutons" src="/static/img/boutons.png" >
+						<br>
+						<div class="research"> 
+							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+							Consultation d'un document
+						</div>
+						<br>
+						<div class = "info" style ="font-size: 1.6rem; width: 500px">
+							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
+							Ouvrez un navigateur Web et entrez « <a href="https://www.glenat.com/manga" style="color:#34a853ff; font-weight: bold;">www.glenat.com/manga</a> » dans la barre d’adresse.
+						</div>
+						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+							<div style = "padding:10px">
 								<div class = "info" style="color:#7c7c7c">
 									<div class="quiz-container" style="margin-top:5px">
-										<div id="quiz51"></div>
+										<div id="quiz41"></div>
 									</div>
 									<br>
-									<br><br>
-									<button class="quiz" id="submit51">Corriger</button>
+									<div id="results41"></div>
+									<br>
+									<button class="quiz" id="previous41" >Précédent</button>
+									<button class="quiz" id="next41">Suivant</button>
+									<button class="quiz" id="submit41">Corriger</button>
 									<br>
 
 								</div>
 							</div>
 							<div style="padding:10px; margin:auto">
-								<img src="/static/img/habillage4.png">
+								<div class = "info" id="div3" style ="display : none; font-size: 1.4rem;">
+									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+									L’adresse est appelée une <b>URL</b> (Uniform Resource Locator). Elle se compose d’un <b>nom du serveur Web</b> qui contient toutes les informations recherchées (glenat.com) et d’une <b>page Web</b> à afficher (/manga).
+									<br> 
+									Grâce au nom du serveur, <b>le navigateur récupère l’adresse IP du serveur et lui demande la page recherchée</b>. 
+									<br><br>
+									<button class="quiz" id="btn4">Continuer</button>
+								</div>
 							</div>
 						</div>
 					</div>
-
 					<br>
-
-					<!-- ================== DIV FONCT. MOTEUR ======================== -->
-					<div id="div3" class="fenetre" style="display:none"> 
-						<img class="boutons" src="/static/img/boutons.png" >
-						<br>
-						<div class="research"> 
-							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-							Fonctionnement d'un moteur
-						</div>
-						<br>
-						<div class = "info" style="font-size: 1.5rem; width: 600px">
-							<br>
-							Les termes renseignés sont appelés des <b>mots-clés</b>. Ils sont essentiels
-							dans le fonctionnement d’un moteur de recherche : ces mots-clés sont en effet 
-							utilisés par <b>des algorithmes</b> propres à chaque moteur de recherche. 
-							<br><br>
-							Cela permet en outre de <b>référencer plus rapidement toutes les pages Web</b> 
-							puisqu’un mot-clé est associé à plusieurs pages.
-							<br><br>
-						</div>
-						<br>
-						<div style="margin:auto;">
-							<img src="/static/img/moteurrecherche.gif" style=" margin:auto;">
-						</div>
-						<button class="quiz" id="btn4">Continuer</button>
-					</div>
 				</div>
 
-				<!-- =================== DIV COMP. MOTEUR ======================== -->
+				<!-- ================== DIV CODE SOURCE ===================== -->
 				<div id="div4" class="fenetre" style="display:none"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
 					<div class="research"> 
 						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Comparaison de moteurs 
+						Code source
 					</div>
 					<br>
 					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-						<div style = "margin: auto; padding:10px">
-							<div class = "info" style =" font-size: 1.6rem">
-								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
-								Ouvrez deux moteurs de recherche : Google et Qwant.
+						<div style = "padding:10px">
+							<div style="padding-left: 15px; padding-right: 15px">
+								Le navigateur ne sert pas simplement à afficher une page recherchée : 
+								en effet, il interprète le <b>“code source”</b> pour <b>afficher de manière interprétable </b>
+								les véritables données stockées sur les serveurs d’Internet. 
+							</div>
+							<br>
+							<div class = "info">
+								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff; border: 2px solid #34a853ff; margin: auto; width: 150px; border-radius: 30px">Manipulation</p>
 								<br>
-								Tapez le mot « manga » sur les deux. Que constatez-vous ?
+								Placez votre souris sur la page web et faites un clic droit. 
+								Sélectionnez l’option « Code source de la page ». 
+								Observez la page et essayez de repérer des éléments reconnaissables.
 								<br><br>
 								<button class="quiz" id="btn5">Continuer</button>
 							</div>
 						</div>
 						<div style="padding:10px; margin:auto">
-							<div class = "info" id="div5" style ="display:none; font-size: 1.4rem">
-								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-								On remarque que les résultats ne sont pas les mêmes (ou pas dans le même ordre). 
-								C’est une illustration du fonctionnement différent des algorithmes des moteurs de recherche : 
-								Google et Qwant n’utilisent pas les mêmes algorithmes et ont des critères de sélection différents.
-
+							<div class = "info" id="div5" style ="display : none; font-size: 1.3rem;">
+								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff;">Réponse</p>
+								Vous découvrez ce qu’est le <b>HTML</b> ! Il s’agit d’un <b>langage de programmation</b> pour créer et représenter du contenu Web. 
 								<br><br>
-								<button class="quiz" id = "btn6">Continuer</button>
+								La page est <b>stockée dans cet état</b> dans les serveurs. 
+								HTML est très utilisé, souvent conjugué à d’autres langages. 
+								Il est évidemment <b>difficilement compréhensible</b> pour des non-initiés mais il est notamment 
+								<b>essentiel pour un concept bien connu</b> que nous avons vu…
+								<br><br>
+								<button class="quiz" id="btn6">Continuer</button>
 							</div>
 						</div>
 					</div>
@@ -144,40 +139,41 @@
 
 				<br>
 
-				<!-- ================= DIV EFFICACITÉ MOTEUR ===================== -->
+				<!-- ====================== DIV HREF ========================= -->
 				<div id="div6" class="fenetre" style="display:none"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
 					<div class="research"> 
 						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Efficacité d'un moteur
+						Href
 					</div>
 					<br>
-					<div class = "info" style ="font-size: 1.6rem; width: 500px">
-						<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
-						Quelles limites voyez-vous à cette façon de rechercher de l’information ?
-						<br><br>
-						<button class="quiz" id="btn7">Continuer</button>
-					</div>
-					<br>
-					<div id = "div7" style="display:none">
-						<div class = "info" style ="font-size: 1.4rem;">
-							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-							Cette recherche est <b>imprécise</b> et la <b>qualité</b> des résultats <b>dépend de nombreux facteurs</b>. 
-							La <b>précision</b> et l’<b>orthographe</b> des mots clés comptent ; la <b>qualité de l’algorithme</b> du moteur 
-							(qui analyse et trie les documents différemment, qui a sa propre fréquence et manière de mettre à jour les données). 
-							Il y a également le <b>risque</b>, sur certains moteurs de recherches, que les résultats soient ordonnés en fonction 
-							du <b>nombre de visiteurs</b> et du <b>nombre d’autres sites qui renvoient vers ce lien</b>, voire d’<b>opérations 
-							publicitaires</b> ou de l’<b>historique de recherche</b> de l’utilisateur (comme sur Google).				
-							<br>
+					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+						<div style = "margin: auto; padding:10px">
+							<div class = "info" id="div1" style =" font-size: 1.6rem">
+								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
+								Repérez une ligne « href ». 
+								<br>
+								Que remarquez-vous ?
+								<br>
+								À quoi sert ce type de ligne selon vous ?
+
+								<br><br>
+								<button class="quiz" id="btn7">Continuer</button>
+							</div>
 						</div>
-						<br>
-						<div class = "info" style ="font-size: 1.4rem;">
-							Retournez sur votre moteur de recherche, puis effectuez la recherche 
-							« Avengers Infinity War ». Cliquez ensuite sur le lien Wikipédia associé. 
-							Vous avez atteint une page dont vous ne connaissiez a priori pas l’adresse URL !
-							<br><br>
-							<button class="quiz" onclick="window.location.href = '/tp1/part3'">Continuer</button>
+						<div style="padding:10px; margin:auto">
+							<div class = "info" id="div7" style ="display:none; font-size: 1.4rem">
+								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+								Les « href » sont les hyperliens. Si l’on regarde de plus près, on remarque que ces balises « href » 
+								sont suivies d’un texte bleu et souligné de la forme « /... » désignant une autre page web du site. 
+								<br>
+								<a style = "font-size: 1.2rem; color: #1c1c3d">
+									(Par exemple, à la ligne 188, « /comics » : cet hyperlien renvoie vers la page web du site concernant les comics). 
+								</a>
+								<br><br>
+								<button class="quiz" onclick="window.location.href = '/tp1/part2-2'">Continuer</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -187,81 +183,81 @@
 			<!-- ====================== DIV GAUCHE : MENU ======================= -->
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div >
-				{% include 'tp1/menus/menu2.html' %}
+				{% include 'menu.html' %}
 			</div>
 		</div>
 
 		<br>
 
 		{% include 'interface.html' %}
-		
+
     </div>
 </header>
 
-<script src="{{ url_for('static', filename='js/tp1/quiz5.js') }}"></script>
-<script src="{{ url_for('static', filename='js/tp1/quiz5-1.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp1/quiz4.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp1/quiz4-1.js') }}"></script>
 
 <script>
-let btn1 = document.getElementById("submit");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("submit51");
-let btn4 = document.getElementById("btn4");
-let btn5 = document.getElementById("btn5");
-let btn6 = document.getElementById("btn6");   
-let btn7 = document.getElementById("btn7");  
-let div0 = document.getElementById("div0");
-let div1 = document.getElementById("div1");
-let div2 = document.getElementById("div2");
-let div3 = document.getElementById("div3");
-let div4 = document.getElementById("div4");
-let div5 = document.getElementById("div5");
-let div6 = document.getElementById("div6");
-let div7 = document.getElementById("div7");
+  let btn1 = document.getElementById("submit");
+  let btn2 = document.getElementById("btn2");
+  let btn3 = document.getElementById("submit41");
+  let btn4 = document.getElementById("btn4");
+  let btn5 = document.getElementById("btn5");
+  let btn6 = document.getElementById("btn6");   
+  let btn7 = document.getElementById("btn7");  
+  let div0 = document.getElementById("div0");
+  let div1 = document.getElementById("div1");
+  let div2 = document.getElementById("div2");
+  let div3 = document.getElementById("div3");
+  let div4 = document.getElementById("div4");
+  let div5 = document.getElementById("div5");
+  let div6 = document.getElementById("div6");
+  let div7 = document.getElementById("div7");
 
-btn1.addEventListener("click", () => {
-  	if(getComputedStyle(div1).display == "none"){
-    	div1.style.display = "block";
-  	}
-})
 
-btn2.addEventListener("click", () => {
-  	if(getComputedStyle(div2).display == "none"){
-		div0.style.display = "none";
-		div2.style.display = "block";
-  	}
-})
+  btn1.addEventListener("click", () => {
+		if(getComputedStyle(div1).display == "none"){
+		  div1.style.display = "block";
+		}
+  })
 
-btn3.addEventListener("click", () => {
-  	if(getComputedStyle(div3).display == "none"){
-    	div3.style.display = "block";
-  	}
-})
+  btn2.addEventListener("click", () => {
+		if(getComputedStyle(div2).display == "none"){
+		  div2.style.display = "block";
+		}
+  })
 
-btn4.addEventListener("click", () => {
-  	if(getComputedStyle(div4).display == "none"){
-		div2.style.display = "none";
-		div3.style.display = "none";
-    	div4.style.display = "block";
-  	}
-})
+  btn3.addEventListener("click", () => {
+		if(getComputedStyle(div3).display == "none"){
+		  div3.style.display = "block";
+		}
+  })
 
-btn5.addEventListener("click", () => {
-  	if(getComputedStyle(div5).display == "none"){
-		div5.style.display = "block";
-  	}
-})
+  btn4.addEventListener("click", () => {
+		if(getComputedStyle(div4).display == "none"){
+		  div0.style.display = "none";
+		  div2.style.display = "none";
+		  div4.style.display = "block";
+		}
+  })
 
-btn6.addEventListener("click", () => {
-  	if(getComputedStyle(div6).display == "none"){
-   		div6.style.display = "block";
-  	}
-})
+  btn5.addEventListener("click", () => {
+		if(getComputedStyle(div5).display == "none"){
+		  div5.style.display = "block";
+		}
+  })
 
-btn7.addEventListener("click", () => {
-  	if(getComputedStyle(div7).display == "none"){
-		div7.style.display = "block";
-  	}
-})
+  btn6.addEventListener("click", () => {
+		if(getComputedStyle(div6).display == "none"){
+		  div6.style.display = "block";
+		}
+  })
+
+  btn7.addEventListener("click", () => {
+		if(getComputedStyle(div7).display == "none"){
+		  div7.style.display = "block";
+		}
+  })
 </script>
-
 {% endblock %}
+

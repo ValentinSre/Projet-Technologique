@@ -26,21 +26,22 @@
 						Nous avons vu précédemment qu’il existait plusieurs moyens de parvenir 
 						à la réponse cherchée mais, généralement, la route ne s’arrête pas là...
 						<br><br>
-						En tâchant de rester sur Wikipédia et sans recherche (seule la navigation par hyperlien est autorisée), cherchez à répondre aux questions suivantes :
+						Toujours sur la page Wikipédia « Avengers : Infinity War », cherchez à répondre aux questions suivantes :
 
 					</div>
 
 					<p style ="font-weight: bold; font-size: 23px; color: #34a853ff">
-						Deuxième niveau : je dois être moteur dans la recherche
+						Premier niveau : je sais où est l’information
 					</p>
 
 					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 						<div style = "padding-left: 10px; width: 420px">
 							<div class = "quiz-container" style="margin-top:10px">
-								<div id="quiz7" ></div>
+								<div id="quiz6" ></div>
 							</div>   
-							<div id="results"></div>
 							<br>
+							<div id="results"></div>
+							<br><br>
 							<button class="quiz" id="previous" >Précédent</button>
 							<button class="quiz" id="next">Suivant</button>
 							<button class="quiz" id="submit">Corriger</button>
@@ -61,36 +62,40 @@
 					<br>
 					<div class="research"> 
 						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-						Recherche de second niveau
+						Recherche de premier niveau
 					</div>
 					<br>
 
 					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 						<div style = "padding-left: 10px">
 							<div style="margin:auto">
-								<br><br><br>
+								<br>
 								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
 											background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
 									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
-									2008
+									Hugo Brunswick
 								</div>
 								<br>
 								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #90c45e;
 											background: white; color: #90c45e; text-align: left; font-size: 1.7rem; font-weight: bold;">
 									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #90c45e;"> </i>
-									Stan Lee / Jack Kirby
+									19 semaines
+								</div>
+								<br>
+								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
+											background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
+									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
+									Meilleurs effets spéciaux
 								</div>
 							</div>   
 						</div>
 						<div style="padding-right: 15px;">
 							<div class = "info" style ="font-size: 1.4rem; ">
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-								Cette fois, la recherche est plus compliquée puisque <b>la page principale ne contient 
-								pas les informations recherchées</b> : il est nécessaire de <b>naviguer</b> d’une page à l’autre 
-								pour trouver l’information. Il s’agit d’une recherche de <b>second niveau</b> qui nécessite d'être <b>moteur</b>.
-
+								Vous venez de faire une recherche de <b>premier niveau : vous connaissez la page où 
+								se trouve l’information</b> que vous cherchez et il vous reste uniquement à parcourir cette page ! 
 								<br><br>
-								<button class="quiz" onclick="window.location.href = '/tp1/conclusion'">Continuer</button>
+								<button class="quiz" onclick="window.location.href = '/tp1/part2-4'">Continuer</button>
 							</div>
 							<br>
 						</div>
@@ -102,18 +107,16 @@
 			<!-- ====================== DIV GAUCHE : MENU ======================= -->
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div >
-				{% include 'tp1/menus/menu2.html' %}
+				{% include 'menu.html' %}
 			</div>
 		</div>
 
 		<br>
 
 		{% include 'interface.html' %}
-
     </div>
 </header>
 
-<script src="{{ url_for('static', filename='js/tp1/quiz7.js') }}"></script>
-
+<script src="{{ url_for('static', filename='js/tp1/quiz6.js') }}"></script>
 
 {% endblock %}

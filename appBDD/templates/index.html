@@ -40,39 +40,21 @@
             <ul>
               <li class="dropdown"><a><span>Clarification des notions</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="/tp1">Architecture globale</a></li>
-                  <li><a href="/tp1/part1-1">Communication sur Internet</a></li>
-                  <li><a href="/tp1/part1-2">Communication sur le Web</a></li>
+                  <li><a href="/tp1/part1-1">Architecture globale</a></li>
+                  <li><a href="/tp1/part1-2">Communication sur Internet</a></li>
+                  <li><a href="/tp1/part1-3">Communication sur le Web</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a><span>Parcours du Web</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="/tp1/part2">Consulter le Web</a></li>
-                  <li><a href="/tp1/part2-1">Utiliser un moteur de recherche</a></li>
-                  <li><a href="/tp1/part3">Les niveaux d'interrogation</a></li>
+                  <li><a href="/tp1/part2-1">Consulter le Web</a></li>
+                  <li><a href="/tp1/part2-2">Utiliser un moteur de recherche</a></li>
+                  <li><a href="/tp1/part2-3">Les niveaux d'interrogation</a></li>
                 </ul>
               </li>
             </ul>
-          </li>          
-          <li class="dropdown"><a href="/tp2"><span>TP2</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown"><a><span>Les données du Web</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="/tp2/part1">Comparaison au Web documentaire</a></li>
-                  <li><a href="/tp2/part1-2">Composition d'une page</a></li>
-                  <li><a href="/tp2/part1-3">Le Web des données</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a><span>Représenter les données</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="/tp2/part2">Représentation concrète des données</a></li>
-                  <li><a href="/tp2/part2-1">Représentation graphique des données</a></li>
-                  <li><a href="/tp2/part2-2">Analyse de ces représentations</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>           
-          <li class="dropdown"><a href="#"><span>TP3</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+          <li class="dropdown"><a href="#"><span>TP2</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="#"><span>PARTIE 1</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -89,7 +71,25 @@
                 </ul>
               </li>
             </ul>
-          </li> 
+          </li>           
+          <li class="dropdown"><a href="/tp3"><span>TP3</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a><span>Les données du Web</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp3/part1-1">Comparaison au Web documentaire</a></li>
+                  <li><a href="/tp3/part1-2">Composition d'une page</a></li>
+                  <li><a href="/tp3/part1-3">Le Web des données</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a><span>Représenter les données</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp3/part2-1">Représentation concrète des données</a></li>
+                  <li><a href="/tp3/part2-2">Représentation graphique des données</a></li>
+                  <li><a href="/tp3/part2-3">Analyse de ces représentations</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>           
         </ul>
       </nav>
     <!-- .navbar -->
@@ -103,7 +103,7 @@
   <section id="top" class="d-flex align-items-center">
     <div class="container">
       <h1>Découvrir le Web des données</h1>
-      <a href="/tp1" class="btn-demarrer scrollto">Démarrer</a>
+      <a href="/tp0" class="btn-demarrer scrollto">Démarrer</a>
     </div>
   </section>
   <!-- End top -->
@@ -122,6 +122,8 @@
                 Passez en revue les notions inhérentes au Web documentaire pour converger vers le concept 
                 du Web des données, avant de découvrir les données dites relationnelles. N'hésitez pas à 
                 pratiquer ces notions grâce à ces activités et à notre interface d'exécution de requêtes SQL !
+                <br><br>
+                [À REFAIRE]
               </p>
               <!--<div class="text-center">
                 <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -130,6 +132,14 @@
           </div>
           <div class="col-lg-8 d-flex align-items-stretch">
             <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="icon-box mt-4 mt-xl-0">
+                 <i class="bx bx-cube-alt"></i>
+                <!-- sinon : "bx bx-bar-chart" -->
+                <a href="/tp0"><h4>Introduction à la donnée</h4></a>
+                <p>Présentation rapide de la notion de donnée et différenciation entre donnée et information.
+                </p>
+              </div>
+              <br>
               <div class="row">
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
@@ -142,18 +152,20 @@
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-data"></i>
-                    <a href="/tp2"><h4>Le Web des données</h4></a>
-                    <p>Introduction au Web sémantique et à la donnée sémantique, par opposition à la 
-                      donnée documentaire.
+                    <i class="bx bx-table"></i>
+                    <a href="/"><h4>Un site Web classique</h4></a>
+                    <p>Découverte des langages composant un site Web et initiation à la manipulation de 
+                      données avec le langage SQL. 
                     </p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-table"></i>
-                    <a href="#"><h4>Données relationnelles</h4></a>
-                    <p>Exploitation d'une base de données relationnelle et découverte du langage SQL.</p>
+                    <i class="bx bx-data"></i>
+                    <a href="/tp3"><h4>Le Web des données</h4></a>
+                    <p>Introduction au Web sémantique et à la donnée sémantique, par opposition à la 
+                      donnée documentaire.
+                    </p>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div style="height: 380px;" class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Ouverture
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Analyse
+            </div>
+            <br>
+            <button class="quiz" onclick="window.location.href = ''">Continuer</button>
+
+          </div>
+        </div>
+      </div>
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include 'menu.html' %}
+      </div>
+    </div>
+	
+    <br>
+    
+    {% include 'interface.html' %}
+  
+  </div>
+</header>
+<script src="{{ url_for('static', filename='js/tp2/quiz4.js') }}"></script>
+
+{% endblock %}

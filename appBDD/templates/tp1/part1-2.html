@@ -5,95 +5,88 @@
 <!-- Header -->
 <header>
 	<div class="container" id="maincontent" tabindex="-1">
-
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <!-- =================== DIV GAUCHE : CONTENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
-
-        <!-- ====================== DIV HREF ============================ -->
-        <!-- Display question : Communication entre deux docs -->
-        <div id="div0" style="" class="fenetre"> 
-			    <img class="boutons" src="/static/img/boutons.png" >
+        
+        <!-- ====================== DIV IP ============================ -->
+        <!-- Display question : Communication entre deux ordis -->
+        <div id="div0" class="fenetre"> 
+          <img class="boutons" src="/static/img/boutons.png" >
           <br>
           <div class="research"> 
             <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Communication entre deux documents
+            Communication entre deux ordinateurs
           </div>
           <br>
-          <p style = "width: 500px; margin: auto">
-            Le Web est donc constitué d'un ensemble de documents liés entre eux.
-            Mais comment ?
-          </p>
+          <p>Deux ordinateurs sont reliés entre eux par un lien de communication filaire ou non filaire.</p>
           <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-            <div style = "padding-left: 30px; width : 380px">
+            <div >
+                <br><br>
+                <img src="/static/img/habillage2.png" style = "width: 150px;">
+            </div>
+            <div style = "width: 400px; padding-right : 50px;">
               <div class="quiz-container">
-                <div id="quiz3"></div>
-              </div>    
+                <div id="quiz2"></div>
+              </div>
+              <br><br>
               <div id="results"></div>
               <br>
               <button class="quiz" id="previous" >Précédent</button>
               <button class="quiz" id="next">Suivant</button>
               <button class="quiz" id="submit">Corriger</button>
-              <br>
-            </div>
-            <div>
-              <br>
-              <img src="/static/img/habillage3.png">
+              <br><br>
             </div>
           </div>
         </div>
 
         <br>
 
-        <!-- Display explication : Communication entre deux docs -->
+        <!-- Display explication : Communication entre deux ordis -->
         <div class="fenetre" id="div1" style="display: none; "> 
-		      <img class="boutons" src="/static/img/boutons.png" >
-		      <br>
-          <div class="research"> 
-              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-              Hyperliens
-          </div>
+          <img class="boutons" src="/static/img/boutons.png" >
           <br>
-          <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-              <div>
-                  <br>
-                  <div style="margin:auto;">
-                    <img src="/static/img/hyperlien.gif" style = "width: 450px">
-                  </div>
-              </div>
-              <div>
-                  <br>
-                  <div class = "info" >
-                      Un <b>hyperlien</b> (ou <b>lien hypertexte</b>) est un lien contenu sur une page Web qui <b>redirige vers une autre page Web</b>.
-                      <br><br>
-                      Ces liens peuvent rediriger vers une page du même site ou d’un autre site. Ils permettent de relier les pages entre elles et constituent donc cet aspect de <b>“toile”</b> au Web : les pages sont <b>interconnectées</b> entre elles.
-                      <br><br>
-                      On voit ainsi une distinction entre Web et Internet : <b>des pages liées sur le Web ne sont pas forcément sur des ordinateurs liés directement</b>.
-                  </div>
-              </div>
+          <div class="research"> 
+            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+            Adresses IP
           </div>
-          <button class="quiz" onclick="window.location.href = '/tp1/part2'">Continuer</button>
+          <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+            <div>
+                <br>
+                <div class = "info">
+                  Chaque ordinateur est identifié au sein d’un réseau par une <b>adresse IP</b> : il s’agit d’une adresse généralement constituée de <b>4 nombres entre 0 et 255</b>. Ces adresses permettent ainsi de savoir où envoyer/demander les données recherchées.
+                  <br><br>
+                  C’est la même chose lorsque vous souhaitez envoyer une photo par SMS à un ami : vous devez avoir son numéro de téléphone pour lui envoyer.                
+                </div>
+            </div>
+            <div>
+                <div style="margin:auto;">
+                  <img src="/static/img/ip.gif" style = "width: 500px">
+                </div>
+            </div>
+          </div>
+          <button class="quiz" onclick="window.location.href = '/tp1/part1-3'">Continuer</button>
 	      </div>
       </div>
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
-        {% include '/tp1/menus/menu1.html' %}
+        {% include 'menu.html' %}
       </div>
     </div>
-	
-    <br>
-    
+
+	  <br>
+
     {% include 'interface.html' %}
   
   </div>
 </header>
 
-<script src="{{ url_for('static', filename='js/tp1/quiz3.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp1/quiz2.js') }}"></script>
 
 {% endblock %}

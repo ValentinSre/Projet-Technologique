@@ -1,92 +1,161 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <!-- Header -->
 <header>
 	<div class="container" id="maincontent" tabindex="-1">
+
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <!-- =================== DIV GAUCHE : CONTENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
-        
-        <!-- ====================== DIV IP ============================ -->
-        <!-- Display question : Communication entre deux ordis -->
-        <div id="div0" class="fenetre"> 
-          <img class="boutons" src="/static/img/boutons.png" >
-          <br>
-          <div class="research"> 
-            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Communication entre deux ordinateurs
-          </div>
-          <br>
-          <p>Deux ordinateurs sont reliés entre eux par un lien de communication filaire ou non filaire.</p>
-          <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-            <div >
-                <br><br>
-                <img src="/static/img/habillage2.png" style = "width: 150px;">
+
+        <!-- ====================== DIV INTERNET ============================ -->
+        <div id = "div2">
+          <!-- Display question : Internet-->
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Connaissez-vous vraiment Internet ?
             </div>
-            <div style = "width: 400px; padding-right : 50px;">
-              <div class="quiz-container">
-                <div id="quiz2"></div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 30px;">
+                <div class="quiz-container">
+                  <div id="quiz1"></div>
+                </div>
+
+                <div id="results"></div>
+                <br>
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+                <br>
               </div>
-              <br><br>
-              <div id="results"></div>
+              <div>
+                <br>
+                <img src="/static/img/habillage1.png">
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Display explication : Internet et Web-->
+          <div class="fenetre" id="div1" style="display:none"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div id="div2">
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Internet
+              </div>
               <br>
-              <button class="quiz" id="previous" >Précédent</button>
-              <button class="quiz" id="next">Suivant</button>
-              <button class="quiz" id="submit">Corriger</button>
-              <br><br>
+              <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+                <div>
+                  <img style="width: 450px" src="/static/img/internet.gif" >
+                </div>
+                <div style = "padding-right: 10px;">
+                  <br>
+                  <div class = "info" >
+                    <br>
+                    Internet est un ensemble d’<b>ordinateurs</b> reliés entre eux. 
+                    Il s’agit donc d’un <b>réseau d'ordinateurs</b> qui permet la communication 
+                    entre les appareils aux quatre coins du monde. 
+                    <br>
+                  </div>
+                  <br>
+                  <button class="quiz" id="btn2">Continuer</button>
+                </div>
+              </div>              
             </div>
           </div>
         </div>
 
-        <br>
+        <!-- ====================== DIV SUIVANTE ============================ -->
 
-        <!-- Display explication : Communication entre deux ordis -->
-        <div class="fenetre" id="div1" style="display: none; "> 
-          <img class="boutons" src="/static/img/boutons.png" >
-          <br>
-          <div class="research"> 
-            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Adresses IP
-          </div>
-          <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-            <div>
-                <br>
-                <div class = "info">
-                  Chaque ordinateur est identifié au sein d’un réseau par une <b>adresse IP</b> : il s’agit d’une adresse généralement constituée de <b>4 nombres entre 0 et 255</b>. Ces adresses permettent ainsi de savoir où envoyer/demander les données recherchées.
-                  <br><br>
-                  C’est la même chose lorsque vous souhaitez envoyer une photo par SMS à un ami : vous devez avoir son numéro de téléphone pour lui envoyer.                
-                </div>
+        <div id="div3" style = "display:none">
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Quel lien entre Internet et Web ?
             </div>
-            <div>
-                <div style="margin:auto;">
-                  <img src="/static/img/ip.gif" style = "width: 500px">
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 30px;">
+                <div class="quiz-container">
+                  <div id="quiz11"></div>
                 </div>
-            </div>
-          </div>
-          <button class="quiz" onclick="window.location.href = '/tp1/part1-2-0'">Continuer</button>
-	      </div>
-      </div>
       
+                <div id="results"></div>
+                <br>
+                <button class="quiz" id="previous11" >Précédent</button>
+                <button class="quiz" id="next11">Suivant</button>
+                <button class="quiz" id="submit11">Corriger</button>
+                <br>
+              </div>
+              <div>
+                <br>
+                <img src="/static/img/habillage1.png">
+              </div>
+            </div>
+          </div>
+      
+          <br>
+      
+          <!-- Display explication : Différences -->
+          <div class="fenetre" id="div4" style="display:none"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div id="div2">
+              <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Internet et le Web
+              </div>
+              <br>
+              <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+                <div style = "padding-left: 10px;">
+                  <br>
+                  <div class = "info" >
+                    <br>
+                    Le Web est à ne pas confondre avec Internet. Les deux sont différents et distincts,
+                    <b>Internet étant le support physique du Web</b>. 
+                    <br><br>
+                    <b>Internet</b> est un <b>réseau informatique que le Web utilise</b> tout comme 
+                    d'autres services, comme <b>les courriels</b> (emails) ou <b>le transfert de fichiers</b>.                    <br><br>
+                  </div>
+                </div>
+                <div>
+                  <img style="width: 450px" src="/static/img/internetweb.png" >
+                </div>
+              </div>
+              <button class="quiz" onclick="window.location.href = '/tp1/part1-2'">Continuer</button>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV DROITE : MENU ======================= -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
-        {% include '/tp1/menus/menu1.html' %}
+        {% include 'menu.html' %}
       </div>
     </div>
-
-	  <br>
+		<br>
 
     {% include 'interface.html' %}
-  
+
   </div>
 </header>
 
-<script src="{{ url_for('static', filename='js/tp1/quiz2.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp1/quiz1.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp1/quiz1-1.js') }}"></script>
 
 {% endblock %}
+

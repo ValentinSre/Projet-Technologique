@@ -19,85 +19,101 @@ from .utils import find_content
 def index():
     return render_template('index.html')
 
-#TP1 partie 1.1
-@app.route('/tp1/')
-@app.route('/tp1/part1')
-def tp1_par1():
-    return render_template('/tp1/part1.html')
-
-#TP1 partie 1.2
-@app.route('/tp1/part1-1')
-def tp1_par1_1():
-    return render_template('/tp1/part1-1.html')
-
-#TP1 partie 1.3
-@app.route('/tp1/part1-2-0')
-def tp1_par1_2_0():
-    return render_template('/tp1/part1-2-0.html')
-
-@app.route('/tp1/part1-2')
-def tp1_par1_2():
-    return render_template('/tp1/part1-2.html')
-
-#TP1 partie 2.1
-@app.route('/tp1/part2')
-def tp1_part2():
-    return render_template('/tp1/part2.html')
-
-#TP1 partie 2.2
-@app.route('/tp1/part2-1')
-def tp1_part2_1():
-    return render_template('/tp1/part2-1.html')
-
-#TP1 partie 3.1
-@app.route('/tp1/part3')
-def tp1_part3():
-    return render_template('/tp1/part3.html')
-
-#TP1 partie 3.2
-@app.route('/tp1/part3-1')
-def tp1_part3_1():
-    return render_template('/tp1/part3-1.html')
-
-#TP1 conclusion
-@app.route('/tp1/conclusion')
-def tp1_ccl():
-    return render_template('/tp1/ccl.html')
-
 # Interface SQL
 @app.route('/sql')
 def sql():
     return render_template('/sql.html')
 
-# TP2 partie 1.1
-@app.route('/tp2/')
-@app.route('/tp2/part1')
-def tp2_par1():
-    return render_template('/tp2/part1.html')
+#----------------------------------------------------------
+#TP 0 : INTRODUCTION
+#----------------------------------------------------------
+# TP0 : page 1
+@app.route('/tp0/')
+def tp0():
+    return render_template('/tp0/introduction.html', tp=0)
 
-#TP2 partie 1.2
-@app.route('/tp2/part1-1')
-def tp2_par1_1():
-    return render_template('/tp2/part1-1.html')
+# TP0 : page 1
+@app.route('/tp0/part1')
+def tp0_par1():
+    return render_template('/tp0/part1.html', tp=0)
 
-#TP2 partie 1.3
-@app.route('/tp2/part1-2')
-def tp2_par1_2():
-    return render_template('/tp2/part1-2.html')
+#----------------------------------------------------------
+#TP 1 : FONCTIONNEMENT DU WEB
+#----------------------------------------------------------
+#TP1 partie 1.1
+@app.route('/tp1/')
+@app.route('/tp1/part1-1')
+def tp1_par1_1():
+    return render_template('/tp1/part1-1.html', tp=1, part=1)
 
-#TP2 partie 1.4
-@app.route('/tp2/part1-3')
-def tp2_par1_3():
-    return render_template('/tp2/part1-3.html')
+#TP1 partie 1.2
+@app.route('/tp1/part1-2')
+def tp1_par1_2():
+    return render_template('/tp1/part1-2.html', tp=1, part=1)
 
-#TP2 partie 2.1
-@app.route('/tp2/part2')
-def tp2_par2():
-    return render_template('/tp2/part2.html')
+#TP1 partie 1.3
+@app.route('/tp1/part1-3')
+def tp1_par1_3():
+    return render_template('/tp1/part1-3.html', tp=1, part=1)
 
-#TP2 partie 2.2
-@app.route('/tp2/part2-1')
-def tp2_par2_1():
+#TP1 partie 1.4
+@app.route('/tp1/part1-4')
+def tp1_par1_4():
+    return render_template('/tp1/part1-4.html', tp=1, part=1)
+
+#TP1 partie 2.1
+@app.route('/tp1/part2-1')
+def tp1_part2_1():
+    return render_template('/tp1/part2-1.html', tp=1, part=2)
+
+#TP1 partie 2.2
+@app.route('/tp1/part2-2')
+def tp1_part2_2():
+    return render_template('/tp1/part2-2.html', tp=1, part=2)
+
+#TP1 partie 2.3
+@app.route('/tp1/part2-3')
+def tp1_part2_3():
+    return render_template('/tp1/part2-3.html', tp=1, part=2)
+
+#TP1 partie 2.4
+@app.route('/tp1/part2-4')
+def tp1_part2_4():
+    return render_template('/tp1/part2-4.html', tp=1, part=2)
+
+#TP1 conclusion
+@app.route('/tp1/conclusion')
+def tp1_ccl():
+    return render_template('/tp1/ccl.html', tp=1)
+
+#----------------------------------------------------------
+#TP 3 : LE WEB DES DONNÉES
+#----------------------------------------------------------
+
+#TP3 partie 1.1
+@app.route('/tp3')
+@app.route('/tp3/part1-1')
+def tp3_par1_1():
+    return render_template('/tp3/part1-1.html', tp=3, part=1)
+
+#TP3 partie 1.2
+@app.route('/tp3/part1-2')
+def tp3_par1_2():
+    return render_template('/tp3/part1-2.html', tp=3, part=1)
+
+#TP3 partie 1.3
+@app.route('/tp3/part1-3')
+def tp3_par1_3():
+    return render_template('/tp3/part1-3.html', tp=3, part=1)
+
+#TP3 partie 2.1
+@app.route('/tp3/part2-1')
+def tp3_par2_1():
+    return render_template('/tp3/part2-1.html', tp=3, part=2)
+
+#TP3 partie 2.2
+@app.route('/tp3/part2-2')
+def tp3_par2_2():
     regenGraphe()
     path = "/app/appBDD/static/json/graph(vers=[0-9]*).json"
     urlFichier = glob.glob(path)
@@ -106,12 +122,12 @@ def tp2_par2_1():
         urlFichier = glob.glob(path)
     decompoUrl = (urlFichier[-1]).split("=")[1]
     version = int(decompoUrl.split(")")[0])
-    return render_template('/tp2/part2-1.html', id=version)
+    return render_template('/tp3/part2-2.html', id=version, tp=3, part=2)
 
-#TP2 partie 2.3
-@app.route('/tp2/part2-2')
-def tp2_par2_2():
-    return render_template('/tp2/part2-2.html')
+#TP3 partie 2.3
+@app.route('/tp3/part2-3')
+def tp3_par2_3():
+    return render_template('/tp3/part2-3.html', tp=3, part=2)
 
 # @app.route('/contents/<int:content_id>/')
 # def content(content_id):
@@ -207,7 +223,7 @@ def test():
         with open(urlFichier, 'w') as fp:
             json.dump(file, fp)
         
-    return render_template('/tp2/part2-1.html', id=version)
+    return render_template('/tp3/part2-2.html', id=version, tp=3, part=2)
 
 # Fonction pour regénérer le graphe à 0 (version 1)
 def regenGraphe():

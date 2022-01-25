@@ -1,0 +1,68 @@
+<!----------------------------------------------------------
+- TP0 : INTRODUCTION À LA DONNEE
+------------------------------------------------------------>
+<div class="fenetre" style = "width: 450px; text-align: left; padding-left: 30px; padding-top:20px; padding-bottom: 20px; padding-right: 30px">
+    <a class="partie" href="/tp0"><i class="fa fa-fw fa-cube"></i> TP0 : Introduction à la donnée</a><br>
+    {% if tp==0 %}
+        <hr style = "border-top: 1px dashed #7c7c7c7c; margin-top: 10px; margin-bottom: 10px">
+        <a class="soustitre" href="/tp0">Introduction</a><br>
+        <a class="soustitre" href="/tp0/part1">Comprendre la donnée</a><br>
+    {% endif %}
+</div>
+
+<br>
+
+<!----------------------------------------------------------
+- TP1 : FONCTIONNEMENT DU WEB
+------------------------------------------------------------>
+<div class="fenetre" style = "width: 450px; text-align: left; padding-left: 30px; padding-top:20px; padding-bottom: 20px; padding-right: 30px">
+    <a class="partie" href="/tp1"><i class="fa fa-fw fa-desktop"></i> TP1 : Fonctionnement du Web</a><br>
+    {% if tp==1 %}
+        <hr style = "border-top: 1px dashed #7c7c7c7c; margin-top: 10px; margin-bottom: 10px">
+        <a class="titre" href="/tp1">1. Clarification des notions</a><br>
+        {% if part==1 %}
+            <a class="soustitre" href="/tp1/part1-1">1. Architecture globale</a><br>
+            <a class="soustitre" href="/tp1/part1-2">2. Communication sur Internet</a><br>
+            <a class="soustitre" href="/tp1/part1-3">3. Communication sur le Web</a><br>
+        {% endif %}
+        <a class="titre" href="/tp1/part2-1">2. Parcours du Web</a><br>
+        {% if part==2 %}
+            <a class="soustitre" href="/tp1/part2-1">1. Consulter le Web</a><br>
+            <a class="soustitre" href="/tp1/part2-2">2. Utiliser un moteur de recherche</a><br>
+            <a class="soustitre" href="/tp1/part2-3">3. Les niveaux d'interrogation</a><br>  
+        {% endif %}
+    {% endif %}
+</div>
+
+<br>
+
+<!----------------------------------------------------------
+- TP2 : UN SITE WEB CLASSIQUE
+------------------------------------------------------------>
+<div class="fenetre" style = "width: 450px; text-align: left; padding-left: 30px; padding-top:20px; padding-right: 30px; padding-bottom: 20px">
+    <a class="partie" href="/"><i class="fa fa-fw fa-cogs"></i> TP2 : Un site Web classique</a><br>
+</div>
+
+<br>
+
+<!----------------------------------------------------------
+- TP3 : LE WEB DES DONNÉES
+------------------------------------------------------------>
+<div class="fenetre" style = "width: 450px; text-align: left; padding-left: 30px; padding-top:20px; padding-right: 30px; padding-bottom: 20px">
+    <a class="partie" href="/tp3"><i class="fa fa-fw fa-database"></i> TP3 : Le Web des données</a><br>
+    {% if tp==3 %}
+        <hr style = "border-top: 1px dashed #7c7c7c7c; margin-top: 10px; margin-bottom: 10px">
+        <a class="titre" href="/tp3">1. Les données du Web</a><br>
+        {% if part == 1 %}
+            <a class="soustitre" href="/tp3/part1-1">1. Comparaison au Web documentaire</a><br>
+            <a class="soustitre" href="/tp3/part1-2">2. Composition d'une page</a><br>
+            <a class="soustitre" href="/tp3/part1-3">3. Le Web des données</a><br>
+        {% endif %}
+        <a class="titre" href="/tp3/part2-1">2. Représenter les données entre elles</a><br>
+        {% if part == 2 %}
+            <a class="soustitre" href="/tp2/part2-1">1. Représentation concrète des données</a><br>
+            <a class="soustitre" href="/tp2/part2-2">2. Représentation graphique des données</a><br>
+            <a class="soustitre" href="/tp2/part2-3">3. Analyse de ces représentations</a><br>
+        {% endif %}
+    {% endif %}
+</div>
