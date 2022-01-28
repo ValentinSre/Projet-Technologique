@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, send_file
 import json
+import html
 import glob
 import os
 from flask import request, redirect
@@ -12,6 +13,72 @@ app.config.from_object('config')
 # To get one variable, tape app.config['MY_VARIABLE']
 
 from .utils import find_content
+import codecs
+
+@app.route('/tp2/part1-1')
+@app.route('/tp2/')
+def tp2_par1_1():
+    return render_template('/tp2/part1-1.html', tp=2, part=1)
+
+@app.route('/tp2/part1-2')
+def tp2_par1_2():
+    return render_template('/tp2/part1-2.html', tp=2, part=1)
+
+@app.route('/tp2/part1-3')
+def tp2_par1_3():
+    return render_template('/tp2/part1-3.html', tp=2, part=1)
+
+@app.route('/tp2/part1-1-html', methods = ['GET', 'POST'])
+def tp2_par1_html():
+    prod = production()
+    if prod:
+        path = "/app/appBDD/templates/html.html"
+    else:
+        path = r".\appBDD\templates\html.html"
+    if request.method == "POST":
+        req = request.form
+        code = req["code"]
+        table_file = open(path, 'w')
+        table_file.write(code)
+        modifie = True
+        table_file.close()
+    else: 
+        table_file = open(path, 'w')
+        table_file.write("<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p><p>Tout est personnalisable : page faite par (mets ton prenom) !</p>")
+        table_file.close()
+        modifie = False
+    return render_template('/tp2/part1-1-bis.html', tp=3, part=2, modification = modifie)
+
+@app.route('/html')
+def html_test():
+    return render_template('html.html')
+
+@app.route('/css')
+def css_test():
+    return render_template('css.html')
+
+@app.route('/tp2/part1-2-css', methods = ['GET', 'POST'])
+def tp2_par1_css():
+    prod = production()
+    if prod:
+        path = "/app/appBDD/templates/css.html"
+    else:
+        path = r".\appBDD\templates\css.html"
+    
+    if request.method == "POST":
+        req = request.form
+        code = req["code"]
+        htmlStruct = "<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p><style>" + code + "</style>"
+        table_file = open(path, 'w')
+        table_file.write(htmlStruct)
+        modifie = True
+        table_file.close()
+    else: 
+        table_file = open(path, 'w')
+        table_file.write("<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p>")
+        table_file.close()
+        modifie = False
+    return render_template('/tp2/part1-2-bis.html', tp=3, part=2, modification = modifie)
 
 #Accueil
 @app.route('/')
@@ -133,6 +200,13 @@ def tp3_par2_3():
 # def content(content_id):
 #     return '%s' % content_id
 
+def production():
+    path = "/app/appBDD/static/json/graph(vers=[0-9]*).json"
+    urlFichier = glob.glob(path)
+    if len(urlFichier) < 1:
+        return False
+    else:
+        return True
 """"
 import graphviz
 import os
@@ -166,7 +240,7 @@ def test():
 """
 
 @app.route('/formulaire', methods = ['GET', 'POST'])
-def test():
+def formulaireGraphe():
     if request.method == "POST":
         req = request.form
 

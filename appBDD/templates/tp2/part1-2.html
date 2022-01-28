@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <!-- Header -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+
 <header>
 	<div class="container" id="maincontent" tabindex="-1">
 
@@ -16,64 +19,66 @@
         <!-- ====================== DIV URI ============================ -->
         <!-- Display question : Composition d'une page -->
         <div id = "div0">
-          <div style="height: 380px;" class="fenetre"> 
+          <div class="fenetre" style="height:400px"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
             <div class="research"> 
               <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-              Le Web des données
+              Le CSS
             </div>
             <br>
             <div style = "width: 500px; margin: auto">
-              Tout cela converge donc vers la notion de Web des données... 
+              Un site Internet se compose de plusieurs langages dont l’utilisation de chacun répond à un but bien 
+              précis : c’est leur addition qui forme une page Web.
             </div>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-              <div style = "padding-left: 20px; width : 400px">
+              <div style = "padding-left: 30px; width : 380px">
                 <div class="quiz-container">
-                  <div id="quiz4"></div>
-                </div>
-                <br>    
+                  <div id="quiz"></div>
+                </div>    
                 <button class="quiz" id="previous" >Précédent</button>
                 <button class="quiz" id="next">Suivant</button>
                 <button class="quiz" id="submit">Corriger</button>
               </div>
-              <div style = "padding-right: 30px">
-                <br><br>
-                <img src="/static/img/habillage4.png" style = "width: 95%;">
+              <div>
+                <img src="/static/img/habillage7.png" style = "height: 60%">
               </div>
             </div>
           </div>
 
           <br>
-
+          
           <!-- Display explication : Définition URI -->
           <div class="fenetre" id="div1" style="display: none; "> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
             <div class="research"> 
                 <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-                Web des données et documentaire
+                Le style
             </div>
             <br>
-              <div  style="padding: 10px; width: 650px; margin:auto">
+              <div  style="padding: 10px; width: 620px; margin:auto">
                 <div class = "info" style="font-size: 14px; padding: 15px">
-                  Le <b>Web des données</b> est une initiative visant à <b>favoriser la publication de données structurées</b> 
-                  sur le Web, en évitant de les représenter sous forme d’un gros bloc décorrélé et plutôt en les 
-                  <b>reliant entre elles</b> pour constituer un réseau global d'informations. <br><br>
-                  On parle de Web de données par opposition au Web "des origines" : un <b>Web dit documentaire</b>, 
-                  autrement dit un <b>ensemble de documents interconnectés et accessibles grâce à Internet</b>, à destination 
-                  des utilisateurs humains qui allaient naviguer d’un document à l’autre pour en traiter eux-mêmes le 
-                  contenu informatif. <b>Le Web des données 'repose' donc sur le Web documentaire classique.</b>
+                  Comme nous l’avons vu, la page HTML créée est "brute". <br>
+                  Pour rendre cela joli, il faut lui <b>donner un style</b> : c’est le rôle des fichiers <b>CSS</b> (pour <i>Cascading Style Sheets</i>). 
+                  <br><br>
+                  Ces fichiers permettent par exemple de définir la position ou la taille d’un élément, la couleur et la taille des polices, 
+                  la couleur du fond… Il peut être inséré dans un fichier .css ou directement dans le code HTML grâce à la balise < style >.
+
                 </div>
               </div>
               <div>
-                <img src="/static/img/webdonnees.gif" style="width: 600px; margin:auto">
+    
               </div>
-            <button class="quiz" onclick="window.location.href = '/tp3/part2-1'">Continuer</button>
+              <br>
+              <button class="quiz" onclick="window.location.href = '/tp2/part1-2-css'">S'exercer</button>
+              <button class="quiz" onclick="window.location.href = '/tp2/part1-3'">Continuer</button>
           </div>
         </div>
+
+
       </div>
-      
+
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <!-- ====================== DIV GAUCHE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -81,13 +86,37 @@
         {% include 'menu.html' %}
       </div>
     </div>
-	
-    <br>
-    
+		<br>
+
     {% include 'interface.html' %}
-  
+
   </div>
 </header>
-<script src="{{ url_for('static', filename='js/tp3/quiz4.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/tp2/quiz2.js') }}"></script>
+
+<script>
+let btn1 = document.getElementById("submit");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let div0 = document.getElementById("div0");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+let div3 = document.getElementById("div3");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+      div1.style.display = "block";
+    }
+})
+
+btn2.addEventListener("click", () => {
+    if(getComputedStyle(div2).display == "none"){
+      div2.style.display = "block";
+    }
+})
+
+</script>
 
 {% endblock %}
+

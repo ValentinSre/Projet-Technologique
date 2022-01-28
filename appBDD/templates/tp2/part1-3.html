@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Le JavaScript
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Un site Internet se compose de plusieurs langages dont l’utilisation de chacun répond à un but bien 
+              précis : c’est leur addition qui forme une page Web.
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 20px; width : 360px">
+                <div class="quiz-container">
+                  <div id="quiz"></div>
+                </div>    
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+              </div>
+              <div style = "padding-right: 20px;">
+                <br><br>
+                <div id = "div1" class = "info" style="font-size: 13px; padding: 15px; margin:auto; display: none;">
+                  Le <b>JavaScript</b> est un langage permettant de <b>décrire les interactions entre l’utilisateur 
+                  et la page Web</b>, mais aussi de <b>modifier certains éléments</b> indépendamment des autres 
+                  sans avoir à recharger la page.
+                  <br><br>
+                  <button class="quiz" id="btn2">Continuer</button>
+                </div>
+              </div>
+              <br>
+            </div>
+          </div>
+
+          <br>
+          
+        <!-- ====================== DIV INTERNET ============================ -->
+        <div id = "div2" style="display: none;">
+          <!-- Display question : Internet-->
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Dynamise ta page HTML !
+            </div>
+            <br>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div class="info" style = "width : 400px; align-content: center;">
+                <pre style = "text-align: left;">
+&lt;button onclick=ouvrirFenetre()&gt;
+  Appuie pour ouvrir !
+&lt;/button&gt;
+&lt;script&gt;
+function ouvrirFenetre(){
+  window.alert("Tu as ouvert cette fenêtre !");
+}
+&lt;/script&gt;</pre>
+                
+<button onclick=ouvrirFenetre() class="quiz">Appuie pour ouvrir !</button>
+            </div>               <div style="margin:auto">
+              <div class="info" style="text-align: center; font-size: 15px;">
+                <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
+                Le code ci-joint est écrit en JavaScript ! 
+                Il définit que, si l'on appuie sur le bouton, la fonction 
+                ouvrirFenetre() se joue et ouvre une fenêtre. Teste-le !<br>
+                <br>
+                <button class="quiz" onclick="window.location.href = '/tp2/part1-4'">Continuer</button>
+                <script>
+                  function ouvrirFenetre(){
+                    window.alert("Tu as ouvert cette fenêtre !");
+                  }
+                </script>
+              </div>
+            </div>
+          </div> 
+            
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include 'menu.html' %}
+      </div>
+    </div>
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/tp2/quiz3.js') }}"></script>
+
+<script>
+let btn1 = document.getElementById("submit");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let div0 = document.getElementById("div0");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+let div3 = document.getElementById("div3");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+      div1.style.display = "block";
+    }
+})
+
+btn2.addEventListener("click", () => {
+    if(getComputedStyle(div2).display == "none"){
+      div2.style.display = "block";
+    }
+})
+
+</script>
+
+{% endblock %}
+

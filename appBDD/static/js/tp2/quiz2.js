@@ -76,9 +76,9 @@
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const monQuiz1 = [
-      { question: "Que remarquez-vous ?",
-        answers: { a: "Il n'y a aucun point commun", b: "Tout est identique sur les 2 sites", c: "Les données de DBPedia sont celles de Wikipédia agencées différemment" },
-        correctAnswer: "c" }
+      { question: "Qu'est-ce que le CSS ?",
+        answers: { a: "Une attaque de Pokémon", b: "Le langage pour styliser une page Web", c: "Un langage pour structurer une page Web" },
+        correctAnswer: "b" }
     ];
   
     buildQuiz();
