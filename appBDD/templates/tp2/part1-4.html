@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div class="fenetre" style="height: 400px"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Le PHP
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Un site Internet se compose de plusieurs langages dont l’utilisation de chacun répond à un but bien 
+              précis : c’est leur addition qui forme une page Web.
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 30px; width : 380px">
+                <div class="quiz-container">
+                  <div id="quiz"></div>
+                </div>    
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+              </div>
+              <div>
+                <img src="/static/img/habillage7.png" style = "height: 60%">
+              </div>
+            </div>
+          </div>
+
+          <br>
+          
+          <!-- Display explication : Définition URI -->
+          <div class="fenetre" id="div1" style="display: none; "> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Les algorithmes
+            </div>
+            <br>
+              <div  style="padding: 10px; width: 620px; margin:auto">
+                <div class = "info" style="font-size: 14px; padding: 15px">
+                  Le langage <b>PHP</b> est un <b>langage de scripts</b> permettant de <b>faire tourner des algorithmes sur le serveur</b> 
+                  Web (où sont stockées les données, les pages web). Ces algorithmes vont <b>traiter les données</b>, <b>effectuer 
+                  des calculs</b>, <b>sauvegarder dans des bases de données</b>… En bref, ce langage effectue des <b>traitements "cachés"</b> 
+                  sur le serveur pour fournir à l’utilisateur une page adaptée à son utilisation du site.
+                </div>
+              </div>
+              <div>
+    
+              </div>
+              <br>
+              <button class="quiz" onclick="window.location.href = '/tp2/part1-5'">Continuer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include 'menu.html' %}
+      </div>
+    </div>
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/tp2/quiz4.js') }}"></script>
+
+<script>
+let btn1 = document.getElementById("submit");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let div0 = document.getElementById("div0");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+let div3 = document.getElementById("div3");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+      div1.style.display = "block";
+    }
+})
+
+btn2.addEventListener("click", () => {
+    if(getComputedStyle(div2).display == "none"){
+      div2.style.display = "block";
+    }
+})
+
+</script>
+
+{% endblock %}
+

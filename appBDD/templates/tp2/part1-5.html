@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div class="fenetre" id="div1"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Architecture d'un site
+            </div>
+            <br>
+              <div  style="padding: 10px; width: 600px; margin:auto">
+                <div class = "info" style="font-size: 14px; padding: 15px">
+                  En conclusion, un site Web est en réalité une superposition de plusieurs langages. 
+                  Chaque langage a un rôle spécifique, permettant d'assurer une fonction précise.
+                  <br><br>
+                  Pour schématiser, un site Web pourrait être comparé à un restaurant.<br>
+                  Les langages <b>HTML, CSS et JavaScript</b> forment l'<b>interface</b> : dans le cas d'un restaurant,
+                  il s'agirait de l'<b>aspect "visible"</b>, c'est-à-dire la salle avec ses tables, sa décoration, 
+                  ses employés, ses plats... <br>
+                  Le langage <b>PHP (ou NodeJS ou Python)</b> permet de mettre en place des <b>algorithmes pour "préparer" la page 
+                  à laquelle on souhaite accéder</b> : dans notre exemple, il s'agirait ici de la cuisine où l'on prépare les plats.<br>
+                  En somme, il nous <b>manque un élément essentiel</b> au bon fonctionnement du site (ou de notre restaurant) : <b>les données</b> ! 
+                </div>
+              </div>
+              <div>
+                <img src="/static/img/restaurant-site.gif" style="width: 600px; margin:auto">
+              </div>
+              <br>
+              <button class="quiz" onclick="window.location.href = '/tp2/part2-1'">Continuer</button>          </div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include 'menu.html' %}
+      </div>
+    </div>
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+
+{% endblock %}
+
