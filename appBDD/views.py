@@ -36,6 +36,22 @@ def tp2_par1_4():
 def tp2_par1_5():
     return render_template('/tp2/part1-5.html', tp=2, part=1)
 
+@app.route('/tp2/part2-1')
+def tp2_par2_1():
+    return render_template('/tp2/part2-1.html', tp=2, part=2)
+
+@app.route('/tp2/part2-2')
+def tp2_par2_2():
+    return render_template('/tp2/part2-2.html', tp=2, part=2)
+
+@app.route('/tp2/part2-3')
+def tp2_par2_3():
+    return render_template('/tp2/part2-3.html', tp=2, part=2)
+
+@app.route('/tp2/part2-4')
+def tp2_par2_4():
+    return render_template('/tp2/part2-4.html', tp=2, part=2)
+
 @app.route('/tp2/part1-1-html', methods = ['GET', 'POST'])
 def tp2_par1_html():
     prod = production()

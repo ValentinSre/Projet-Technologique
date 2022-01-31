@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div class="fenetre" style="height: 400px"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              La jointure
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Exercice jointure
+            </div>
+            <br>
+            <button class="quiz" onclick="window.open('/sql'); return false;">Interface</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include 'menu.html' %}
+      </div>
+    </div>
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/tp2/quiz1.js') }}"></script>
+
+<script>
+let btn1 = document.getElementById("submit");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let div0 = document.getElementById("div0");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+let div3 = document.getElementById("div3");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+      div1.style.display = "block";
+    }
+})
+
+btn2.addEventListener("click", () => {
+    if(getComputedStyle(div2).display == "none"){
+      div2.style.display = "block";
+    }
+})
+
+</script>
+
+{% endblock %}
+

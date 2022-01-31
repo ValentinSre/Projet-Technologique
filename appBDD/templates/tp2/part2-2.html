@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div class="fenetre" style="height: 470px"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Le SQL
+            </div>
+            <br>
+            <div style = "width: 500px; margin: auto">
+              Il existe différents types de bases de données. Dans le cadre de ce projet, nous nous 
+              intéresserons aux <b>bases de données relationnelles</b>, c'est-à-dire des bases de données
+              qui organisent les données selon des tables, liées entre elles par des relations.
+            </div>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "padding-left: 30px">
+                <div class="quiz-container">
+                  <div id="quiz"></div>
+                </div>  
+                <br><br><br> 
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+              </div>
+              <div>
+                <br>
+                <img src="/static/img/habillage3.png" style = "height: 80%">
+              </div>
+            </div>
+            <br><br>
+          </div>
+
+          <br>
+          
+          <!-- Display explication : Définition URI -->
+          <div class="fenetre" id="div1" style="display: none; "> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+                <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+                Le SQL
+            </div>
+            <br>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "margin: auto; padding:10px">
+                <div class = "info" style =" font-size: 1.6rem">
+                  <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Explication</p>
+                  Le SQL <i>(Structured Query Language)</i> est un langage permettant de <b>communiquer avec une base de données</b>. <br>
+                  Ce langage est notamment très utilisé pour communiquer avec les données d’un site web.
+                  <br><br>
+                  <button class="quiz" id="btn2">Continuer</button>
+                </div>
+              </div>
+              <div style="padding:10px; margin:auto">
+                <div id = "div2" style="display: none">
+                  <div class = "info" style ="font-size: 1.6rem">
+                    Deux types de commandes sont essentielles en SQL : la <b>projection</b> <i>(sélectionner un ensemble 
+                    de colonnes dans une table)</i> et la <b>jointure</b> <i>(lier deux tables)</i>.<br>
+                    Nous allons pratiquer ces deux commandes dans les prochains exercices...
+                    <br><br>
+                    <button class="quiz" onclick="window.location.href = '/tp2/part2-3'">Continuer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include 'menu.html' %}
+      </div>
+    </div>
+		<br>
+
+    {% include 'interface.html' %}
+
+  </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/tp2/quiz6.js') }}"></script>
+
+<script>
+let btn1 = document.getElementById("submit");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let div0 = document.getElementById("div0");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+      div1.style.display = "block";
+    }
+})
+
+btn2.addEventListener("click", () => {
+    if(getComputedStyle(div2).display == "none"){
+      div2.style.display = "block";
+    }
+})
+
+</script>
+
+{% endblock %}
+

@@ -70,7 +70,7 @@ function test(input) { // Exécution des requêtes
 }
 
 function references(){
-  test("SELECT * FROM films; \ SELECT * FROM bd;");
+  test("SELECT * FROM livre; \ SELECT * FROM adaptation; \ SELECT * FROM artiste;");
 }
 function erreurTab(err) {
   errorDiv.style.height = '2rem'

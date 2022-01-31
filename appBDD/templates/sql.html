@@ -56,32 +56,48 @@
   </div>
  <h1> </h1>
   <main>
-      <div class="fenetre">
+
+    <div class="container" id="maincontent" tabindex="-1">
+
+        <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+          
+          <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+          <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+          <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+          <div>
+
+            <div class="fenetre" style="text-align: left;">
+                <label for='input'>Champ de requête</label>
+                <br>
+                <textarea id="input" name="input"> SELECT * FROM livre;</textarea>
+        
+                <button id="interpreter" class="quiz">Exécuter</button>
+                <button id='savedb' class="button" style="display:none">Exporter la BDD</button>
+                <label class="button" style="display:none">Charger une BDD SQLite<input type='file' id='dbfile'></label>
+        
+                <div id="echec" class="echec"></div>
+        
+                <div id="output">Résultats</div>
+            </div>
+
+
+      <br>
+      </div>
+      <!-- Colonne droite-->
+      <div>
+      <div class="fenetre" style="width: 500px;">
         <img class="boutons" src="/static/img/boutons.png" >
         <br>
-        <div class="research"> 
+        <div class="research" style="width: 450px"> 
             <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Comparaison au Web documentaire
+            Informations
         </div>
         <br>
-        <div id = "tables">Table(s) initiale(s)</div>
-
-      </div>
-      <br>
-      <div class="fenetre" style="text-align: left;">
-    <label for='input'>Champ de requête</label>
-    <br>
-    <textarea id="input" name="input"> SELECT * FROM films;
- SELECT titre FROM films WHERE sortie = (SELECT MAX(sortie) FROM films);</textarea>
-
-    <button id="interpreter" class="quiz">Exécuter</button>
-    <button id='savedb' class="button" style="display:none">Exporter la BDD</button>
-    <label class="button" style="display:none">Charger une BDD SQLite<input type='file' id='dbfile'></label>
-
-    <div id="echec" class="echec"></div>
-
-    <div id="output">Résultats</div>
-</div>
+        <div id = "tables" style="display: none;">Table(s) initiale(s)</div>
+        <button id="ouvrirTables">Voir les tables</button>
+    </div>
+    </div>
+</div></div>
 <br>
   </main>
 
@@ -132,13 +148,14 @@
 
 table {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
   border-collapse: collapse;
-  width: 100%;
+  margin:auto;
 }
 
 table td, table th {
   border: 1px solid #000;
-  padding: 8px;
+  padding: 4px;
 }
 
 table tr:nth-child(even){background-color: #f2f2f2;}
@@ -146,9 +163,8 @@ table tr:nth-child(even){background-color: #f2f2f2;}
 table tr:hover {background-color: #ddd;}
 
 table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
+  padding-top: 6px;
+  text-align: center;
   background-color: #04AA6D;
   color: white;
 }
@@ -180,5 +196,21 @@ html{
 }
 
 </style>
+
+<script>
+    let btnTables = document.getElementById("ouvrirTables");
+    let divTables = document.getElementById("tables");
+
+    btnTables.addEventListener("click", () => {
+        if(getComputedStyle(divTables).display == "none"){
+            divTables.style.display = "block";
+            btnTables.innerHTML = "Cacher les tables";
+        } else {
+            divTables.style.display = "none";
+            btnTables.innerHTML = "Voir les tables";
+        }
+    })
+
+</script>
 
 </html>
