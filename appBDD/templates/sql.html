@@ -54,9 +54,8 @@
 
     </nav>
   </div>
- <h1> </h1>
   <main>
-
+    <header>
     <div class="container" id="maincontent" tabindex="-1">
 
         <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
@@ -69,8 +68,10 @@
             <div class="fenetre" style="text-align: left;">
                 <label for='input'>Champ de requête</label>
                 <br>
-                <textarea id="input" name="input"> SELECT * FROM livre;</textarea>
-        
+                <textarea id="input" name="input"> 
+                    
+                </textarea>
+                <br>
                 <button id="interpreter" class="quiz">Exécuter</button>
                 <button id='savedb' class="button" style="display:none">Exporter la BDD</button>
                 <label class="button" style="display:none">Charger une BDD SQLite<input type='file' id='dbfile'></label>
@@ -95,10 +96,13 @@
         <br>
         <div id = "tables" style="display: none;">Table(s) initiale(s)</div>
         <button id="ouvrirTables">Voir les tables</button>
+        <br><br>
+        {% include 'patternsSQL.html' %}
     </div>
     </div>
 </div></div>
-<br>
+<br><br>
+<br></header>
   </main>
 
     <footer class="text-center">
@@ -210,7 +214,18 @@ html{
             btnTables.innerHTML = "Voir les tables";
         }
     })
+    let btnPatterns = document.getElementById("voirPatterns");
+    let divPatterns = document.getElementById("patterns");
 
+    btnPatterns.addEventListener("click", () => {
+        if(getComputedStyle(divPatterns).display == "none"){
+            divPatterns.style.display = "block";
+            btnPatterns.innerHTML = "Cacher les modèles";
+        } else {
+            divPatterns.style.display = "none";
+            btnPatterns.innerHTML = "Voir les modèles";
+        }
+    })
 </script>
 
 </html>

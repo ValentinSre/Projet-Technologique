@@ -19,7 +19,7 @@
         <!-- ====================== DIV URI ============================ -->
         <!-- Display question : Composition d'une page -->
         <div id = "div0">
-          <div class="fenetre" style="height: 400px"> 
+          <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
             <div class="research"> 
@@ -27,11 +27,115 @@
               La jointure
             </div>
             <br>
-            <div style = "width: 500px; margin: auto">
-              Exercice jointure
+            <div style = "width: 510px; margin: auto">
+              La jointure permet d'associer deux (ou plusieurs) tables dans une seule requête.
+              Prenons pour l'exemple les table <b>livre</b> et <b>adaptation</b> suivantes : 
+              <br><br>
+              <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+                <div style = "margin: auto; padding:10px">
+                  Table <b>livre</b> 
+                  <br><br>
+                  <table>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Annee</th>
+                        <th>Genre</th>
+                        <th>Editeur</th>
+                    </tr>
+                    <tr>
+                        <td>Pokémon</td>
+                        <td>1997</td>
+                        <td>Manga</td>
+                        <td>Kurokawa</td>
+                    </tr>
+                    <tr>
+                      <td>Dragon Ball</td>
+                      <td>1984</td>
+                      <td>Manga</td>
+                      <td>Glénat</td>
+                  </tr>
+                    <tr>
+                        <td>Civil War</td>
+                        <td>2006</td>
+                        <td>Comics</td>
+                        <td>Marvel</td>
+                    </tr>
+                    <tr>
+                      <td>Le Gant de l Infini</td>
+                      <td>1991</td>
+                      <td>Comics</td>
+                      <td>Marvel</td>
+                    </tr>
+                 </table>
+                </div>
+                <div style = "margin: auto; padding:10px">
+                  Table <b>adaptation</b> 
+                  <br><br>
+                  <table>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Oeuvre</th>
+                        <th>Duree</th>
+                        <th>Annee</th>
+                    </tr>
+                    <tr>
+                        <td>Dragon Ball Evolution</td>
+                        <td>Dragon Ball</td>
+                        <td>100</td>
+                        <td>2009</td>
+                    </tr>
+                    <tr>
+                      <td>Captain America: Civil War</td>
+                      <td>Civil War</td>
+                      <td>148</td>
+                      <td>2016</td>
+                    </tr>
+                    <tr>
+                      <td>Avengers: Infinity War</td>
+                      <td>Le Gant de l Infini</td>
+                      <td>149</td>
+                      <td>2018</td>
+                    </tr>
+                 </table>
+                </div>
+              </div>
+
+             <br>
+
             </div>
-            <br>
-            <button class="quiz" onclick="window.open('/sql'); return false;">Interface</button>
+            
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <div style = "margin: auto; padding:10px">
+                <div class = "info" style ="font-size: 1.4rem; ">
+                  <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Explication</p>
+                  La jointure des deux tables se fait par l'instruction :
+                  <p style="font-family:'Courier New', Courier, monospace; font-size: 1.4rem;">SELECT * FROM table_A JOIN table_B ON tableA.clé = table_B.clé</p>
+                  <hr>
+                  Il est ainsi nécessaire d'identifier les colonnes qui sont communes aux deux tables et permettent de relier une table à l'autre.
+                  Dans notre exemple, l'oeuvre de la table <b>adaptation</b> correspond au titre de la table <b>livre</b>. Ici, cela donnerait donc :
+                  <p style="font-family:'Courier New', Courier, monospace; font-size: 1.4rem;">SELECT * FROM livre JOIN adaptation ON livre.titre = adaptation.oeuvre</p>
+                </div>
+              </div>
+              <div style = "margin: auto; padding:10px">
+                <div class = "info" style ="font-size: 1.4rem; ">
+                  <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
+                  Sur l'interface, essaie de : 
+                  <br><br>
+                  <ul style = "text-align: left;">
+                    <li>joindre la table <b>livre</b> et <b>adaptation</b></li>
+                    <li>joindre la table <b>livre</b> et <b>artiste</b></li>
+                    <li>sélectionner le nom et prénom de l'auteur de One Piece</li>
+                    <li>sélectionner la durée de l'adaptation de Pokémon</li>
+                    <li>(difficile) sélectionner le titre et le genre de l'oeuvre des films sortis en 2009</li>
+                  </ul>
+                  <br>
+                  N'hésite pas à tester <i>(tu ne casseras rien !)</i> et à demander de l'aide !
+
+                  <br><br>
+                  <button class="quiz" onclick="window.open('/sql'); return false;">Lancer l'interface</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -75,5 +179,29 @@ btn2.addEventListener("click", () => {
 
 </script>
 
+<style>
+  table {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  border-collapse: collapse;
+  margin:auto;
+}
+
+table td, table th {
+  border: 1px solid #000;
+  padding: 4px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 6px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
 {% endblock %}
 

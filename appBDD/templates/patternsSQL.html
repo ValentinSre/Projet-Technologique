@@ -1,0 +1,58 @@
+<div id = "patterns" style="display: none;">
+    <div class="info" style = "text-align: left; padding-left:15px; font-size: 1.3rem;">
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">Structure d'une requête SQL</p>
+        <b>SELECT</b> colonne(s) <br>
+        <b>FROM</b> Table1 <br>
+        <b>JOIN</b> Table2 <b>ON</b> condition(s) <br>
+        <b>WHERE</b> condition(s) <br>
+        <b>GROUP BY</b> colonne(s) <br>
+        <b>HAVING</b> condition(s)<br>
+        <b>ORDER BY</b> colonne(s) <b>ASC/DESC</b>
+    </div>
+    <br>
+    <div class="info" style = "text-align: left; padding-left:15px; font-size: 1.3rem;">
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">Création de tables</p>
+        <b>CREATE TABLE</b> nomTable (nomColonne1 type, nomColonne2 type, ...)
+        <br><br>
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">Remplissage de tables</p>
+        <b>INSERT INTO</b> Table <b>VALUES</b> (valeur1, valeur2, ...)
+        <br>
+    </div>
+    <br>
+    <div class="info" style = "text-align: left; padding-left:15px; font-size: 1.3rem;">
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">Fonctions d'agrégation utiles</p>
+        <b>SUM()</b> : calcule la somme d'une colonne ou groupe de lignes <br>
+        <b>AVG()</b> : calcule la moyenne d'une colonne ou groupe de lignes <br>
+        <b>MAX()</b> : retourne le résultat maximum <br>
+        <b>MIN()</b> : retourne le résultat minimum <br>
+        <b>COUNT()</b> : compte le nombre de lignes dans un résultat <br>
+        <b>ROUND()</b> : arrondit la valeur
+    </div>
+    <br>
+    <div class="info" style = "text-align: left; padding-left:15px; font-size: 1.3rem;">
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">ORDER BY</p>
+        Permet de trier les lignes (ASC = ascendant ; DESC = descendant)
+        <br><br>
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">GROUP BY</p>
+        Permet de grouper plusieurs résultats et utiliser une fonction sur un groupe de résultat
+        <br><br>
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">LIMIT</p>
+        Permet de spécifier le nombre maximum de résultats que l'on souhaite obtenir
+        <br><br>
+        <p style ="font-weight: bold; font-size: 1.5rem; color: #34a853ff; text-align: center;">HAVING/WHERE</p>
+        <b>HAVING</b> permet de filtrer après le <b>GROUP BY</b> alors que <b>WHERE</b> filtre avant
+    </div>
+</div>
+<br>
+<button id="voirPatterns">Voir les modèles</button>
+
+<!--
+        La sélection d'une colonne dans une table se fait grâce à :
+    <p style="font-family:'Courier New', Courier, monospace; font-size: 1.3rem; padding-left: 15px;">SELECT nom_colonne FROM nom_table</p>
+    La sélection de deux colonnes dans une table se fait grâce à :
+    <p style="font-family:'Courier New', Courier, monospace; font-size: 1.3rem; padding-left: 15px;">SELECT nom_colonne1, nom_colonne2 FROM nom_table</p>
+    La sélection de toutes les colonnes dans une table se fait grâce à :
+    <p style="font-family:'Courier New', Courier, monospace; font-size: 1.3rem; padding-left: 15px;">SELECT * FROM nom_table</p>
+    La sélection d'une colonne dans une table en évitant un doublon se fait grâce à :
+    <p style="font-family:'Courier New', Courier, monospace; font-size: 1.3rem; padding-left: 15px;">SELECT DISTINCT nom_colonne FROM nom_table</p>
+-->

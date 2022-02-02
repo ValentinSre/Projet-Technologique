@@ -77,8 +77,8 @@
     const submitButton = document.getElementById('submit');
     const monQuiz1 = [
       { question: "Qu'est-ce que le JavaScript ?",
-        answers: { a: "Réponse A", b: "Réponse B", c: "Réponse C" },
-        correctAnswer: "c" }
+        answers: { a: "Un langage de scripts pour page web", b: "Un script écrit en langage Java", c: "Un navigateur professionnel" },
+        correctAnswer: "a" }
     ];
   
     buildQuiz();

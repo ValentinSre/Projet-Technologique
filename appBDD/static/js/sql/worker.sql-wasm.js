@@ -211,18 +211,18 @@ function onModuleReady(SQL) {
         if (db != null) db.close();
         db = new SQL.Database(data);
         let sqlstr = 
-        " CREATE TABLE livre (titre text, annee year, genre text, editeur text, nomAuteur text, prenomAuteur text); \
+        " CREATE TABLE livre (titre text, annee year, genre text, editeur text, nomAuteur text); \
         CREATE TABLE adaptation (titre text, oeuvre text, dureeMinutes int, annee year); \
         CREATE TABLE artiste (nom text, prenom text, pays text, dateNaissance date); \
-        INSERT INTO livre VALUES ('Pokémon', 1997, 'Manga', 'Kurokawa', 'Kusaka', 'Hidenori'); \
-        INSERT INTO livre VALUES ('Dragon Ball', 1984, 'Manga', 'Glénat', 'Toriyama', 'Akira'); \
-        INSERT INTO livre VALUES ('Civil War', 2006, 'Comics', 'Marvel', 'Millar', 'Mark'); \
-        INSERT INTO livre VALUES ('Watchmen', 1986, 'Comics', 'DC', 'Moore', 'Alan'); \
-        INSERT INTO livre VALUES ('Le Gant de l Infini', 1991, 'Comics', 'Marvel', 'Starlin', 'Jim'); \
-        INSERT INTO livre VALUES ('Batman : le Culte', 1988, 'Comics', 'DC', 'Starlin', 'Jim'); \
-        INSERT INTO livre VALUES ('One Piece', 1997, 'Manga', 'Glénat', 'Oda', 'Eiichiro'); \
-        INSERT INTO livre VALUES ('Tintin', 1930, 'Bande-dessinée', 'Casterman', 'Remi', 'Georges'); \
-        INSERT INTO livre VALUES ('Titeuf', 1992, 'Bande-dessinée', 'Glénat', 'Chapuis', 'Philippe'); \
+        INSERT INTO livre VALUES ('Pokémon', 1997, 'Manga', 'Kurokawa', 'Kusaka'); \
+        INSERT INTO livre VALUES ('Dragon Ball', 1984, 'Manga', 'Glénat', 'Toriyama'); \
+        INSERT INTO livre VALUES ('Civil War', 2006, 'Comics', 'Marvel', 'Millar'); \
+        INSERT INTO livre VALUES ('Watchmen', 1986, 'Comics', 'DC', 'Moore'); \
+        INSERT INTO livre VALUES ('Le Gant de l Infini', 1991, 'Comics', 'Marvel', 'Starlin'); \
+        INSERT INTO livre VALUES ('Batman : le Culte', 1988, 'Comics', 'DC', 'Starlin'); \
+        INSERT INTO livre VALUES ('One Piece', 1997, 'Manga', 'Glénat', 'Oda'); \
+        INSERT INTO livre VALUES ('Tintin', 1930, 'Bande-dessinée', 'Casterman', 'Remi'); \
+        INSERT INTO livre VALUES ('Titeuf', 1992, 'Bande-dessinée', 'Glénat', 'Chapuis'); \
         INSERT INTO adaptation VALUES ('Détective Pikachu', 'Pokémon', 104, 2019); \
         INSERT INTO adaptation VALUES ('Captain America : Civil War', 'Civil War', 148, 2016); \
         INSERT INTO adaptation VALUES ('Watchmen : les Gardiens', 'Watchmen', 163, 2009); \

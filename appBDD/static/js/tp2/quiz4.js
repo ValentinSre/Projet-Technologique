@@ -77,8 +77,8 @@
     const submitButton = document.getElementById('submit');
     const monQuiz1 = [
       { question: "Qu'est-ce que le PHP ?",
-        answers: { a: "Réponse A", b: "Réponse B", c: "Réponse C" },
-        correctAnswer: "c" }
+        answers: { a: "Le nom d'un hôpital", b: "Un langage pour des algorithmes", c: "Le sigle avant une URL" },
+        correctAnswer: "b" }
     ];
   
     buildQuiz();
