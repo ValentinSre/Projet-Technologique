@@ -1,11 +1,15 @@
 var interpBtn = document.getElementById("interpreter");
-var tables = document.getElementById("tables");
+var tableLivre = document.getElementById("tableLivre");
+var tableAdaptation = document.getElementById("tableAdaptation");
+var tableArtiste = document.getElementById("tableArtiste");
 var outputDiv = document.getElementById('output');
 var errorDiv = document.getElementById('echec');
 var commandsElm = document.getElementById('input');
 
 var worker = new Worker("/static/js/sql/worker.sql-wasm.js"); // Besoin d'un worker pour faire tourner sql.js
 var worker2 = new Worker("/static/js/sql/worker.sql-wasm.js"); // Besoin d'un worker pour faire tourner sql.js
+var worker3 = new Worker("/static/js/sql/worker.sql-wasm.js"); // Besoin d'un worker pour faire tourner sql.js
+var worker4 = new Worker("/static/js/sql/worker.sql-wasm.js"); // Besoin d'un worker pour faire tourner sql.js
 
 interpBtn.addEventListener("click", executionComm, true);
 window.addEventListener("onload", references());
@@ -13,6 +17,10 @@ worker.onerror = erreurTab;
 worker.postMessage({ action: 'open' }); // Ouverture d'une BDD
 worker2.onerror = erreurTab;
 worker2.postMessage({ action: 'open' }); // Ouverture d'une BDD
+worker3.onerror = erreurTab;
+worker3.postMessage({ action: 'open' }); // Ouverture d'une BDD
+worker4.onerror = erreurTab;
+worker4.postMessage({ action: 'open' }); // Ouverture d'une BDD
 
 function interprete(input) { // Exécution des requêtes
   worker.onmessage = function (event) {
@@ -53,24 +61,26 @@ function executionComm() { // exécution quand le bouton est cliqué
   interprete(editor.getValue() + ';');
 }
 
-function test(input) { // Exécution des requêtes
-  worker2.onmessage = function (event) {
+function test(input, table, work) { // Exécution des requêtes
+  work.onmessage = function (event) {
       var results = event.data.results;
       if (!results) {
           erreurTab({msg: event.data.error});
           return;
       }
-      tables.innerHTML = "";
+      table.innerHTML = "";
       for (var i = 0; i < results.length; i++) {
-        tables.appendChild(creationTableau(results[i].columns, results[i].values));
+        table.appendChild(creationTableau(results[i].columns, results[i].values));
       }
   }
-  worker2.postMessage({ action: 'exec', sql: input });
-  tables.textContent = "...";
+  work.postMessage({ action: 'exec', sql: input });
+  table.textContent = "...";
 }
 
 function references(){
-  test("SELECT * FROM livre; \ SELECT * FROM adaptation; \ SELECT * FROM artiste;");
+  test("SELECT * FROM livre;", tableLivre, worker2);
+  test("SELECT * FROM adaptation;", tableAdaptation, worker3);
+  test("SELECT * FROM artiste;", tableArtiste, worker4);
 }
 function erreurTab(err) {
   errorDiv.style.height = '2rem'

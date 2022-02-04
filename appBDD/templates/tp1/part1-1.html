@@ -3,10 +3,11 @@
 {% block content %}
 <!-- Header -->
 <header>
+  <balise id="hautdepage"></balise>
+
 	<div class="container" id="maincontent" tabindex="-1">
 
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
-      
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <!-- =================== DIV GAUCHE : CONTENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -68,7 +69,7 @@
                     <br>
                   </div>
                   <br>
-                  <button class="quiz" id="btn2">Continuer</button>
+                  <button class="quiz" id="btn2" onclick="location.href='#hautdepage';">Continuer</button>
                 </div>
               </div>              
             </div>
@@ -126,11 +127,12 @@
                     <b>Internet étant le support physique du Web</b>. 
                     <br><br>
                     <b>Internet</b> est un <b>réseau informatique que le Web utilise</b> tout comme 
-                    d'autres services, comme <b>les courriels</b> (emails) ou <b>le transfert de fichiers</b>.                    <br><br>
+                    d'autres services, comme <b>les courriels</b> (emails) ou <b>le transfert de fichiers</b>.                    
+                    <br><br>
                   </div>
                 </div>
                 <div>
-                  <img style="width: 450px" src="/static/img/internetweb.png" >
+                  <img style="width: 400px" src="/static/img/internetweb.png" >
                 </div>
               </div>
               <button class="quiz" onclick="window.location.href = '/tp1/part1-2'">Continuer</button>
@@ -141,7 +143,7 @@
       </div>
 
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}

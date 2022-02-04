@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Projet Technologique</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{ url_for('static', filename='css/freelancer-theme.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <script src="https://use.fontawesome.com/470b91f216.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="{{ url_for('static', filename='js/jquery/jquery.min.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+    <script src="{{ url_for('static', filename='js/sql/interpreteursql.js') }}"></script>
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Contenu principal</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                  <a class="navbar-brand" href="/">Découvrir le Web des données !</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </nav>
+  </div>
+  <main>
+    <header>
+    <div class="container" id="maincontent" tabindex="-1">
+
+        <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+          
+          <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+          <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+          <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+          <div>
+
+            <div class="fenetre" style="text-align: left;">
+                <label for='input'>Champ de requête</label>
+                <br>
+                <textarea id="input" name="input"> 
+                    
+                </textarea>
+                <br>
+                <button id="interpreter" class="quiz">Exécuter</button>
+                <button id='savedb' class="button" style="display:none">Exporter la BDD</button>
+                <label class="button" style="display:none">Charger une BDD SQLite<input type='file' id='dbfile'></label>
+        
+                <div id="echec" class="echec"></div>
+        
+                <div id="output">Résultats</div>
+            </div>
+
+
+      <br>
+      </div>
+      <!-- Colonne droite-->
+      <div>
+      <div class="fenetre" style="width: 500px;">
+        <img class="boutons" src="/static/img/boutons.png" >
+        <br>
+        <div class="research" style="width: 450px"> 
+            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+            Informations
+        </div>
+        <br>
+        <div id = "tables" style="display: none;">Table(s) initiale(s)</div>
+        <button id="ouvrirTables">Voir les tables</button>
+        <br><br>
+        {% include 'patternsSQL.html' %}
+    </div>
+    </div>
+</div></div>
+<br><br>
+<br></header>
+  </main>
+
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="https://enssat.fr" class="btn-social btn-outline" target="_blank"><span class="sr-only">ENSSAT</span><i class="fa fa-fw fa-rebel"></i></a>
+                        <hr class="star-light">
+                        <span class="italic">Réalisé par Valentin SÉRÉE</span>
+                        <p style="font-style:italic; font-size: 14px;"><a href="https://startbootstrap.com/template-overviews/freelancer/">Thème Bootstrap</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{ url_for('static', filename='js/freelancer-theme.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sql/interpreteursql.js') }}"></script>
+
+</body>
+
+<style>
+/* Tables */
+.CodeMirror {
+  border: 1px solid #222;
+  height: auto;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  border-collapse: collapse;
+  margin:auto;
+}
+
+table td, table th {
+  border: 1px solid #000;
+  padding: 4px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 6px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+
+#execute {
+	margin-top: 5px;;
+	width: 10%;
+	min-width:100px;
+}
+
+main{
+    background-color: #90c45e;
+}
+h1{
+    background-color: #90c45e;
+}
+html{
+    background-color: #90c45e;
+}
+.echec {
+	color:red;
+	transition:.5s;
+	overflow:hidden;
+	margin: 15px;
+}
+
+#output {
+	overflow: auto;
+}
+
+</style>
+
+<script>
+    let btnTables = document.getElementById("ouvrirTables");
+    let divTables = document.getElementById("tables");
+
+    btnTables.addEventListener("click", () => {
+        if(getComputedStyle(divTables).display == "none"){
+            divTables.style.display = "block";
+            btnTables.innerHTML = "Cacher les tables";
+        } else {
+            divTables.style.display = "none";
+            btnTables.innerHTML = "Voir les tables";
+        }
+    })
+    let btnPatterns = document.getElementById("voirPatterns");
+    let divPatterns = document.getElementById("patterns");
+
+    btnPatterns.addEventListener("click", () => {
+        if(getComputedStyle(divPatterns).display == "none"){
+            divPatterns.style.display = "block";
+            btnPatterns.innerHTML = "Cacher les modèles";
+        } else {
+            divPatterns.style.display = "none";
+            btnPatterns.innerHTML = "Voir les modèles";
+        }
+    })
+</script>
+
+</html>

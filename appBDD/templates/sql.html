@@ -1,231 +1,477 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Projet Technologique</title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <title>Projet Technologique</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link href="{{ url_for('static', filename='css/freelancer-theme.css') }}" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='css/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/sql.css') }}" rel="stylesheet">
+  <script src="{{ url_for('static', filename='js/jquery/jquery.min.js') }}"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 
-    <!-- Custom Fonts -->
-    <script src="https://use.fontawesome.com/470b91f216.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <script src="{{ url_for('static', filename='js/jquery/jquery.min.js') }}"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
-    <script src="{{ url_for('static', filename='js/sql/interpreteursql.js') }}"></script>
 </head>
 
-<body id="page-top" class="index">
-<div id="skipnav"><a href="#maincontent">Contenu principal</a></div>
+<body>
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                  <a class="navbar-brand" href="/">Découvrir le Web des données !</a>
-            </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
+      <h1 class="logo me-auto"><a href="index.html"></a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
+          <li class="dropdown"><a href="/tp1"><span>TP1</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a><span>Clarification des notions</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp1/part1-1">Architecture globale</a></li>
+                  <li><a href="/tp1/part1-2">Communication sur Internet</a></li>
+                  <li><a href="/tp1/part1-3">Communication sur le Web</a></li>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
+              </li>
+              <li class="dropdown"><a><span>Parcours du Web</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp1/part2-1">Consulter le Web</a></li>
+                  <li><a href="/tp1/part2-2">Utiliser un moteur de recherche</a></li>
+                  <li><a href="/tp1/part2-3">Les niveaux d'interrogation</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="/tp2"><span>TP2</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="/tp2"><span>Composition d'un site</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp2/part1-1">L'interface</a></li>
+                  <li><a href="/tp2/part1-4">Les algorithmes</a></li>
+                  <li><a href="/tp2/part1-5">L'architecture d'un site</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="/tp2/part2-1"><span>Manipulation des données</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp2/part2-1">Le langage SQL</a></li>
+                  <li><a href="/tp2/part2-3">La projection</a></li>
+                  <li><a href="/tp2/part2-4">La jointure</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>           
+          <li class="dropdown"><a href="/tp3"><span>TP3</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a><span>Les données du Web</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp3/part1-1">Comparaison au Web documentaire</a></li>
+                  <li><a href="/tp3/part1-2">Composition d'une page</a></li>
+                  <li><a href="/tp3/part1-3">Le Web des données</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a><span>Représenter les données</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/tp3/part2-1">Représentation concrète des données</a></li>
+                  <li><a href="/tp3/part2-2">Représentation graphique des données</a></li>
+                  <li><a href="/tp3/part2-3">Analyse de ces représentations</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>           
+        </ul>
+      </nav>
+    <!-- .navbar -->
 
-    </nav>
-  </div>
-  <main>
-    <header>
-    <div class="container" id="maincontent" tabindex="-1">
+      <a href="/sql" class="interface-btn scrollto"><span class="d-none d-md-inline"></span>Interface d'exécution SQL</a>
 
-        <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
-          
-          <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-          <!-- =================== DIV GAUCHE : CONTENU ======================= -->
-          <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-          <div>
+    </div>
+  </header><!-- End Header -->
 
-            <div class="fenetre" style="text-align: left;">
-                <label for='input'>Champ de requête</label>
-                <br>
-                <textarea id="input" name="input"> 
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Interface d'exécution de requêtes <span>SQL</span></h1>
+      <h2>Entraînez-vous à exécuter vos propres requêtes SQL pour manipuler des données !</h2>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+
+            <!-- ======= Featured Services Section ======= -->
+            <section id="featured-services" class="featured-services">
+                <div class="container" data-aos="fade-up">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <h2>INTERFACE</h2>
+                        <h3>Exécute tes requêtes <span>SQL</span></h3>
+                        <p class="description">Il est possible d'exécuter plusieurs requêtes en les séparant d'un point virgule. <br>
+                            Les tables et des tutoriels sont disponibles ci-après.
+                        </p>
+                        <div class="fenetre" style="text-align: left;">
+                            <br>
+                            <textarea id="input" name="input"></textarea>
+                            <br>
+                            <button id="interpreter">Exécuter</button>
+                            <button onclick="location.href='#tables'">Voir les tables</button>
+                            <button onclick="location.href='#exemples'">Voir les exemples</button>
+                            <button onclick="location.href='#templates'">Voir le tutoriel</button>
+                            <div id="echec" class="echec"></div>
                     
-                </textarea>
-                <br>
-                <button id="interpreter" class="quiz">Exécuter</button>
-                <button id='savedb' class="button" style="display:none">Exporter la BDD</button>
-                <label class="button" style="display:none">Charger une BDD SQLite<input type='file' id='dbfile'></label>
-        
-                <div id="echec" class="echec"></div>
-        
-                <div id="output">Résultats</div>
-            </div>
+                            <div id="output">Résultats</div>
+                        </div>
 
 
-      <br>
-      </div>
-      <!-- Colonne droite-->
-      <div>
-      <div class="fenetre" style="width: 500px;">
-        <img class="boutons" src="/static/img/boutons.png" >
-        <br>
-        <div class="research" style="width: 450px"> 
-            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-            Informations
-        </div>
-        <br>
-        <div id = "tables" style="display: none;">Table(s) initiale(s)</div>
-        <button id="ouvrirTables">Voir les tables</button>
-        <br><br>
-        {% include 'patternsSQL.html' %}
-    </div>
-    </div>
-</div></div>
-<br><br>
-<br></header>
-  </main>
-
-    <footer class="text-center">
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="https://enssat.fr" class="btn-social btn-outline" target="_blank"><span class="sr-only">ENSSAT</span><i class="fa fa-fw fa-rebel"></i></a>
-                        <hr class="star-light">
-                        <span class="italic">Réalisé par Valentin SÉRÉE</span>
-                        <p style="font-style:italic; font-size: 14px;"><a href="https://startbootstrap.com/template-overviews/freelancer/">Thème Bootstrap</a></p>
+                        <!--------------------------------------------------------------------------------------------------------->
                     </div>
                 </div>
-            </div>
+            </section><!-- End Featured Services Section -->
         </div>
-    </footer>
+      </div>
+    </section><!-- End Portfolio Section -->
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
+    <script>
+        window.addEventListener('load', function(){
+            window.scrollTo(0,0);
+        }, false);
+    </script>
+
+    <!-- ======= Tables Section ======= -->
+    <section id="tables" class="tables section-bg">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>TABLES</h2>
+            <h3>Visualise le contenu de la <span>base de données</span></h3>
+            <p>Clique sur une table pour en afficher le contenu.</p>
+          </div>
+  
+          <div class="row">
+
+            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+              <h3>En cliquant sur une table, tu afficheras son contenu ainsi qu'une explication de ses colonnes afin de faciliter ta manipulation.</h3>
+              <p class="fst-italic">
+                Ce module ne renseigne que les informations présentes dans la base de données avant modification. 
+                L'affichage au sein de ce module ne prend pas en compte les éventuels ajouts/retraits que vous effectuerez sur la base de données.
+              </p>
+              <ul>
+                <li onclick="affichageLivre()">
+                  <i class="bx bx-book"></i>
+                  <div>
+                    <h5>Table <b>livre</b></h5>
+                    <p>Cette table se compose de 5 colonnes et 9 lignes.</p>
+                  </div>
+                </li>
+                <li onclick="affichageAdaptation()">
+                  <i class="bx bx-movie"></i>
+                  <div>
+                    <h5>Table <b>adaptation</b></h5>
+                    <p>Cette table se compose de 4 colonnes et 6 lignes.</p>
+                  </div>
+                </li>
+                <li onclick="affichageArtiste()">
+                    <i class="bx bx-pencil"></i>
+                    <div>
+                      <h5>Table <b>artiste</b></h5>
+                      <p>Cette table se compose de 4 colonnes et 5 lignes.</p>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">                
+                <div id="divLivre" style="display: none;">
+                    <h5>La table <b>livre</b> se compose des colonnes suivantes :</h5>
+                    <br>
+                    <p style="padding-left: 20px;">
+                        <b>titre</b> qui désigne le titre du livre<br>
+                        <b>annee</b> qui désigne l'année de sortie du livre<br>
+                        <b>genre</b> qui désigne le genre du livre parmi Manga, Comics et Bande-dessinée <br>
+                        <b>editeur</b> qui désigne l'éditeur du livre<br>
+                        <b>nomAuteur</b> qui désigne le nom de famille de l'auteur du livre<br>
+                    </p>
+                    <br>
+                    <div id = "tableLivre">Tables initiale</div>
+                </div>
+                <div id="divAdaptation" style="display: none;">
+                    <h5>La table <b>adaptation</b> se compose des colonnes suivantes :</h5>
+                    <br>
+                    <p style="padding-left: 20px;">
+                        <b>titre</b> qui désigne le titre du livre<br>
+                        <b>annee</b> qui désigne l'année de sortie du livre<br>
+                        <b>dureeMinutes</b> qui désigne la durée du film en minutes <br>
+                        <b>annee</b> qui désigne l'année de sortie du film<br>
+                    </p>
+                    <br>
+                    <div id = "tableAdaptation">Table initiale</div>
+                </div>
+                <div id="divArtiste" style="display: none;">
+                    <h5>La table <b>artiste</b> se compose des colonnes suivantes :</h5>
+                    <br>
+                    <p style="padding-left: 20px;">
+                        <b>nom</b> qui désigne le nom de famille de l'auteur<br>
+                        <b>prenom</b> qui désigne le prénom de famille de l'auteur<br>
+                        <b>pays</b> qui désigne le pays d'origine de l'auteur <br>
+                        <b>dateNaissance</b> qui désigne l'année de naissance de l'auteur<br>
+                    </p>
+                    <br>
+                    <div id = "tableArtiste">Table initiale</div>
+                </div>
+            </div>
+          </div>
+  
+        </div>
+    </section><!-- End Tables Section -->
+
+    <script>
+        function affichageLivre(){
+            document.getElementById("divLivre").style.display = "block";
+            document.getElementById("divAdaptation").style.display = "none";
+            document.getElementById("divArtiste").style.display = "none";
+        }
+        function affichageAdaptation(){
+            document.getElementById("divLivre").style.display = "none";
+            document.getElementById("divAdaptation").style.display = "block";
+            document.getElementById("divArtiste").style.display = "none";
+        }
+        function affichageArtiste(){
+            document.getElementById("divLivre").style.display = "none";
+            document.getElementById("divAdaptation").style.display = "none";
+            document.getElementById("divArtiste").style.display = "block";
+        }
+    </script>
+
+    <!-- ======= Services Section ======= -->
+    <section id="exemples" class="services">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Exemples</h2>
+            <h3>Inspire-toi de ces <span>exemples</span></h3>
+            <p>Ces exemples reviennent sur les requêtes basiques en s'inspirant des tables disponibles dans la base de données.</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-search"></i></div>
+                <h4><a>Projection</a></h4>
+                <p>Sélection de toutes les colonnes de la table <b>livre</b> :</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT * FROM livre</p>
+                    <hr>
+                <p>Sélection des colonnes Titre et Annee de la table <b>livre</b> :</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre, Annee FROM livre</p>
+                    <hr>
+                <p>Sélection des colonnes Titre de la table <b>livre</b> où le Genre est Comics :</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre FROM livre WHERE Genre = "Comics"</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-link"></i></div>
+                <h4><a>Jointure</a></h4>
+                <p>Joindre deux tables <i>(forme générique)</i>:</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT * FROM table_A JOIN table_B ON tableA.clé = table_B.clé</p>
+                    <hr>
+                <p>Dans notre exemple, l'oeuvre de la table <b>adaptation</b> correspond au titre de la table <b>livre</b>. </p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT * FROM livre JOIN adaptation ON livre.titre = adaptation.oeuvre</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-grid"></i></div>
+                <h4><a>Groupement</a></h4>
+                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-data"></i></div>
+                <h4><a>Création/suppression</a></h4>
+                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-plus-circle"></i></div>
+                <h4><a>Insertion</a></h4>
+                <p>Blablabla Blablabla Blablabla BlablablaBlablabla Blablabla Blablabla</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-minus-circle"></i></div>
+                <h4><a>Retrait</a></h4>
+                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Services Section -->
+
+    <!-- ======= Structures exemples Section ======= -->
+    <section id="templates" class="templates section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>AIDE</h2>
+          <h3>Construis ta requête <span>SQL</span></h3>
+          <p>Utilise ce guide pour structurer ta requête de la meilleure manière possible !</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <ul class="templates-list">
+
+              <li>
+                <div data-bs-toggle="collapse" class="collapsed question" href="#templates1">Structure globale d'une requête <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates1" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                    <b>SELECT</b> colonne(s) <br>
+                    <b>FROM</b> Table1 <br>
+                    <b>JOIN</b> Table2 <b>ON</b> condition(s) <br>
+                    <b>WHERE</b> condition(s) <br>
+                    <b>GROUP BY</b> colonne(s) <br>
+                    <b>HAVING</b> condition(s)<br>
+                    <b>ORDER BY</b> colonne(s) <b>ASC/DESC</b>
+                    </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#templates2" class="collapsed question">Création de table <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates2" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                        <b>CREATE TABLE</b> nomTable (nomColonne1 type, nomColonne2 type, ...)
+                    </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#templates3" class="collapsed question">Remplissage de table <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates3" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                        <b>INSERT INTO</b> Table <b>VALUES</b> (valeur1, valeur2, ...)
+                    </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#templates4" class="collapsed question">Fonctions d'agrégation utiles <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates4" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                        <b>SUM()</b> : calcule la somme d'une colonne ou groupe de lignes <br>
+                        <b>AVG()</b> : calcule la moyenne d'une colonne ou groupe de lignes <br>
+                        <b>MAX()</b> : retourne le résultat maximum <br>
+                        <b>MIN()</b> : retourne le résultat minimum <br>
+                        <b>COUNT()</b> : compte le nombre de lignes dans un résultat <br>
+                        <b>ROUND()</b> : arrondit la valeur                  
+                    </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#templates5" class="collapsed question">ORDER BY <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates5" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                        Permet de trier les lignes (ASC = ascendant ; DESC = descendant)
+                    </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#templates6" class="collapsed question">GROUP BY <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates6" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                        Permet de grouper plusieurs résultats et utiliser une fonction sur un groupe de résultat
+                    </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#templates7" class="collapsed question">LIMIT <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates7" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                        Permet de spécifier le nombre maximum de résultats que l'on souhaite obtenir
+                    </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#templates8" class="collapsed question">HAVING / WHERE <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="templates8" class="collapse" data-bs-parent=".templates-list">
+                    <p>
+                        <b>HAVING</b> permet de filtrer après le <b>GROUP BY</b> alors que <b>WHERE</b> filtre avant
+                    </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Thème adapté de <strong><span>Bootstrap</span></strong>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.youtube.com/channel/UCHu4nXDst8MkC_NPX5i87Ug" class="youtube"><i class="bx bxl-youtube"></i></a>
+        <a href="https://twitter.com/enssat?lang=fr" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/enssat/" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="http://blog.enssat.fr/" class="blogger"><i class="bx bxl-blogger"></i></a>
+        <a href="https://www.linkedin.com/school/enssat/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.instagram.com/enssat_lannion/" class="instagram"><i class="bx bxl-instagram"></i></a>
+
+      </div>
     </div>
+  </footer><!-- End Footer -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='css/vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{ url_for('static', filename='css/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='css/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='css/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='css/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='css/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='css/vendor/waypoints/noframework.waypoints.js') }}"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="{{ url_for('static', filename='js/freelancer-theme.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/sql/interpreteursql.js') }}"></script>
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/sql/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/sql/interpreteursql.js') }}"></script>
 
 </body>
-
-<style>
-/* Tables */
-.CodeMirror {
-  border: 1px solid #222;
-  height: auto;
-}
-.CodeMirror-scroll {
-  overflow-y: hidden;
-  overflow-x: auto;
-}
-
-table {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  border-collapse: collapse;
-  margin:auto;
-}
-
-table td, table th {
-  border: 1px solid #000;
-  padding: 4px;
-}
-
-table tr:nth-child(even){background-color: #f2f2f2;}
-
-table tr:hover {background-color: #ddd;}
-
-table th {
-  padding-top: 6px;
-  text-align: center;
-  background-color: #04AA6D;
-  color: white;
-}
-
-#execute {
-	margin-top: 5px;;
-	width: 10%;
-	min-width:100px;
-}
-
-main{
-    background-color: #90c45e;
-}
-h1{
-    background-color: #90c45e;
-}
-html{
-    background-color: #90c45e;
-}
-.echec {
-	color:red;
-	transition:.5s;
-	overflow:hidden;
-	margin: 15px;
-}
-
-#output {
-	overflow: auto;
-}
-
-</style>
-
-<script>
-    let btnTables = document.getElementById("ouvrirTables");
-    let divTables = document.getElementById("tables");
-
-    btnTables.addEventListener("click", () => {
-        if(getComputedStyle(divTables).display == "none"){
-            divTables.style.display = "block";
-            btnTables.innerHTML = "Cacher les tables";
-        } else {
-            divTables.style.display = "none";
-            btnTables.innerHTML = "Voir les tables";
-        }
-    })
-    let btnPatterns = document.getElementById("voirPatterns");
-    let divPatterns = document.getElementById("patterns");
-
-    btnPatterns.addEventListener("click", () => {
-        if(getComputedStyle(divPatterns).display == "none"){
-            divPatterns.style.display = "block";
-            btnPatterns.innerHTML = "Cacher les modèles";
-        } else {
-            divPatterns.style.display = "none";
-            btnPatterns.innerHTML = "Voir les modèles";
-        }
-    })
-</script>
 
 </html>
