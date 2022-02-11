@@ -16,20 +16,70 @@
         <!-- ====================== DIV URI ============================ -->
         <!-- Display question : Composition d'une page -->
         <div id = "div0">
-          <div style="height: 380px;" class="fenetre"> 
+          <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
             <div class="research"> 
               <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-              Ouverture
+              Graphe RDF
             </div>
             <br>
-            <div style = "width: 500px; margin: auto">
-              Analyse
+            <div style = "width: 500px; margin: auto; color: #1c1c3d">
+              Le graphe ci-contre représente plusieurs triplets récupérés sur la page DBpédia du film Avengers: Infinity War.
             </div>
             <br>
-            <button class="quiz" onclick="window.location.href = ''">Continuer</button>
+            <img src="/static/img/grapheRDF.png" style="width:680px">
+            <br>
+          </div>
 
+          <br>
+          
+          <div style="height: 370px;" class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Composition d'une page
+            </div>
+            <br>
+            <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <div style = "padding-left: 15px; width : 340px">
+                <div class="quiz-container">
+                  <div id="quiz"></div>
+                </div>
+                <br>    
+                <button class="quiz" id="previous" >Précédent</button>
+                <button class="quiz" id="next">Suivant</button>
+                <button class="quiz" id="submit">Corriger</button>
+              </div>
+              <div>
+                <br>
+                <div id="reponses" style="display:none">
+                  <div style="margin:auto">
+                    <br>
+                    <div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
+                          background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
+                      <i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
+                      Acteur (<i>starring</i>)
+                    </div>
+                    <br>
+                    <div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #90c45e;
+                          background: white; color: #90c45e; text-align: left; font-size: 1.7rem; font-weight: bold;">
+                      <i class="fa fa-fw fa-bookmark" style="width: 50px; color: #90c45e;"> </i>
+                      1973-06-02
+                    </div>
+                    <br>
+                    <div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
+                          background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
+                      <i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
+                      Benedict Cumberbatch
+                    </div>
+                    <br>
+                    <button class="quiz" onclick="window.location.href = '/tp3/part2-4'">Continuer</button>
+                  </div>   
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -48,6 +98,16 @@
   
   </div>
 </header>
-<script src="{{ url_for('static', filename='js/tp2/quiz4.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp3/quiz6.js') }}"></script>
+<script>
+  let btn = document.getElementById("submit");
+  let div = document.getElementById("reponses");
+
+  btn.addEventListener("click", () => {
+      if(getComputedStyle(div).display == "none"){
+        div.style.display = "block";
+      }
+  })
+</script>
 
 {% endblock %}

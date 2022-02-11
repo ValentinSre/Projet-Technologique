@@ -15,95 +15,6 @@ app.config.from_object('config')
 from .utils import find_content
 import codecs
 
-@app.route('/tp2/part1-1')
-@app.route('/tp2/')
-def tp2_par1_1():
-    return render_template('/tp2/part1-1.html', tp=2, part=1)
-
-@app.route('/tp2/part1-2')
-def tp2_par1_2():
-    return render_template('/tp2/part1-2.html', tp=2, part=1)
-
-@app.route('/tp2/part1-3')
-def tp2_par1_3():
-    return render_template('/tp2/part1-3.html', tp=2, part=1)
-
-@app.route('/tp2/part1-4')
-def tp2_par1_4():
-    return render_template('/tp2/part1-4.html', tp=2, part=1)
-
-@app.route('/tp2/part1-5')
-def tp2_par1_5():
-    return render_template('/tp2/part1-5.html', tp=2, part=1)
-
-@app.route('/tp2/part2-1')
-def tp2_par2_1():
-    return render_template('/tp2/part2-1.html', tp=2, part=2)
-
-@app.route('/tp2/part2-2')
-def tp2_par2_2():
-    return render_template('/tp2/part2-2.html', tp=2, part=2)
-
-@app.route('/tp2/part2-3')
-def tp2_par2_3():
-    return render_template('/tp2/part2-3.html', tp=2, part=2)
-
-@app.route('/tp2/part2-4')
-def tp2_par2_4():
-    return render_template('/tp2/part2-4.html', tp=2, part=2)
-
-@app.route('/tp2/part1-1-html', methods = ['GET', 'POST'])
-def tp2_par1_html():
-    prod = production()
-    if prod:
-        path = "/app/appBDD/templates/html.html"
-    else:
-        path = r".\appBDD\templates\html.html"
-    if request.method == "POST":
-        req = request.form
-        code = req["code"]
-        table_file = open(path, 'w')
-        table_file.write(code)
-        modifie = True
-        table_file.close()
-    else: 
-        table_file = open(path, 'w')
-        table_file.write("<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p><p>Tout est personnalisable : page faite par (mets ton prenom) !</p>")
-        table_file.close()
-        modifie = False
-    return render_template('/tp2/part1-1-bis.html', tp=3, part=2, modification = modifie)
-
-@app.route('/html')
-def html_test():
-    return render_template('html.html')
-
-@app.route('/css')
-def css_test():
-    return render_template('css.html')
-
-@app.route('/tp2/part1-2-css', methods = ['GET', 'POST'])
-def tp2_par1_css():
-    prod = production()
-    if prod:
-        path = "/app/appBDD/templates/css.html"
-    else:
-        path = r".\appBDD\templates\css.html"
-    
-    if request.method == "POST":
-        req = request.form
-        code = req["code"]
-        htmlStruct = "<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p><style>" + code + "</style>"
-        table_file = open(path, 'w')
-        table_file.write(htmlStruct)
-        modifie = True
-        table_file.close()
-    else: 
-        table_file = open(path, 'w')
-        table_file.write("<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p>")
-        table_file.close()
-        modifie = False
-    return render_template('/tp2/part1-2-bis.html', tp=3, part=2, modification = modifie)
-
 #Accueil
 @app.route('/')
 @app.route('/index/')
@@ -114,6 +25,11 @@ def index():
 @app.route('/sql')
 def sql():
     return render_template('/sql.html')
+
+# Interface SQL
+@app.route('/sql2')
+def sql2():
+    return render_template('/sql2.html')
 
 #----------------------------------------------------------
 #TP 0 : INTRODUCTION
@@ -178,6 +94,112 @@ def tp1_ccl():
     return render_template('/tp1/ccl.html', tp=1)
 
 #----------------------------------------------------------
+#TP 2 : UN SITE WEB CLASSIQUE
+#----------------------------------------------------------
+#TP2 partie 1.1
+@app.route('/tp2/part1-1')
+@app.route('/tp2/')
+def tp2_par1_1():
+    return render_template('/tp2/part1-1.html', tp=2, part=1)
+
+@app.route('/tp2/part1-1-html', methods = ['GET', 'POST'])
+def tp2_par1_html():
+    prod = production()
+    if prod:
+        path = "/app/appBDD/templates/html.html"
+    else:
+        path = r".\appBDD\templates\html.html"
+    if request.method == "POST":
+        req = request.form
+        code = req["code"]
+        table_file = open(path, 'w')
+        table_file.write(code)
+        modifie = True
+        table_file.close()
+    else: 
+        table_file = open(path, 'w')
+        table_file.write("<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p><p>Tout est personnalisable : page faite par (mets ton prenom) !</p>")
+        table_file.close()
+        modifie = False
+    return render_template('/tp2/part1-1-bis.html', tp=3, part=2, modification = modifie)
+
+@app.route('/html')
+def html_test():
+    return render_template('html.html')
+
+#TP2 partie 1.2
+@app.route('/tp2/part1-2')
+def tp2_par1_2():
+    return render_template('/tp2/part1-2.html', tp=2, part=1)
+
+@app.route('/tp2/part1-2-css', methods = ['GET', 'POST'])
+def tp2_par1_css():
+    prod = production()
+    if prod:
+        path = "/app/appBDD/templates/css.html"
+    else:
+        path = r".\appBDD\templates\css.html"
+    
+    if request.method == "POST":
+        req = request.form
+        code = req["code"]
+        htmlStruct = "<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p><style>" + code + "</style>"
+        table_file = open(path, 'w')
+        table_file.write(htmlStruct)
+        modifie = True
+        table_file.close()
+    else: 
+        table_file = open(path, 'w')
+        table_file.write("<h1>Ceci est une balise de grand titre.</h1><h2>Ceci est une balise de titre moins grand.</h2><p>Ceci est une balise de paragraphe</p>")
+        table_file.close()
+        modifie = False
+    return render_template('/tp2/part1-2-bis.html', tp=3, part=2, modification = modifie)
+    
+@app.route('/css')
+def css_test():
+    return render_template('css.html')
+
+#TP2 partie 1.3
+@app.route('/tp2/part1-3')
+def tp2_par1_3():
+    return render_template('/tp2/part1-3.html', tp=2, part=1)
+
+#TP2 partie 1.4
+@app.route('/tp2/part1-4')
+def tp2_par1_4():
+    return render_template('/tp2/part1-4.html', tp=2, part=1)
+
+#TP2 partie 1.5
+@app.route('/tp2/part1-5')
+def tp2_par1_5():
+    return render_template('/tp2/part1-5.html', tp=2, part=1)
+
+#TP2 partie 2.1
+@app.route('/tp2/part2-1')
+def tp2_par2_1():
+    return render_template('/tp2/part2-1.html', tp=2, part=2)
+
+#TP2 partie 2.2
+@app.route('/tp2/part2-2')
+def tp2_par2_2():
+    return render_template('/tp2/part2-2.html', tp=2, part=2)
+
+#TP2 partie 2.3
+@app.route('/tp2/part2-3')
+def tp2_par2_3():
+    return render_template('/tp2/part2-3.html', tp=2, part=2)
+
+#TP2 partie 2.4
+@app.route('/tp2/part2-4')
+def tp2_par2_4():
+    return render_template('/tp2/part2-4.html', tp=2, part=2)
+
+#TP2 conclusion
+@app.route('/tp2/conclusion')
+def tp2_ccl():
+    return render_template('/tp2/ccl.html', tp=2)
+
+#----------------------------------------------------------
 #TP 3 : LE WEB DES DONNÉES
 #----------------------------------------------------------
 
@@ -220,9 +242,15 @@ def tp3_par2_2():
 def tp3_par2_3():
     return render_template('/tp3/part2-3.html', tp=3, part=2)
 
-# @app.route('/contents/<int:content_id>/')
-# def content(content_id):
-#     return '%s' % content_id
+#TP3 partie 2.4
+@app.route('/tp3/part2-4')
+def tp3_par2_4():
+    return render_template('/tp3/part2-4.html', tp=3, part=2)
+
+#TP3 conclusion
+@app.route('/tp3/conclusion')
+def tp3_ccl():
+    return render_template('/tp3/ccl.html', tp=3)
 
 def production():
     path = "/app/appBDD/static/json/graph(vers=[0-9]*).json"

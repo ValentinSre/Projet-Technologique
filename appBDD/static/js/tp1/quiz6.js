@@ -83,7 +83,7 @@
       { question: "Combien de temps est resté le film au cinéma en France ?",
         answers: { a: "15 semaines", b: "17 semaines", c: "19 semaines" },
         correctAnswer: "c" },
-      { question: "Quel est l'Oscar remporté par le film ?",
+      { question: "Quel Oscar aurait pu remporter le film ?",
         answers: { a: "Meilleur scénario", b: "Meilleure musique", c: "Meilleur acteur", d: "Meilleurs effets visuels" },
         correctAnswer: "d" }
     ];

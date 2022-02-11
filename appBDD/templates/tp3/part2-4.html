@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Header -->
+<header>
+	<div class="container" id="maincontent" tabindex="-1">
+
+    <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div style = "padding-left: 30px;">
+
+        <!-- ====================== DIV URI ============================ -->
+        <!-- Display question : Composition d'une page -->
+        <div id = "div0">
+          <div class="fenetre"> 
+            <img class="boutons" src="/static/img/boutons.png" >
+            <br>
+            <div class="research"> 
+              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+              Comparaison
+            </div>
+            <br>
+            <div style = "width: 600px; margin: auto; color: #1c1c3d; text-align: justify">
+              Les objets sont <b>mieux décrits</b> car ils sont <b>reliés entre eux avec des relations plus riches</b>. 
+              En outre, les données sont <b>structurées</b>, ce qui permet d’<b>interroger plus précisément les données du Web</b> avec des langages 
+              adaptés (SPARQL par exemple).
+              <br><br>
+              Le Web des données, c’est donc une <b>représentation plus structurée des données s’appuyant (entre autres) sur la notion d’URI</b>. 
+              Les données sont liées et il est alors possible d’avoir accès aux informations sans avoir à connaître où se situent les données 
+              sur le Web.
+            </div>
+            <br>
+            <button class="quiz" onclick="window.location.href = '/tp3/conclusion'">Continuer</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div >
+        {% include 'menu.html' %}
+      </div>
+    </div>
+	
+    <br>
+    
+    {% include 'interface.html' %}
+  
+  </div>
+</header>
+<script src="{{ url_for('static', filename='js/tp3/quiz6.js') }}"></script>
+<script>
+  let btn = document.getElementById("submit");
+  let div = document.getElementById("reponses");
+
+  btn.addEventListener("click", () => {
+      if(getComputedStyle(div).display == "none"){
+        div.style.display = "block";
+      }
+  })
+</script>
+
+{% endblock %}
