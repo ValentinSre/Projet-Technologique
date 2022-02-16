@@ -50,32 +50,14 @@
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    if(currentSlide == 2){
-      previousButton.style.display = 'none';
-    } else {
-      previousButton.style.display = 'none';
-    }
-    if(currentSlide == slides.length-1){
-      nextButton.style.display = 'none';
-      submitButton.style.display = 'inline-block';
-    } else {
-      nextButton.style.display = 'inline-block';
-      submitButton.style.display = 'none';
-    }
-  }
-
-  function showNextSlide() {
-    showSlide(currentSlide + 1);
-  }
-
-  function showPreviousSlide() {
-    showSlide(currentSlide - 1);
   }
 
   // Variables
   const quizContainer = document.getElementById('quiz11');
   const resultsContainer = document.getElementById('results11');
   const submitButton = document.getElementById('submit11');
+  
+
   const monQuiz11 = [
     { question: "Quelle est la relation entre Internet et le Web ?",
         answers: { a: "Le Web repose sur Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses !" },
@@ -84,13 +66,9 @@
 
   buildQuiz();
 
-  const previousButton = document.getElementById("previous11");
-  const nextButton = document.getElementById("next11");
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 1;
   showSlide(currentSlide);
   submitButton.addEventListener('click', showResults);
-  previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
 })()
 

@@ -76,6 +76,8 @@
   const quizContainer = document.getElementById('quiz1');
   const resultsContainer = document.getElementById('results1');
   const submitButton = document.getElementById('submit1');
+
+  //----------- QUESTIONS -----------//
   const monQuiz2 = [
     { question: "Tableau à 2 colonnes avec des nombres",
     answers: { a: "C'est une donnée", b: "C'est une information"},
@@ -110,4 +112,21 @@
   nextButton.addEventListener("click", showNextSlide);
 })()
 
+// --------------------- GESTION DES BOUTONS -------------------------//
 
+let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn2");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+
+btn1.addEventListener("click", () => {
+    if(getComputedStyle(div1).display == "none"){
+      div1.style.display = "block";
+    }
+})
+
+btn2.addEventListener("click", () => {
+    if(getComputedStyle(div2).display == "none"){
+      div2.style.display = "block";
+    }
+})

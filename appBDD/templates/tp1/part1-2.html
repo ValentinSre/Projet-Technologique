@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <!-- Header -->
 <header>
 	<div class="container" id="maincontent" tabindex="-1">
@@ -12,8 +11,7 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
         
-        <!-- ====================== DIV IP ============================ -->
-        <!-- Display question : Communication entre deux ordis -->
+        <!-- Display "Communication entre deux ordinateurs" -->
         <div id="div0" class="fenetre"> 
           <img class="boutons" src="/static/img/boutons.png" >
           <br>
@@ -22,13 +20,16 @@
             Communication entre deux ordinateurs
           </div>
           <br>
+          <!-- Texte introductif -->
           <p style="color: #1c1c3d">Deux ordinateurs sont reliés entre eux par un lien de communication filaire ou non filaire.</p>
           <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
             <div >
                 <br><br>
+                <!-- Illustration -->
                 <img src="/static/img/habillage2.png" style = "width: 150px;">
             </div>
             <div style = "width: 400px; padding-right : 50px;">
+              <!-- Cadre du quiz (voir js/tp1/quiz2.js) -->
               <div class="quiz-container">
                 <div id="quiz2"></div>
               </div>
@@ -45,7 +46,7 @@
 
         <br>
 
-        <!-- Display explication : Communication entre deux ordis -->
+        <!-- Display "Adresses IP" -->
         <div class="fenetre" id="div1" style="display: none; "> 
           <img class="boutons" src="/static/img/boutons.png" >
           <br>
@@ -55,17 +56,19 @@
           </div>
           <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
             <div>
-                <br>
-                <div class = "info">
-                  Chaque ordinateur est identifié au sein d’un réseau par une <b>adresse IP</b> : il s’agit d’une adresse généralement constituée de <b>4 nombres entre 0 et 255</b>. Ces adresses permettent ainsi de savoir où envoyer/demander les données recherchées.
-                  <br><br>
-                  C’est la même chose lorsque vous souhaitez envoyer une photo par SMS à un ami : vous devez avoir son numéro de téléphone pour lui envoyer.                
-                </div>
+              <br>
+              <!-- Cadre de définition -->
+              <div class = "info">
+                Chaque ordinateur est identifié au sein d’un réseau par une <b>adresse IP</b> : il s’agit d’une adresse généralement constituée de <b>4 nombres entre 0 et 255</b>. Ces adresses permettent ainsi de savoir où envoyer/demander les données recherchées.
+                <br><br>
+                C’est la même chose lorsque vous souhaitez envoyer une photo par SMS à un ami : vous devez avoir son numéro de téléphone pour lui envoyer.                
+              </div>
             </div>
             <div>
-                <div style="margin:auto;">
-                  <img src="/static/img/ip.gif" style = "width: 500px">
-                </div>
+              <div style="margin:auto;">
+                <!-- Animation Adresses IP -->
+                <img src="/static/img/ip.gif" style = "width: 500px">
+              </div>
             </div>
           </div>
           <button class="quiz" onclick="window.location.href = '/tp1/part1-3'">Continuer</button>

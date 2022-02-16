@@ -75,6 +75,8 @@
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+    
+    //----------- QUESTIONS -----------//
     const monQuiz1 = [
       { question: "Que remarquez-vous ?",
         answers: { a: "Il n'y a aucun point commun", b: "Tout est identique sur les 2 sites", c: "Les données de DBPedia sont celles de Wikipédia agencées différemment" },

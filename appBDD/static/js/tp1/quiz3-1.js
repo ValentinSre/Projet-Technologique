@@ -50,18 +50,6 @@
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    if(currentSlide == 0){
-      previousButton.style.display = 'none';
-    } else {
-      previousButton.style.display = 'none';
-    }
-    if(currentSlide == slides.length-1){
-      nextButton.style.display = 'none';
-      submitButton.style.display = 'inline-block';
-    } else {
-      nextButton.style.display = 'inline-block';
-      submitButton.style.display = 'none';
-    }
   }
 
   function showNextSlide() {
@@ -84,14 +72,10 @@
 
   buildQuiz();
 
-  const previousButton = document.getElementById("previous11");
-  const nextButton = document.getElementById("next11");
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
   showSlide(currentSlide);
   submitButton.addEventListener('click', showResults);
-  previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
 })()
 
 

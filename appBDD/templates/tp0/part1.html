@@ -13,47 +13,46 @@
       <div style = "padding-left: 30px;">
 
         <!-- ====================== DIV DONNÉE ============================ -->
-        <div id = "divX">
-          <!-- Display question : Données -->
-					<div class="fenetre"> 
-						<img class="boutons" src="/static/img/boutons.png" >
-						<br>
-						<div class="research"> 
-							<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-							Les différents formats de donnée
-						</div>
-						<br>
-						<div class = "info" style ="font-size: 1.6rem; width: 520px">
-							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
-							Cliquez sur les liens suivants et consultez les sites <br>« 
-              <a href="https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_du_box-office_mondial" style="color:#34a853ff; font-weight: bold;">www.wikipedia.com</a> », 
-              « <a href="https://www.google.com/search?q=COVID&rlz=1C1VDKB_frFR978FR978&sxsrf=AOaemvKCbmoLoE0_B9L0EBcexgSIiKVn0Q%3A1642088708008&ei=A0ngYf_3PMHClwSyypZI&ved=0ahUKEwi_hYWRia_1AhVB4YUKHTKlBQkQ4dUDCA4&uact=5&oq=COVID&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDATILCAAQgAQQsQMQgwEyDggAEIAEELEDEIMBEMkDMgUIABCSAzIQCAAQgAQQhwIQsQMQgwEQFDIKCAAQgAQQhwIQFDILCAAQgAQQsQMQgwEyBQgAEIAEMgUIABCABDoECCMQJzoKCAAQsQMQgwEQQzoECAAQQ0oECEEYAEoECEYYAFCmaliHbmChb2gDcAB4AIABdYgBgwWSAQMxLjWYAQCgAQHAAQE&sclient=gws-wiz" style="color:#34a853ff; font-weight: bold;">www.google.com</a> » <br> et 
-              « <a href="https://www.marvel.com/movies" style="color:#34a853ff; font-weight: bold;">www.marvel.com</a> ».
-						</div>
-						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
-							<div style = "padding:10px">
-								<div class = "info" style="font-size: 1.5rem;">
-									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
-									En parcourant ces sites, repérez au moins 5 formats de données différents. 
-									<br><br>
-                  <button class="quiz" id="btn1">Continuer</button>
-								</div>
+        <!-- Display "Les différents formats de donnée" -->
+				<div class="fenetre"> 
+					<img class="boutons" src="/static/img/boutons.png" >
+					<br>
+					<div class="research"> 
+						<i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+						Les différents formats de donnée
+					</div>
+					<br>
+					<div class = "info" style ="font-size: 1.6rem; width: 520px">
+						<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
+						Cliquez sur les liens suivants et consultez les sites <br>« 
+            <a href="https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_du_box-office_mondial" style="color:#34a853ff; font-weight: bold;">www.wikipedia.com</a> », 
+            « <a href="https://www.google.com/search?q=COVID&rlz=1C1VDKB_frFR978FR978&sxsrf=AOaemvKCbmoLoE0_B9L0EBcexgSIiKVn0Q%3A1642088708008&ei=A0ngYf_3PMHClwSyypZI&ved=0ahUKEwi_hYWRia_1AhVB4YUKHTKlBQkQ4dUDCA4&uact=5&oq=COVID&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDATILCAAQgAQQsQMQgwEyDggAEIAEELEDEIMBEMkDMgUIABCSAzIQCAAQgAQQhwIQsQMQgwEQFDIKCAAQgAQQhwIQFDILCAAQgAQQsQMQgwEyBQgAEIAEMgUIABCABDoECCMQJzoKCAAQsQMQgwEQQzoECAAQQ0oECEEYAEoECEYYAFCmaliHbmChb2gDcAB4AIABdYgBgwWSAQMxLjWYAQCgAQHAAQE&sclient=gws-wiz" style="color:#34a853ff; font-weight: bold;">www.google.com</a> » <br> et 
+            « <a href="https://www.marvel.com/movies" style="color:#34a853ff; font-weight: bold;">www.marvel.com</a> ».
+					</div>
+					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+						<div style = "padding:10px">
+							<div class = "info" style="font-size: 1.5rem;">
+								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
+								En parcourant ces sites, repérez au moins 5 formats de données différents. 
+								<br><br>
+                <button class="quiz" id="btn1">Continuer</button>
 							</div>
-							<div style="padding:10px; margin:auto">
-								<div class = "info" id="div1" style =" font-size: 1.4rem; display: none;">
-									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
-									Ces sites contiennent des données dans divers formats : <i>texte, valeur, graphe, carte, tableau, image, vidéo, audio</i>... 
-									<br><br>
-									<button class="quiz" id="btn2">Continuer</button>
-								</div>
+						</div>
+						<div style="padding:10px; margin:auto">
+							<div class = "info" id="div1" style =" font-size: 1.4rem; display: none;">
+								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
+								Ces sites contiennent des données dans divers formats : <i>texte, valeur, graphe, carte, tableau, image, vidéo, audio</i>... 
+								<br><br>
+								<button class="quiz" id="btn2">Continuer</button>
 							</div>
 						</div>
 					</div>
+				</div>
 
           <br>
 
-          <!-- Display explication : La donnée-->
-          <div class="fenetre" id="div2" style="display:none"> 
+        <!-- Display "La donnée" -->
+        <div class="fenetre" id="div2" style="display:none"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
             <div>
@@ -62,6 +61,7 @@
                 La donnée
               </div>
               <br>
+              <!-- Texte introductif -->
               <div style="width: 550px; margin:auto; color: #1c1c3d">
                 Comme nous avons pu le voir, le Web est une <b>bibliothèque géante de données</b>, aux formats divers et variés.
                 Il convient par conséquent de comprendre ce que représente le terme de <b>donnée</b>.
@@ -69,6 +69,7 @@
               <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
                 <div style = "padding-left: 10px">
                   <br>
+                  <!-- Cadre de définition -->
                   <div class = "info" style="margin:auto" >
                     <br>
                     La <b>donnée</b> est une notion généralement <b>confondue avec l'information</b>. Une donnée peut être un <b>chiffre brut</b>,
@@ -84,6 +85,7 @@
                 </div>
                 <div style = "padding-right: 10px;">
                   <br>
+                  <!-- Cadre du quiz (voir js/tp0/quiz1.js) -->
                   <div class = "info" >
                     <div class="quiz-container" style="margin-top:5px">
                       <div id="quiz1"></div>
@@ -101,11 +103,10 @@
               <button class="quiz" onclick="window.location.href = '/'">Continuer</button>
             </div>
           </div>
-        </div>
       </div>
 
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}
@@ -119,25 +120,7 @@
   </div>
 </header>
 
-<script src="{{ url_for('static', filename='js/tp3/quiz1.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tp0/quiz1.js') }}"></script>
 
-<script>
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let div1 = document.getElementById("div1");
-let div2 = document.getElementById("div2");
-
-btn1.addEventListener("click", () => {
-    if(getComputedStyle(div1).display == "none"){
-      div1.style.display = "block";
-    }
-})
-
-btn2.addEventListener("click", () => {
-    if(getComputedStyle(div2).display == "none"){
-      div2.style.display = "block";
-    }
-})
-</script>
 {% endblock %}
 

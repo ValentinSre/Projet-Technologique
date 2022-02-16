@@ -13,46 +13,41 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV URI ============================ -->
-        <!-- Display question : Composition d'une page -->
-        <div id = "div0">
-          <div class="fenetre"> 
-            <img class="boutons" src="/static/img/boutons.png" >
-            <br>
-            <div class="research"> 
-              <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
-              Introduction
-            </div>
-            <br>
-            <div style = "width: 500px; margin: auto; text-align: left;">
-              <p>
-                Bienvenue à l'ENSSAT !<br>
-                Avant de commencer à réaliser les exercices, une petite question... <br><br>
-                Connais-tu le concept de <b><i>donnée</i></b> ?<br><br>
-                Que tu penses connaître ou non, cette introduction servira à s'assurer que tu 
-                maîtrises bien cette définition importante...
-              </p>
-            </div>
-            <br>
-            <button class="quiz" onclick="window.location.href = '/tp0/part1'">C'est parti !</button>
-
+        <!-- ==================== DIV INTRODUCTIF ========================= -->
+        <!-- Display "Introduction" au TP0 -->
+        <div class="fenetre"> 
+          <img class="boutons" src="/static/img/boutons.png" >
+          <br>
+          <div class="research"> 
+            <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
+            Introduction
           </div>
+          <br>
+          <div style = "width: 500px; margin: auto; text-align: left;">
+            <p>
+              Bienvenue à l'ENSSAT !<br>
+              Avant de commencer à réaliser les exercices, une petite question... <br><br>
+              Connais-tu le concept de <b><i>donnée</i></b> ?<br><br>
+              Que tu penses connaître ou non, cette introduction servira à s'assurer que tu 
+              maîtrises bien cette définition importante...
+            </p>
+          </div>
+          <br>
+          <button class="quiz" onclick="window.location.href = '/tp0/part1'">C'est parti !</button>
         </div>
       </div>
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}
       </div>
     </div>
-	
-    <br>
-    
+  </div>
+      
     {% include 'interface.html' %}
   
-  </div>
 </header>
 
 {% endblock %}

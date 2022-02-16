@@ -13,9 +13,9 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV INTERNET ============================ -->
+        <!-- ====================== PARTIE 1 ============================ -->
         <div id = "div2">
-          <!-- Display question : Internet-->
+          <!-- Display "Connaissez-vous vraiment Internet ?" -->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -25,19 +25,18 @@
             </div>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
               <div style = "padding-left: 30px;">
+                <!-- Cadre du quiz (voir js/tp1/quiz1.js) -->
                 <div class="quiz-container">
                   <div id="quiz1"></div>
                 </div>
-
                 <div id="results"></div>
                 <br>
-                <button class="quiz" id="previous" >Précédent</button>
-                <button class="quiz" id="next">Suivant</button>
                 <button class="quiz" id="submit">Corriger</button>
                 <br>
               </div>
               <div>
                 <br>
+                <!-- Illustration -->
                 <img src="/static/img/habillage1.png">
               </div>
             </div>
@@ -45,7 +44,7 @@
 
           <br>
 
-          <!-- Display explication : Internet et Web-->
+          <!-- Display "Internet" -->
           <div class="fenetre" id="div1" style="display:none"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -57,10 +56,12 @@
               <br>
               <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
                 <div>
+                  <!-- Animation Internet -->
                   <img style="width: 450px" src="/static/img/internet.gif" >
                 </div>
                 <div style = "padding-right: 10px;">
                   <br>
+                  <!-- Cadre de définition -->
                   <div class = "info" >
                     <br>
                     Internet est un ensemble d’<b>ordinateurs</b> reliés entre eux. 
@@ -76,9 +77,9 @@
           </div>
         </div>
 
-        <!-- ====================== DIV SUIVANTE ============================ -->
-
+        <!-- ====================== PARTIE 2 ============================ -->
         <div id="div3" style = "display:none">
+          <!-- Display "Quel lien entre Internet et Web ?" -->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -88,19 +89,18 @@
             </div>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
               <div style = "padding-left: 30px;">
+                <!-- Cadre du quiz (voir js/tp1/quiz1-1.js) -->
                 <div class="quiz-container">
                   <div id="quiz11"></div>
                 </div>
-      
                 <div id="results"></div>
                 <br>
-                <button class="quiz" id="previous11" >Précédent</button>
-                <button class="quiz" id="next11">Suivant</button>
                 <button class="quiz" id="submit11">Corriger</button>
                 <br>
               </div>
               <div>
                 <br>
+                <!-- Illustration -->
                 <img src="/static/img/habillage1.png">
               </div>
             </div>
@@ -108,7 +108,7 @@
       
           <br>
       
-          <!-- Display explication : Différences -->
+          <!-- Display "Internet et le Web" -->
           <div class="fenetre" id="div4" style="display:none"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -121,6 +121,7 @@
               <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
                 <div style = "padding-left: 10px;">
                   <br>
+                  <!-- Cadre de définition -->
                   <div class = "info" >
                     <br>
                     Le Web est à ne pas confondre avec Internet. Les deux sont différents et distincts,
@@ -132,6 +133,7 @@
                   </div>
                 </div>
                 <div>
+                  <!-- Illustration Internet -->
                   <img style="width: 400px" src="/static/img/internetweb.png" >
                 </div>
               </div>
