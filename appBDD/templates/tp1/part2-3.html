@@ -12,7 +12,7 @@
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div style = "padding-left: 30px;">
 				
-				<!-- ====================== DIV QUESTION ========================= -->
+				<!-- Display "Les niveaux d'interrogation" -->
 				<div id="div0" class="fenetre"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
@@ -21,25 +21,27 @@
 						Les niveaux d'interrogation
 					</div>
 					<br>
+					<!-- Texte introductif -->
 					<div style="color: #1c1c3d; font-size: 16px; padding:15px">
 						Il existe différentes façons de chercher les données sur le Web. 
 						Nous avons vu précédemment qu’il existait plusieurs moyens de parvenir 
 						à la réponse cherchée mais, généralement, la route ne s’arrête pas là...
 						<br><br>
 						Toujours sur la page Wikipédia « Avengers : Infinity War », cherchez à répondre aux questions suivantes :
-
 					</div>
 
+					<!-- Titre -->
 					<p style ="font-weight: bold; font-size: 23px; color: #34a853ff">
 						Premier niveau : je sais où est l’information
 					</p>
 
 					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 						<div style = "padding-left: 10px; width: 420px">
+							<!-- Cadre du quiz (voir js/tp1/quiz6.js) -->
 							<div class = "quiz-container" style="margin-top:10px">
 								<div id="quiz6" ></div>
 							</div>   
-							<br>
+							<br><br>
 							<div id="results"></div>
 							<br><br>
 							<button class="quiz" id="previous" >Précédent</button>
@@ -49,6 +51,7 @@
 						</div>
 						<div>
 							<br><br>
+							<!-- Illustration -->
 							<img src="/static/img/habillage5.png">
 						</div>
 					</div>
@@ -56,7 +59,7 @@
 
 				<br>
 		
-				<!-- ====================== DIV REPONSE ========================= -->
+				<!-- Display "Recherche de premier niveau" -->
 				<div id="div1" style="display:none" class="fenetre"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
@@ -70,18 +73,21 @@
 						<div style = "padding-left: 10px">
 							<div style="margin:auto">
 								<br>
+								<!-- Cadre réponse 1 -->
 								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
 											background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
 									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
 									Hugo Brunswick
 								</div>
 								<br>
+								<!-- Cadre réponse 2 -->
 								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #90c45e;
 											background: white; color: #90c45e; text-align: left; font-size: 1.7rem; font-weight: bold;">
 									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #90c45e;"> </i>
 									19 semaines
 								</div>
 								<br>
+								<!-- Cadre réponse 3 -->
 								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
 											background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
 									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
@@ -91,6 +97,7 @@
 						</div>
 						<div style="padding-right: 15px;">
 							<div class = "info" style ="font-size: 1.4rem; ">
+								<!-- Cadre de réponse -->
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
 								Vous venez de faire une recherche de <b>premier niveau : vous connaissez la page où 
 								se trouve l’information</b> que vous cherchez et il vous reste uniquement à parcourir cette page ! 
@@ -104,7 +111,7 @@
 			</div>
 
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-			<!-- ====================== DIV GAUCHE : MENU ======================= -->
+			<!-- ====================== DIV DROITE : MENU ======================= -->
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div >
 				{% include 'menu.html' %}

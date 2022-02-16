@@ -9,11 +9,11 @@
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- =================== DIV DROITE : CONTENU ======================= -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
         
-        <!-- ====================== DIV TITRE ============================ -->
+        <!-- Display "Fin du TP1" -->
         <div class="fenetre"> 
           <img class="boutons" src="/static/img/boutons.png" >
           <br>
@@ -25,9 +25,8 @@
 
         <br>
 
-        <!-- ====================== DIV INTERNET ============================ -->
         <div id = "div2">
-          <!-- Display question : Internet-->
+          <!-- Display "Conclusion" -->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -55,7 +54,7 @@
 
           <br>
 
-          <!-- Display explication : Internet et Web-->
+          <!-- Display "Bibliographie" -->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -68,16 +67,19 @@
               <p style = "font-size: 18px; color: #34a853ff; font-weight: bold;">Pour en savoir plus...</p>
               <div style="margin: auto">
                 <ul>
+                  <!-- Référence 1 -->
                   <li style ="text-align: left;">
                     <a href="https://interstices.info/idee-recue-web-et-internet-cest-la-meme-chose/" target="_blank" style="color:#7c7c7c; font-weight: bold; font-size: 16px;">
                       Interstices - Idée reçue : Web et Internet, c'est la même chose
                     </a>
                   </li>
+                  <!-- Référence 2 -->
                   <li style ="text-align: left;">
                     <a href="https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" target="_blank" style="color:#7c7c7c; font-weight: bold; font-size: 16px">
                       MDN Web Docs - Création d'hyperliens
                     </a>
                   </li>
+                  <!-- Référence 3 -->
                   <li style ="text-align: left;">
                     <a href="https://mylittlebigweb.com/comment-fonctionne-un-moteur-de-recherche/" target="_blank" style="color:#7c7c7c; font-weight: bold; font-size: 16px">
                       SEO - Comment fonctionne un moteur de recherche ?
@@ -94,7 +96,7 @@
       </div>
 
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}

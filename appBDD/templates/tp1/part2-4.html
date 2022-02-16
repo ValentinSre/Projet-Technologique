@@ -12,7 +12,7 @@
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div style = "padding-left: 30px;">
 				
-				<!-- ====================== DIV QUESTION ========================= -->
+				<!-- Display "Les niveaux d'interrogation" -->
 				<div id="div0" class="fenetre"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
@@ -21,21 +21,23 @@
 						Les niveaux d'interrogation
 					</div>
 					<br>
+					<!-- Texte introductif -->
 					<div style="color: #1c1c3d; font-size: 16px; padding:15px">
 						Il existe différentes façons de chercher les données sur le Web. 
 						Nous avons vu précédemment qu’il existait plusieurs moyens de parvenir 
 						à la réponse cherchée mais, généralement, la route ne s’arrête pas là...
 						<br><br>
 						En tâchant de rester sur Wikipédia et sans recherche (seule la navigation par hyperlien est autorisée), cherchez à répondre aux questions suivantes :
-
 					</div>
 
+					<!-- Titre -->
 					<p style ="font-weight: bold; font-size: 23px; color: #34a853ff">
 						Deuxième niveau : je dois être moteur dans la recherche
 					</p>
 
 					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 						<div style = "padding-left: 10px; width: 420px">
+							<!-- Cadre du quiz (voir js/tp1/quiz7.js) -->
 							<div class = "quiz-container" style="margin-top:10px">
 								<div id="quiz7" ></div>
 							</div>   
@@ -48,14 +50,15 @@
 						</div>
 						<div>
 							<br><br>
+							<!-- Illustration -->
 							<img src="/static/img/habillage5.png">
 						</div>
 					</div>
 				</div>
 
 				<br>
-		
-				<!-- ====================== DIV REPONSE ========================= -->
+
+				<!-- Display "Recherche de second niveau" -->
 				<div id="div1" style="display:none" class="fenetre"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
@@ -69,12 +72,14 @@
 						<div style = "padding-left: 10px">
 							<div style="margin:auto">
 								<br><br><br>
+								<!-- Cadre réponse 2 -->
 								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
 											background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
 									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
 									2008
 								</div>
 								<br>
+								<!-- Cadre réponse 2 -->
 								<div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #90c45e;
 											background: white; color: #90c45e; text-align: left; font-size: 1.7rem; font-weight: bold;">
 									<i class="fa fa-fw fa-bookmark" style="width: 50px; color: #90c45e;"> </i>
@@ -83,6 +88,7 @@
 							</div>   
 						</div>
 						<div style="padding-right: 15px;">
+							<!-- Cadre de réponse -->
 							<div class = "info" style ="font-size: 1.4rem; ">
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
 								Cette fois, la recherche est plus compliquée puisque <b>la page principale ne contient 
@@ -99,7 +105,7 @@
 			</div>
 
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-			<!-- ====================== DIV GAUCHE : MENU ======================= -->
+			<!-- ====================== DIV DROITE : MENU ======================= -->
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div >
 				{% include 'menu.html' %}
@@ -114,6 +120,5 @@
 </header>
 
 <script src="{{ url_for('static', filename='js/tp1/quiz7.js') }}"></script>
-
 
 {% endblock %}

@@ -43,7 +43,6 @@
         answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
       }
     });
-    resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz51.length} <br>`; // on affiche le nb total de bonnes réponses
   }
 
   function showSlide(n) {
@@ -64,6 +63,5 @@
   const slides = document.querySelectorAll(".slide");
   slides[1].classList.add('active-slide');
   submitButton.addEventListener('click', showResults);
-  previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
 })()
+

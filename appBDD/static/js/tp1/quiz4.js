@@ -43,7 +43,6 @@
           answerContainers[questionNumber].style.color = 'red';  // on colore les réponses en rouge
         }
       });
-      resultsContainer.innerHTML = `${numCorrect} sur ${monQuiz4.length} <br>`; // on affiche le nb total de bonnes réponses
     }
   
     function showSlide(n) {
@@ -51,7 +50,6 @@
   
     // Variables
     const quizContainer = document.getElementById('quiz4');
-    const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const monQuiz4 = [
       { question: "Qu'est-ce qu'un navigateur ?",
@@ -64,8 +62,67 @@
     const slides = document.querySelectorAll(".slide");
     slides[0].classList.add('active-slide');
     submitButton.addEventListener('click', showResults);
-    previousButton.addEventListener("click", showPreviousSlide);
-    nextButton.addEventListener("click", showNextSlide);
   })()
 
+// --------------------- GESTION DES BOUTONS -------------------------//
 
+  let btn1 = document.getElementById("submit");
+  let btn2 = document.getElementById("btn2");
+  let btn3 = document.getElementById("submit41");
+  let btn4 = document.getElementById("btn4");
+  let btn5 = document.getElementById("btn5");
+  let btn6 = document.getElementById("btn6");   
+  let btn7 = document.getElementById("btn7");  
+  let div0 = document.getElementById("div0");
+  let div1 = document.getElementById("div1");
+  let div2 = document.getElementById("div2");
+  let div3 = document.getElementById("div3");
+  let div4 = document.getElementById("div4");
+  let div5 = document.getElementById("div5");
+  let div6 = document.getElementById("div6");
+  let div7 = document.getElementById("div7");
+
+
+  btn1.addEventListener("click", () => {
+		if(getComputedStyle(div1).display == "none"){
+		  div1.style.display = "block";
+		}
+  })
+
+  btn2.addEventListener("click", () => {
+		if(getComputedStyle(div2).display == "none"){
+		  div2.style.display = "block";
+		}
+  })
+
+  btn3.addEventListener("click", () => {
+		if(getComputedStyle(div3).display == "none"){
+		  div3.style.display = "block";
+		}
+  })
+
+  btn4.addEventListener("click", () => {
+		if(getComputedStyle(div4).display == "none"){
+		  div0.style.display = "none";
+		  div2.style.display = "none";
+		  div4.style.display = "block";
+		}
+  })
+
+  btn5.addEventListener("click", () => {
+		if(getComputedStyle(div5).display == "none"){
+		  div5.style.display = "block";
+		}
+  })
+
+  btn6.addEventListener("click", () => {
+		if(getComputedStyle(div6).display == "none"){
+		  div6.style.display = "block";
+		}
+  })
+
+  btn7.addEventListener("click", () => {
+		if(getComputedStyle(div7).display == "none"){
+		  div7.style.display = "block";
+		}
+  })

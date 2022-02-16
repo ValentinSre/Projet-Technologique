@@ -12,7 +12,7 @@
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div style = "padding-left: 30px;">
 
-				<!-- ====================== DIV NAVIGATEUR ========================= -->
+				<!-- ====================== PARTIE 1 ========================= -->
 				<div id="div0">
 					<div class="fenetre"> 
 						<img class="boutons" src="/static/img/boutons.png" >
@@ -24,6 +24,7 @@
 						<br>
 						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 							<div style = "padding:10px">
+								<!-- Cadre du quiz (voir js/tp1/quiz4.js) -->
 								<div class = "info" style="color:#7c7c7c; width: 350px;">
 									<div class="quiz-container" style="margin-top:5px">
 										<div id="quiz4"></div>
@@ -33,6 +34,7 @@
 									<br>
 								</div>
 							</div>
+							<!-- Cadre de définition -->
 							<div style="padding:10px; margin:auto">
 								<div class = "info" id="div1" style ="display : none; font-size: 1.6rem">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
@@ -48,9 +50,8 @@
 					<br>
 				</div>
 
-
-				<!-- ====================== DIV URL ========================= -->
 				<div id="div2" style="display:none;">
+					<!-- Display "Consultation d'un document" -->
 					<div class="fenetre"> 
 						<img class="boutons" src="/static/img/boutons.png" >
 						<br>
@@ -59,12 +60,14 @@
 							Consultation d'un document
 						</div>
 						<br>
+						<!-- Cadre de Manipulation -->
 						<div class = "info" style ="font-size: 1.6rem; width: 500px">
 							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
 							Ouvrez un navigateur Web et entrez <br>« <a href="https://www.glenat.com/manga" target="_blank" style="color:#34a853ff; font-weight: bold;">www.glenat.com/manga</a> » dans la barre d’adresse.
 						</div>
 						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 							<div style = "padding:10px">
+								<!-- Cadre du quiz (voir js/tp1/quiz4-1.js) -->
 								<div class = "info" style="color:#7c7c7c">
 									<div class="quiz-container" style="margin-top:5px">
 										<div id="quiz41"></div>
@@ -76,10 +79,10 @@
 									<button class="quiz" id="next41">Suivant</button>
 									<button class="quiz" id="submit41">Corriger</button>
 									<br>
-
 								</div>
 							</div>
 							<div style="padding:10px; margin:auto">
+								<!-- Cadre de réponse -->
 								<div class = "info" id="div3" style ="display : none; font-size: 1.4rem;">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
 									L’adresse est appelée une <b>URL</b> (Uniform Resource Locator). Elle se compose d’un <b>nom du serveur Web</b> qui contient toutes les informations recherchées (glenat.com) et d’une <b>page Web</b> à afficher (/manga).
@@ -94,7 +97,8 @@
 					<br>
 				</div>
 
-				<!-- ================== DIV CODE SOURCE ===================== -->
+				<!-- ================== PARTIE 2 ===================== -->
+				<!-- Display "Code source" -->
 				<div id="div4" class="fenetre" style="display:none"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
@@ -105,12 +109,14 @@
 					<br>
 					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 						<div style = "padding:10px">
+							<!-- Texte introductif -->
 							<div style="padding-left: 15px; padding-right: 15px; color: #1c1c3d">
 								Le navigateur ne sert pas simplement à afficher une page recherchée : 
 								en effet, il interprète le <b>“code source”</b> pour <b>afficher de manière interprétable </b>
 								les véritables données stockées sur les serveurs d’Internet. 
 							</div>
 							<br>
+							<!-- Cadre de Manipulation -->
 							<div class = "info">
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff; border: 2px solid #34a853ff; margin: auto; width: 150px; border-radius: 30px">Manipulation</p>
 								<br>
@@ -122,6 +128,7 @@
 							</div>
 						</div>
 						<div style="padding:10px; margin:auto">
+							<!-- Cadre de réponse -->
 							<div class = "info" id="div5" style ="display : none; font-size: 1.3rem;">
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff;">Réponse</p>
 								Vous découvrez ce qu’est le <b>HTML</b> ! Il s’agit d’un <b>langage de programmation</b> pour créer et représenter du contenu Web. 
@@ -139,7 +146,7 @@
 
 				<br>
 
-				<!-- ====================== DIV HREF ========================= -->
+				<!-- Display "Href" -->
 				<div id="div6" class="fenetre" style="display:none"> 
 					<img class="boutons" src="/static/img/boutons.png" >
 					<br>
@@ -150,6 +157,7 @@
 					<br>
 					<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 						<div style = "margin: auto; padding:10px">
+							<!-- Cadre de question -->
 							<div class = "info" id="div1" style =" font-size: 1.6rem">
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
 								Repérez une ligne « href ». 
@@ -157,12 +165,12 @@
 								Que remarquez-vous ?
 								<br>
 								À quoi sert ce type de ligne selon vous ?
-
 								<br><br>
 								<button class="quiz" id="btn7">Continuer</button>
 							</div>
 						</div>
 						<div style="padding:10px; margin:auto">
+							<!-- Cadre de réponse -->
 							<div class = "info" id="div7" style ="display:none; font-size: 1.4rem">
 								<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
 								Les « href » sont les hyperliens. Si l’on regarde de plus près, on remarque que ces balises « href » 
@@ -197,67 +205,5 @@
 <script src="{{ url_for('static', filename='js/tp1/quiz4.js') }}"></script>
 <script src="{{ url_for('static', filename='js/tp1/quiz4-1.js') }}"></script>
 
-<script>
-  let btn1 = document.getElementById("submit");
-  let btn2 = document.getElementById("btn2");
-  let btn3 = document.getElementById("submit41");
-  let btn4 = document.getElementById("btn4");
-  let btn5 = document.getElementById("btn5");
-  let btn6 = document.getElementById("btn6");   
-  let btn7 = document.getElementById("btn7");  
-  let div0 = document.getElementById("div0");
-  let div1 = document.getElementById("div1");
-  let div2 = document.getElementById("div2");
-  let div3 = document.getElementById("div3");
-  let div4 = document.getElementById("div4");
-  let div5 = document.getElementById("div5");
-  let div6 = document.getElementById("div6");
-  let div7 = document.getElementById("div7");
-
-
-  btn1.addEventListener("click", () => {
-		if(getComputedStyle(div1).display == "none"){
-		  div1.style.display = "block";
-		}
-  })
-
-  btn2.addEventListener("click", () => {
-		if(getComputedStyle(div2).display == "none"){
-		  div2.style.display = "block";
-		}
-  })
-
-  btn3.addEventListener("click", () => {
-		if(getComputedStyle(div3).display == "none"){
-		  div3.style.display = "block";
-		}
-  })
-
-  btn4.addEventListener("click", () => {
-		if(getComputedStyle(div4).display == "none"){
-		  div0.style.display = "none";
-		  div2.style.display = "none";
-		  div4.style.display = "block";
-		}
-  })
-
-  btn5.addEventListener("click", () => {
-		if(getComputedStyle(div5).display == "none"){
-		  div5.style.display = "block";
-		}
-  })
-
-  btn6.addEventListener("click", () => {
-		if(getComputedStyle(div6).display == "none"){
-		  div6.style.display = "block";
-		}
-  })
-
-  btn7.addEventListener("click", () => {
-		if(getComputedStyle(div7).display == "none"){
-		  div7.style.display = "block";
-		}
-  })
-</script>
 {% endblock %}
 
