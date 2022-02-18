@@ -16,9 +16,8 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV URI ============================ -->
-        <!-- Display question : Composition d'une page -->
         <div id = "div0">
+          <!-- Display "Les bases de données" -->
           <div class="fenetre" style="height: 370px"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -28,17 +27,17 @@
             </div>
             <br>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <!-- Cadre du quiz (voir js/tp2/quiz5.js) -->
               <div style = "padding-left: 30px">
                 <div class="quiz-container">
                   <div id="quiz"></div>
                 </div>  
                 <br>  
-                <button class="quiz" id="previous" >Précédent</button>
-                <button class="quiz" id="next">Suivant</button>
                 <button class="quiz" id="submit">Corriger</button>
               </div>
               <div>
                 <br>
+                <!-- Illustration -->
                 <img src="/static/img/habillage3.png" style = "height: 70%">
               </div>
             </div>
@@ -47,7 +46,7 @@
 
           <br>
           
-          <!-- Display explication : Définition URI -->
+          <!-- Display "Base de données" -->
           <div class="fenetre" id="div1" style="display: none; "> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -58,6 +57,7 @@
             <br>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
               <div style = "margin: auto; padding:10px">
+                <!-- Cadre de définition -->
                 <div class = "info" style =" font-size: 1.6rem">
                   <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Explication</p>
                   Une base de données est un <b>collection de données</b>, généralement stockées et accessibles électroniquement.<br>
@@ -68,11 +68,13 @@
               </div>
               <div style="padding:10px; margin:auto">
                 <div id = "div2" style="display: none">
+                  <!-- Cadre d'exemple -->
                   <div class = "info" style ="font-size: 1.3rem">
                     <p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Exemple</p>
                     Des programmes permettent d'ailleurs aux utilisateurs de gérer une base de données, comme Excel ou MySQL.
                   </div>
                   <br>
+                  <!-- Cadre de définition -->
                   <div class = "info" style ="font-size: 1.3rem">
                     Le but d'une BDD est de stocker des données, proposer un mécanisme pour interroger, créer, modifier et supprimer des données 
                     et fournir une structure organisationnelle pour les données.
@@ -87,7 +89,7 @@
       </div>
 
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}
@@ -101,30 +103,6 @@
 </header>
 
 <script src="{{ url_for('static', filename='js/tp2/quiz5.js') }}"></script>
-
-<script>
-let btn1 = document.getElementById("submit");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let div0 = document.getElementById("div0");
-let div1 = document.getElementById("div1");
-let div2 = document.getElementById("div2");
-let div3 = document.getElementById("div3");
-
-btn1.addEventListener("click", () => {
-    if(getComputedStyle(div1).display == "none"){
-      div1.style.display = "block";
-    }
-})
-
-btn2.addEventListener("click", () => {
-    if(getComputedStyle(div2).display == "none"){
-      div2.style.display = "block";
-      div3.style.display = "block";
-    }
-})
-
-</script>
 
 {% endblock %}
 

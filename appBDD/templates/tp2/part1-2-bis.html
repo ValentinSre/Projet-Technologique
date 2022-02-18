@@ -16,9 +16,8 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV INTERNET ============================ -->
         <div id = "div2">
-          <!-- Display question : Internet-->
+          <!-- Display "Stylise ta page HTML !"-->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -26,11 +25,10 @@
               <i class="fa fa-fw fa-search" style="width: 50px; color: #7c7c7c;"> </i>
               Stylise ta page HTML !
             </div>
-
-                <br>
-                <form action="/tp2/part1-2-css" method="POST">
-                <div class="form-group"> 
-                  <textarea id="code" name="code">h1 {
+            <br>
+            <form action="/tp2/part1-2-css" method="POST">
+              <div class="form-group"> 
+                <textarea id="code" name="code">h1 {
   color: red;
   font-size: 50px;                    
 }
@@ -41,43 +39,26 @@ h2 {
 p {
   color: (mets la couleur de ton choix, en anglais);
   font-size: 30px;
-} </textarea>
-                </div> 
-                {% if modification == True %}
-                  <p style="color: green; font-size: 1rem"> Modification effectuée : visualise-la !</p>
-                {% endif %}
-                <script>
-                  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-                    lineNumbers: true, 
-                    mode: "text/x-html"
-                  });
-                </script>
-                
-              <style>
-                .CodeMirror {
-                  border: 1px solid #222;
-                  height: auto;
-                  text-align: left;
-                }
-                .CodeMirror-scroll {
-                  overflow-y: hidden;
-                  overflow-x: auto;
-                }
-              </style>                
-
+}         
+                </textarea>
+              </div> 
+              
+              {% if modification == True %}
+                <p style="color: green; font-size: 1rem"> Modification effectuée : visualise-la !</p>
+              {% endif %}
+             
               <button type="submit" class="quiz">Enregistrer</button> 
               <button class="quiz" onclick="window.open('/css'); return false;">Visualiser</button>
 
-              </form> 
-              <br>
-              <button class="quiz" onclick="window.location.href = '/tp2/part1-3'">Continuer le TP</button>
-
+            </form> 
+            <br>
+            <button class="quiz" onclick="window.location.href = '/tp2/part1-3'">Continuer le TP</button>
           </div>
         </div>
       </div>
 
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}
@@ -90,30 +71,46 @@ p {
   </div>
 </header>
 
-<script src="{{ url_for('static', filename='js/tp2/quiz1.js') }}"></script>
+<!--------------- GESTION DES BOUTONS --------------->
 
 <script>
-let btn1 = document.getElementById("submit");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let div0 = document.getElementById("div0");
-let div1 = document.getElementById("div1");
-let div2 = document.getElementById("div2");
-let div3 = document.getElementById("div3");
+  let btn1 = document.getElementById("submit");
+  let btn2 = document.getElementById("btn2");
+  let btn3 = document.getElementById("btn3");
+  let div0 = document.getElementById("div0");
+  let div1 = document.getElementById("div1");
+  let div2 = document.getElementById("div2");
+  let div3 = document.getElementById("div3");
 
-btn1.addEventListener("click", () => {
-    if(getComputedStyle(div1).display == "none"){
-      div1.style.display = "block";
-    }
-})
+  btn1.addEventListener("click", () => {
+      if(getComputedStyle(div1).display == "none"){
+        div1.style.display = "block";
+      }
+  })
 
-btn2.addEventListener("click", () => {
-    if(getComputedStyle(div2).display == "none"){
-      div2.style.display = "block";
-    }
-})
+  btn2.addEventListener("click", () => {
+      if(getComputedStyle(div2).display == "none"){
+        div2.style.display = "block";
+      }
+  })
 
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true, 
+    mode: "text/x-html"
+  });
 </script>
+
+<style>
+  .CodeMirror {
+    border: 1px solid #222;
+    height: auto;
+    text-align: left;
+  }
+  .CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+</style> 
 
 {% endblock %}
 
