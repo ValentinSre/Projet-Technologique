@@ -75,6 +75,8 @@
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Questions 
     const monQuiz1 = [
       { question: "Quel est le lien de Benedict Cumberbatch avec le film ?", 
         answers: { a: "acteur", b: "compositeur", c: "réalisateur" }, 
@@ -98,3 +100,14 @@
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })()
+
+// --------------------- GESTION DES BOUTONS -------------------------//
+
+  let btn = document.getElementById("submit");
+  let div = document.getElementById("reponses");
+
+  btn.addEventListener("click", () => {
+      if(getComputedStyle(div).display == "none"){
+        div.style.display = "block";
+      }
+  })

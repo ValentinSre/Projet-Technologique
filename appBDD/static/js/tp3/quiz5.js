@@ -25,7 +25,6 @@
           );
         }
       );
-      quizContainer.innerHTML = output.join(''); // on combine notre liste de sortie en une string HTML et le mettre sur la page
     }
   
     function showResults(){
@@ -51,18 +50,12 @@
       currentSlide = n;
     }
   
-    function showNextSlide() {
-      showSlide(currentSlide + 1);
-    }
-  
-    function showPreviousSlide() {
-      showSlide(currentSlide - 1);
-    }
-  
     // Variables
     const quizContainer = document.getElementById('quiz5');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Questions 
     const monQuiz5 = [
       { question: "Qu'est-ce que le RDF ?",
         answers: { a: "Un PDF que l'on peut lire", b: "Un format pour décrire les données", c: "Un registre de tous les documents du Web" },
@@ -77,13 +70,15 @@
     submitButton.addEventListener('click', showResults);
   })()
 
+// --------------------- GESTION DES BOUTONS  -------------------------//
+
   let btn1 = document.getElementById("submit");
   let btn2 = document.getElementById("btn2");
   let div1 = document.getElementById("div1");
   let div2 = document.getElementById("div2");
 
-btn1.addEventListener("click", () => {
+  btn1.addEventListener("click", () => {
     if(getComputedStyle(div1).display == "none"){
       div1.style.display = "block";
     }
-})
+  })

@@ -49,32 +49,14 @@
       slides[currentSlide].classList.remove('active-slide');
       slides[n].classList.add('active-slide');
       currentSlide = n;
-      if(currentSlide === 0){
-        previousButton.style.display = 'none';
-      } else {
-        previousButton.style.display = 'inline-block';
-      }
-      if(currentSlide === slides.length-1){
-        nextButton.style.display = 'none';
-        submitButton.style.display = 'inline-block';
-      } else {
-        nextButton.style.display = 'inline-block';
-        submitButton.style.display = 'none';
-      }
-    }
-  
-    function showNextSlide() {
-      showSlide(currentSlide + 1);
-    }
-  
-    function showPreviousSlide() {
-      showSlide(currentSlide - 1);
     }
   
     // Variables
     const quizContainer = document.getElementById('quiz4');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Web
     const monQuiz4 = [
       { question: "Qu'est-ce que le Web des données ?",
         answers: { a: "L'ensemble des données structurées du Web", b: "Tous les numéros de téléphone sur le Web", c: "C'est le nom technique du Web classique" },
@@ -83,15 +65,13 @@
   
     buildQuiz();
   
-    const previousButton = document.getElementById("previous");
-    const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
     showSlide(currentSlide);
     submitButton.addEventListener('click', showResults);
-    previousButton.addEventListener("click", showPreviousSlide);
-    nextButton.addEventListener("click", showNextSlide);
   })()
+
+// --------------------- GESTION DES BOUTONS -------------------------//
 
   let btn1 = document.getElementById("submit");
   let btn2 = document.getElementById("btn2");

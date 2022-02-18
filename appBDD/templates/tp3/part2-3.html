@@ -13,9 +13,8 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV URI ============================ -->
-        <!-- Display question : Composition d'une page -->
         <div id = "div0">
+          <!-- Display "Graphe RDF" -->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -24,16 +23,19 @@
               Graphe RDF
             </div>
             <br>
+            <!-- Texte introductif -->
             <div style = "width: 500px; margin: auto; color: #1c1c3d">
               Le graphe ci-contre représente plusieurs triplets récupérés sur la page DBpédia du film Avengers: Infinity War.
             </div>
             <br>
+            <!-- Illustration Graphe RDF -->
             <img src="/static/img/grapheRDF.png" style="width:680px">
             <br>
           </div>
 
           <br>
           
+          <!-- Display "Lecture de graphe" -->
           <div style="height: 370px;" class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -43,6 +45,7 @@
             </div>
             <br>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+              <!-- Cadre du quiz (voir js/tp3/quiz6.js) -->
               <div style = "padding-left: 15px; width : 340px">
                 <div class="quiz-container">
                   <div id="quiz"></div>
@@ -57,18 +60,21 @@
                 <div id="reponses" style="display:none">
                   <div style="margin:auto">
                     <br>
+                    <!-- Cadre réponse 1 -->
                     <div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
                           background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
                       <i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
                       Acteur (<i>starring</i>)
                     </div>
                     <br>
+                    <!-- Cadre réponse 2 -->
                     <div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #90c45e;
                           background: white; color: #90c45e; text-align: left; font-size: 1.7rem; font-weight: bold;">
                       <i class="fa fa-fw fa-bookmark" style="width: 50px; color: #90c45e;"> </i>
                       1973-06-02
                     </div>
                     <br>
+                    <!-- Cadre réponse 3 -->
                     <div style="width: 300px; margin:auto; padding: 2px; border-radius: 30px; border: 2px solid #34a853ff;
                           background: white; color: #34a853ff; text-align: left; font-size: 1.7rem; font-weight: bold;">
                       <i class="fa fa-fw fa-bookmark" style="width: 50px; color: #34a853ff;"> </i>
@@ -85,7 +91,7 @@
       </div>
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}
@@ -99,15 +105,5 @@
   </div>
 </header>
 <script src="{{ url_for('static', filename='js/tp3/quiz6.js') }}"></script>
-<script>
-  let btn = document.getElementById("submit");
-  let div = document.getElementById("reponses");
-
-  btn.addEventListener("click", () => {
-      if(getComputedStyle(div).display == "none"){
-        div.style.display = "block";
-      }
-  })
-</script>
 
 {% endblock %}

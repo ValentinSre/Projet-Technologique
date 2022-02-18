@@ -13,9 +13,8 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV URI ============================ -->
-        <!-- Display question : Composition d'une page -->
         <div id = "div0">
+          <!-- Display "Comparaison" -->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -24,6 +23,7 @@
               Comparaison
             </div>
             <br>
+            <!-- Cadre de définition -->
             <div style = "width: 600px; margin: auto; color: #1c1c3d; text-align: justify">
               Les objets sont <b>mieux décrits</b> car ils sont <b>reliés entre eux avec des relations plus riches</b>. 
               En outre, les données sont <b>structurées</b>, ce qui permet d’<b>interroger plus précisément les données du Web</b> avec des langages 
@@ -40,7 +40,7 @@
       </div>
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}
@@ -53,7 +53,9 @@
   
   </div>
 </header>
-<script src="{{ url_for('static', filename='js/tp3/quiz6.js') }}"></script>
+
+<!--------------- GESTION DES BOUTONS -------------->
+
 <script>
   let btn = document.getElementById("submit");
   let div = document.getElementById("reponses");

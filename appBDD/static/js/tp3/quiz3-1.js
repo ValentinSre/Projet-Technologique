@@ -76,6 +76,8 @@
     const quizContainer = document.getElementById('quiz31');
     const resultsContainer = document.getElementById('results31');
     const submitButton = document.getElementById('submit31');
+
+    // Questions
     const monQuiz2 = [
       { question: "www.google.fr",
       answers: { a:"est une URI", b: "est une URL", c: "est une URN"},

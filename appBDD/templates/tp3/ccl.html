@@ -9,11 +9,11 @@
     <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- =================== DIV DROITE : CONTENU ======================= -->
+      <!-- =================== DIV GAUCHE : CONTENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
         
-        <!-- ====================== DIV TITRE ============================ -->
+        <!-- Display "Fin du TP3" -->
         <div class="fenetre"> 
           <img class="boutons" src="/static/img/boutons.png" >
           <br>
@@ -25,10 +25,9 @@
 
         <br>
 
-        <!-- ====================== DIV INTERNET ============================ -->
         <div id = "div2">
-          <!-- Display question : Internet-->
-          <div class="fenetre"> 
+        <!-- Display "Conclusion" -->
+        <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
             <div class="research"> 
@@ -38,8 +37,10 @@
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
               <div>
                 <br>
+                <!-- Illustration -->
                 <img src="/static/img/habillage6.png" style="height: 250px">
               </div>
+              <!-- Texte explicatif -->
               <div style = "padding-right: 50px; width: 400px; text-align: justify;">
                 <br><br>
                 <p style="font-size: 15px;">À travers ces quelques séances de travaux pratiques, nous avons donc vu ce que voulait dire le terme
@@ -55,7 +56,7 @@
 
           <br>
 
-          <!-- Display explication : Internet et Web-->
+          <!-- Display "Bibliographie" -->
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -68,11 +69,13 @@
               <p style = "font-size: 18px; color: #34a853ff; font-weight: bold;">Pour en savoir plus...</p>
               <div style="margin: auto">
                 <ul>
+                  <!-- Référence 1 -->
                   <li style ="text-align: left;">
                     <a href="https://interstices.info/le-web-de-donnees/" target="_blank" style="color:#7c7c7c; font-weight: bold; font-size: 16px;">
                       Interstices - Le Web des données
                     </a>
                   </li>
+                  <!-- Référence 2 -->
                   <li style ="text-align: left;">
                     <a href="https://fr.wikipedia.org/wiki/Web_des_donn%C3%A9es" target="_blank" style="color:#7c7c7c; font-weight: bold; font-size: 16px">
                       Wikipédia - Web des données
@@ -88,7 +91,7 @@
       </div>
 
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}

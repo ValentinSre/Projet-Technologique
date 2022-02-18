@@ -13,9 +13,9 @@
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div style = "padding-left: 30px;">
 
-        <!-- ====================== DIV URI ============================ -->
-        <!-- Display question : Composition d'une page -->
+        <!-- ====================== PARTIE 1 ============================ -->
         <div id = "div0">
+          <!-- Display "Composition d'une page" -->
           <div style="height: 370px;" class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -24,20 +24,21 @@
               Composition d'une page
             </div>
             <br>
+            <!-- Texte introductif -->
             <div style = "width: 500px; margin: auto">
               Chaque élément du Web est défini par ce que l'on appelle une <b>URI</b>.
             </div>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <!-- Cadre du quiz (voir js/tp3/quiz3.js) -->
               <div style = "padding-left: 30px; width : 380px">
                 <div class="quiz-container">
                   <div id="quiz3"></div>
                 </div>    
-                <button class="quiz" id="previous" >Précédent</button>
-                <button class="quiz" id="next">Suivant</button>
                 <button class="quiz" id="submit">Corriger</button>
               </div>
               <div>
                 <br>
+                <!-- Illustration -->
                 <img src="/static/img/habillage3.png" style = "height: 70%">
               </div>
             </div>
@@ -45,7 +46,7 @@
 
           <br>
 
-          <!-- Display explication : Définition URI -->
+          <!-- Display "URI" -->
           <div class="fenetre" id="div1" style="display: none; "> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -55,6 +56,7 @@
             </div>
             <br>
               <div  style="padding: 10px; width: 600px; margin:auto">
+                <!-- Cadre de définition -->
                 <div class = "info" style="font-size: 14px; padding: 15px">
                   L'<b>URI (Uniform Resource Identifier) permet d'identifier une entité</b> utilisée 
                   sur le web. Les URI peuvent être reliées entre elles.
@@ -70,6 +72,7 @@
                 </div>
               </div>
               <div>
+                <!-- Animation URI -->
                 <img src="/static/img/uri.gif" style="width: 600px; margin:auto">
               </div>
               <br>
@@ -77,6 +80,8 @@
           </div>
         </div>
 
+        <!-- ====================== PARTIE 2 ============================ -->
+        <!-- Display "Exemple d'URI" -->
         <div id = "div2" style = "display:none">
           <div class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
@@ -134,6 +139,7 @@
 
           <br>
 
+          <!-- Display "Comprendre l'URI" -->
           <div style="height: 370px; display: none;" id="div3" class="fenetre"> 
             <img class="boutons" src="/static/img/boutons.png" >
             <br>
@@ -142,10 +148,12 @@
               Comprendre l'URI
             </div>
             <br>
+            <!-- Texte introductif -->
             <div style = "width: 500px; margin: auto">
               Vérifie ta bonne compréhension de ces notions.
             </div>
             <div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
+              <!-- Cadre du quiz (voir js/tp3/quiz3-1.js) -->
               <div style = "padding-left: 10px; width : 320px">
                   <div class="quiz-container">
                     <div id="quiz31"></div>
@@ -157,6 +165,7 @@
               </div>
               <div style = "padding-right: 10px">
                 <br>
+                <!-- Cadre de définition-->
                 <div class = "info" style="color:#7c7c7c; font-size: 13px; display:none" id="div4">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Résumé</p>
                   L'<b>URL</b> permet de <b>localiser une ressource</b> dans le web. <br>
@@ -173,7 +182,7 @@
       </div>
       
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ====================== DIV GAUCHE : MENU ======================= -->
+      <!-- ====================== DIV DROITE : MENU ======================= -->
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <div >
         {% include 'menu.html' %}

@@ -12,9 +12,8 @@
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div style = "padding-left: 30px;">
 
-				<!-- ====================== DIV DONNÉE ============================ -->
 				<div>
-					<!-- Display question : Données -->
+					<!-- Display "Comparaison au Web documentaire" -->
 					<div class="fenetre"> 
 						<img class="boutons" src="/static/img/boutons.png" >
 						<br>
@@ -23,6 +22,7 @@
 							Comparaison au Web documentaire
 						</div>
 						<br>
+						<!-- Cadre de manipulation -->
 						<div class = "info" style ="font-size: 1.6rem; width: 520px">
 							<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Manipulation</p>
 							Sur votre navigateur, ouvrez les sites<br>« 
@@ -35,18 +35,18 @@
 						</div>
 						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 							<div style = "padding:10px">
+								<!-- Cadre du quiz (voir js/tp3/quiz2.js) -->
 								<div class = "info" style="color:#7c7c7c">
 									<div class="quiz-container" style="margin-top:5px">
 										<div id="quiz"></div>
 									</div>
 									<br><br>
-									<button class="quiz" id="previous" >Précédent</button>
-									<button class="quiz" id="next">Suivant</button>
 									<button class="quiz" id="submit">Corriger</button>
 									<br>
 								</div>
 							</div>
 							<div style="padding:10px; margin:auto">
+								<!-- Cadre de réponse -->
 								<div class = "info" id="div1" style ="display:none; font-size: 1.4rem;">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
 									Sur DBPedia, les informations sont présentées de <b>manière structurée</b>. 
@@ -61,7 +61,7 @@
 
 					<br>
 
-					<!-- Display explication : La donnée-->
+					<!-- Display "Données liées"-->
 					<div class="fenetre" id = "div2" style="display:none"> 
 						<img class="boutons" src="/static/img/boutons.png" >
 						<br>
@@ -70,11 +70,13 @@
 							Données liées
 						</div>
 						<br>
+						<!-- Texte introductif -->
 						<div style ="font-size: 1.7rem; width: 450px; margin:auto; border: 2px solid #34a853ff; border-radius: 30px;">
 							Chechez "Kevin Feige" sur les deux pages <br>(Wikipédia et DBPedia).
 						</div>
 						<div style = "display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;">
 							<div style = "padding:10px; margin:auto">
+								<!-- Cadre de question -->
 								<div class = "info" style="color:#7c7c7c; font-size: 16px">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Question</p>
 									Quelles informations concernant <b>Kevin Feige</b> pouvez-vous déduire de Wikipédia ? de DBPedia ?
@@ -84,6 +86,7 @@
 								</div>
 							</div>
 							<div style="padding:10px; margin:auto">
+								<!-- Cadre d'explication -->
 								<div class = "info" id = "div3" style="display: none; color:#7c7c7c; font-size: 13px">
 									<p style ="font-weight: bold; font-size: 20px; color: #34a853ff">Réponse</p>
 									On remarque de part et d'autre que le film Avengers: Infinity War est produit par Kevin Feige.
@@ -100,7 +103,7 @@
 			</div>
 
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-			<!-- ====================== DIV GAUCHE : MENU ======================= -->
+			<!-- ====================== DIV DROITE : MENU ======================= -->
 			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<div >
 				{% include 'menu.html' %}
@@ -112,32 +115,8 @@
 		{% include 'interface.html' %}
 	</div>
 </header>
+
 <script src="{{ url_for('static', filename='js/tp3/quiz2.js') }}"></script>
-<script>
-let btn1 = document.getElementById("submit");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let div1 = document.getElementById("div1");
-let div2 = document.getElementById("div2");
-let div3 = document.getElementById("div3");
 
-btn1.addEventListener("click", () => {
-    if(getComputedStyle(div1).display == "none"){
-      div1.style.display = "block";
-    }
-})
-
-btn2.addEventListener("click", () => {
-    if(getComputedStyle(div2).display == "none"){
-      div2.style.display = "block";
-    }
-})
-
-btn3.addEventListener("click", () => {
-    if(getComputedStyle(div3).display == "none"){
-      div3.style.display = "block";
-    }
-})
-</script>
 {% endblock %}
 
