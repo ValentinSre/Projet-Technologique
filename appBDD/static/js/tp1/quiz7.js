@@ -76,6 +76,8 @@
     const quizContainer = document.getElementById('quiz7');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Questions
     const monQuiz7 = [
       { question: "Quand est sorti le film 'Iron Man' ?",
         answers: { a: "2008", b: "2009", c: "2010" },
@@ -96,6 +98,8 @@
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })()
+
+// --------------------- GESTION DES BOUTONS -------------------------//
 
 	let btn1 = document.getElementById("submit");
 	let div0 = document.getElementById("div0");

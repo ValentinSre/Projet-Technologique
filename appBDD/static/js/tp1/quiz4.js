@@ -51,6 +51,8 @@
     // Variables
     const quizContainer = document.getElementById('quiz4');
     const submitButton = document.getElementById('submit');
+
+    // Questions
     const monQuiz4 = [
       { question: "Qu'est-ce qu'un navigateur ?",
         answers: { a: "Un logiciel pour consulter le Web", b: "Un site pour chercher une information", c: "Un aventurier en bateau"},

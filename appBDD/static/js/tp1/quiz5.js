@@ -52,6 +52,8 @@
     const quizContainer = document.getElementById('quiz5');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Questions
     const monQuiz5 = [
       { question: "Qu'est-ce qu'un moteur de recherche ?",
         answers: { a: "Une voiture expérimentale", b: "Une application pour chercher des informations sur le Web", c: "Un site qui traduit le HTML pour moi"},
@@ -66,7 +68,8 @@
   
   })()
 
-  // --------------------- GESTION DES BOUTONS -------------------------//
+// --------------------- GESTION DES BOUTONS -------------------------//
+
 let btn1 = document.getElementById("submit");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("submit51");

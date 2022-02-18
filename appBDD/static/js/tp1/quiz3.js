@@ -76,6 +76,8 @@
     const quizContainer = document.getElementById('quiz3');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Questions
     const monQuiz3 = [
       { question: "Qu'est-ce qu'un hyperlien ?",
         answers: { a: "Un lien plus que super", b: "Une liaison directe entre deux ordinateurs", c: "Un lien entre deux documents du Web" },

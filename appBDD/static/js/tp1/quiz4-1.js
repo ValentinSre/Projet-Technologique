@@ -76,6 +76,8 @@
   const quizContainer = document.getElementById('quiz41');
   const resultsContainer = document.getElementById('results41');
   const submitButton = document.getElementById('submit41');
+
+  // Questions
   const monQuiz41 = [
     { question: "Comment appelle-t-on l’adresse renseignée ?",
     answers: { a: "Une URL", b: "Un hyperlien", c: "Un ULM" },

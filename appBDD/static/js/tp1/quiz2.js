@@ -76,6 +76,8 @@
   const quizContainer = document.getElementById('quiz2');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
+  
+  // Questions
   const monQuiz2 = [
     { question: "Comment sont identifiés les ordinateurs ?",
     answers: { a: "Par magie", b: "Grâce à un code PIN", c: "Grâce à des adresses IP", d: "Grâce à un e-mail" },
@@ -97,6 +99,7 @@
   nextButton.addEventListener("click", showNextSlide);
 })()
 
+// --------------------- GESTION DES BOUTONS -------------------------//
 
 let btn1 = document.getElementById("submit");
 let div0 = document.getElementById("div0");

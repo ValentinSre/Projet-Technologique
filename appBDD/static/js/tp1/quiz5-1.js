@@ -52,6 +52,8 @@
   const quizContainer = document.getElementById('quiz51');
   const resultsContainer = document.getElementById('results51');
   const submitButton = document.getElementById('submit51');
+
+  // Questions
   const monQuiz51 = [
     { question: "Comment appele-t-on les termes tapés ?",
       answers: { a: "Les mots clés", b: "La formule magique", c: "Les indexs"},

@@ -55,6 +55,8 @@
     const quizContainer = document.getElementById('quiz1');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Questions
     const monQuiz1 = [
       { question: "Qu'est-ce qu'Internet ?",
         answers: { a: "Un sous-espace du Web", b: "Un réseau entre des ordinateurs", c: "Un ensemble de sites" },

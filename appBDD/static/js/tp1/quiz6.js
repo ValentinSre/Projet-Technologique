@@ -76,6 +76,8 @@
     const quizContainer = document.getElementById('quiz6');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    // Questions
     const monQuiz6 = [
       { question: "Qui est la voix française de Spider-Man ?",
         answers: { a: "Richard Darbois", b: "Hugo Brunswick", c: "Adrien Antoine", d: "Alexandre Gillet" },
@@ -100,6 +102,7 @@
     nextButton.addEventListener("click", showNextSlide);
   })()
 
+// --------------------- GESTION DES BOUTONS -------------------------//
 
   let btn1 = document.getElementById("submit");
 	let div0 = document.getElementById("div0");

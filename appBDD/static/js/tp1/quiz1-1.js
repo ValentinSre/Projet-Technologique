@@ -57,7 +57,7 @@
   const resultsContainer = document.getElementById('results11');
   const submitButton = document.getElementById('submit11');
   
-
+  // Questions
   const monQuiz11 = [
     { question: "Quelle est la relation entre Internet et le Web ?",
         answers: { a: "Le Web repose sur Internet", b: "Internet utilise forcément le Web", c: "Ce sont les mêmes choses !" },

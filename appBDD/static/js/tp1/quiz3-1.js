@@ -64,6 +64,8 @@
   const quizContainer = document.getElementById('quiz11');
   const resultsContainer = document.getElementById('results11');
   const submitButton = document.getElementById('submit11');
+
+  // Questions
   const monQuiz11 = [
     { question: "Qu'est-ce que le Web selon vous ?",
       answers: { a: "L'ensemble des données accessibles via Internet", b: "Un lien entre des ordinateurs", c: "Le réseau comprenant Internet" },
