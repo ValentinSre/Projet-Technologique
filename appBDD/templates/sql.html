@@ -95,30 +95,29 @@
           </li>           
         </ul>
       </nav>
-    <!-- .navbar -->
 
       <a href="/sql" class="interface-btn scrollto"><span class="d-none d-md-inline"></span>Interface d'exécution SQL</a>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <!-- ======= banniere Section ======= -->
+  <section id="banniere" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <h1>Interface d'exécution de requêtes <span>SQL</span></h1>
       <h2>Entraînez-vous à exécuter vos propres requêtes SQL pour manipuler des données !</h2>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!-- ======= Cadre Section ======= -->
+    <section id="cadre" class="cadre">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
 
-            <!-- ======= Featured Services Section ======= -->
-            <section id="featured-services" class="featured-services">
+            <!-- ======= Interface Section ======= -->
+            <section id="interface" class="interface">
                 <div class="container" data-aos="fade-up">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                         <h2>INTERFACE</h2>
@@ -138,15 +137,12 @@
                     
                             <div id="output">Résultats</div>
                         </div>
-
-
-                        <!--------------------------------------------------------------------------------------------------------->
                     </div>
                 </div>
-            </section><!-- End Featured Services Section -->
+            </section>
         </div>
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
 
     <script>
         window.addEventListener('load', function(){
@@ -238,7 +234,7 @@
           </div>
   
         </div>
-    </section><!-- End Tables Section -->
+    </section>
 
     <script>
         function affichageLivre(){
@@ -258,8 +254,8 @@
         }
     </script>
 
-    <!-- ======= Services Section ======= -->
-    <section id="exemples" class="services">
+    <!-- ======= exemples Section ======= -->
+    <section id="exemples" class="exemples">
         <div class="container" data-aos="fade-up">
   
           <div class="section-title">
@@ -273,14 +269,14 @@
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-search"></i></div>
                 <h4><a>Projection</a></h4>
-                <p>Sélection de toutes les colonnes de la table <b>livre</b> :</p>
+                <p>        Affichage de toutes les colonnes de la table <b>livre</b> :</p>
                     <p style="font-family:'Courier New', Courier, monospace;">SELECT * FROM livre</p>
                     <hr>
-                <p>Sélection des colonnes Titre et Annee de la table <b>livre</b> :</p>
-                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre, Annee FROM livre</p>
+                <p>Affichage de la colonne Titre de la table <b>livre</b> :</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre FROM livre</p>
                     <hr>
-                <p>Sélection des colonnes Titre de la table <b>livre</b> où le Genre est Comics :</p>
-                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre FROM livre WHERE Genre = "Comics"</p>
+                <p>Affichage des colonnes Titre, Genre et Annee de la table <b>livre</b> :</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre, Genre, Annee FROM livre</p>
               </div>
             </div>
   
@@ -288,7 +284,7 @@
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-link"></i></div>
                 <h4><a>Jointure</a></h4>
-                <p>Joindre deux tables <i>(forme générique)</i>:</p>
+                <p>Jointure de deux tables <i>(forme générique)</i> :</p>
                     <p style="font-family:'Courier New', Courier, monospace;">SELECT * FROM table_A JOIN table_B ON tableA.clé = table_B.clé</p>
                     <hr>
                 <p>Dans notre exemple, l'oeuvre de la table <b>adaptation</b> correspond au titre de la table <b>livre</b>. </p>
@@ -299,8 +295,12 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-grid"></i></div>
-                <h4><a>Groupement</a></h4>
-                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
+                <h4><a>Sélection</a></h4>
+                <p>Sélection des colonnes Titre de la table <b>livre</b> où le Genre est Comics</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre FROM livre WHERE Genre = "Comics"</p>
+                    <hr>
+                <p>Sélection des colonnes Titre et Genre de la table <b>livre</b> où l'éditeur est Glénat</p>  
+                    <p style="font-family:'Courier New', Courier, monospace;">SELECT Titre, Genre FROM livre WHERE Editeur = "Glénat"</p>
               </div>
             </div>
   
@@ -308,7 +308,11 @@
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-data"></i></div>
                 <h4><a>Création/suppression</a></h4>
-                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
+                <p>Création d'une table <b>acteur</b> avec une colonne nom, prénom, dateNaissance, nationalite</p>
+                    <p style="font-family:'Courier New', Courier, monospace;">CREATE TABLE acteur(nom text, prenom text, dateNaissance date, nationalite text)</p>
+                    <hr>
+                <p>Suppression de la table <b>acteur</b></p>
+                    <p style="font-family:'Courier New', Courier, monospace;">DROP TABLE acteur</p>
               </div>
             </div>
   
@@ -316,24 +320,29 @@
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-plus-circle"></i></div>
                 <h4><a>Insertion</a></h4>
-                <p>Blablabla Blablabla Blablabla BlablablaBlablabla Blablabla Blablabla</p>
+                <p>Insertion d'une ligne (entière) dans la table <b>acteur</b></p>
+                    <p style="font-family:'Courier New', Courier, monospace;">INSERT INTO acteur VALUES ("Holland", "Tom", 1996-06-01, "Royaume-Uni")</p>
+                    <hr>
+                <p>Insertion d'une ligne (partielle) dans la table <b>acteur</b></p>
+                    <p style="font-family:'Courier New', Courier, monospace;">INSERT INTO acteur ("prenom", "nationalite") VALUES ("Zendaya", "États-Unis")</p>
               </div>
             </div>
-  
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-minus-circle"></i></div>
                 <h4><a>Retrait</a></h4>
-                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
+                <p>Suppression d'un (ou des) élément(s) d'une table <i>(forme générique)</i></p>
+                    <p style="font-family:'Courier New', Courier, monospace">DELETE FROM table WHERE condition</p>
+                    <hr>
+                <p>Suppresion de la ligne "Tintin" de la table <b>livre</b></p>
+                    <p style="font-family: 'Courier New', Courier, monospace;">DELETE FROM livre WHERE titre='Tintin'</p>
               </div>
             </div>
-  
           </div>
-  
         </div>
-      </section><!-- End Services Section -->
+      </section>
 
-    <!-- ======= Structures exemples Section ======= -->
+    <!-- ======= Structures exemples ======= -->
     <section id="templates" class="templates section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -434,8 +443,8 @@
         </div>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
-  </main><!-- End #main -->
+    </section>
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

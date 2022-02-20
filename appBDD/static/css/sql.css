@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# General
+# Général
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
@@ -171,11 +171,9 @@ color: white;
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Navigation
 --------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
+
 .navbar {
   padding: 0;
 }
@@ -271,16 +269,16 @@ color: white;
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Banniere Section
 --------------------------------------------------------------*/
-#hero {
+#banniere {
   width: 100%;
   height: 250px;
   background-color: #eefcf0;
   background-size: cover;
   position: relative;
 }
-#hero:before {
+#banniere:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -288,10 +286,10 @@ color: white;
   left: 0;
   right: 0;
 }
-#hero .container {
+#banniere .container {
   position: relative;
 }
-#hero h1 {
+#banniere h1 {
   padding-top: 100px;
   margin: 0;
   font-size: 48px;
@@ -300,10 +298,10 @@ color: white;
   color: #222222;
   font-family: "Poppins", sans-serif;
 }
-#hero h1 span {
+#banniere h1 span {
   color: #34a853;
 }
-#hero h2 {
+#banniere h2 {
   color: #555555;
   margin: 5px 0 30px 0;
   font-size: 24px;
@@ -311,35 +309,35 @@ color: white;
 }
 
 @media (min-width: 1024px) {
-  #hero {
+  #banniere {
     background-attachment: fixed;
   }
 }
 @media (max-width: 768px) {
-  #hero {
+  #banniere {
     height: 100vh;
   }
-  #hero h1 {
+  #banniere h1 {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero h2 {
+  #banniere h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
-  #hero .btn-get-started, #hero .btn-watch-video {
+  #banniere .btn-get-started, #banniere .btn-watch-video {
     font-size: 13px;
   }
 }
 @media (max-height: 500px) {
-  #hero {
+  #banniere {
     height: 120vh;
   }
 }
 
 /*--------------------------------------------------------------
-# Sections General
+# Sections (généralité)
 --------------------------------------------------------------*/
 button {
   background-color: #34a853ff;
@@ -398,9 +396,9 @@ section {
 
 
 /*--------------------------------------------------------------
-# Featured Services
+# Interface
 --------------------------------------------------------------*/
-.featured-services .icon-box {
+.interface .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -410,7 +408,7 @@ section {
   border-radius: 8px;
   z-index: 1;
 }
-.featured-services .icon-box::before {
+.interface .icon-box::before {
   content: "";
   position: absolute;
   background: #cbe0fb;
@@ -422,24 +420,24 @@ section {
   z-index: -1;
 }
 
-.featured-services .icon {
+.interface .icon {
   margin-bottom: 15px;
 }
-.featured-services .icon i {
+.interface .icon i {
   font-size: 48px;
   line-height: 1;
   color: #106eea;
   transition: all 0.3s ease-in-out;
 }
-.featured-services .title {
+.interface .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
-.featured-services .title a {
+.interface .title a {
   color: #111;
 }
-.featured-services .description {
+.interface .description {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
@@ -489,16 +487,16 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
+# Exemples
 --------------------------------------------------------------*/
-.services .icon-box {
+.exemples .icon-box {
   text-align: center;
   border: 1px solid #d4fcdb;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
-.services .icon-box .icon {
+.exemples .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
@@ -511,40 +509,40 @@ section {
   margin-bottom: 20px;
   transition: ease-in-out 0.3s;
 }
-.services .icon-box .icon i {
+.exemples .icon-box .icon i {
   color: #34a853;
   font-size: 28px;
   transition: ease-in-out 0.3s;
 }
-.services .icon-box h4 {
+.exemples .icon-box h4 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
 }
-.services .icon-box h4 a {
+.exemples .icon-box h4 a {
   color: #222222;
   transition: ease-in-out 0.3s;
 }
-.services .icon-box p {
+.exemples .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
-.services .icon-box:hover {
+.exemples .icon-box:hover {
   border-color: #fff;
   box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
 }
-.services .icon-box:hover h4 a, .services .icon-box:hover .icon i {
+.exemples .icon-box:hover h4 a, .exemples .icon-box:hover .icon i {
   color: #34a853;
 }
-.services .icon-box:hover .icon {
+.exemples .icon-box:hover .icon {
   border-color: #34a853;
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# Cadre
 --------------------------------------------------------------*/
-.portfolio #portfolio-flters {
+.cadre #cadre-flters {
   padding: 0;
   margin: 0 auto 15px auto;
   list-style: none;
@@ -552,7 +550,7 @@ section {
   border-radius: 50px;
   padding: 2px 15px;
 }
-.portfolio #portfolio-flters li {
+.cadre #cadre-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -564,16 +562,16 @@ section {
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.cadre #cadre-flters li:hover, .cadre #cadre-flters li.filter-active {
   color: #106eea;
 }
-.portfolio #portfolio-flters li:last-child {
+.cadre #cadre-flters li:last-child {
   margin-right: 0;
 }
-.portfolio .portfolio-item {
+.cadre .cadre-item {
   margin-bottom: 30px;
 }
-.portfolio .portfolio-item .portfolio-info {
+.cadre .cadre-item .cadre-info {
   opacity: 0;
   position: absolute;
   left: 30px;
@@ -584,31 +582,31 @@ section {
   background: rgba(255, 255, 255, 0.9);
   padding: 15px;
 }
-.portfolio .portfolio-item .portfolio-info h4 {
+.cadre .cadre-item .cadre-info h4 {
   font-size: 18px;
   color: #fff;
   font-weight: 600;
   color: #222222;
 }
-.portfolio .portfolio-item .portfolio-info p {
+.cadre .cadre-item .cadre-info p {
   color: #555555;
   font-size: 14px;
   margin-bottom: 0;
 }
-.portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
+.cadre .cadre-item .cadre-info .preview-link, .cadre .cadre-item .cadre-info .details-link {
   position: absolute;
   right: 40px;
   font-size: 24px;
   top: calc(50% - 18px);
   color: #3c3c3c;
 }
-.portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
+.cadre .cadre-item .cadre-info .preview-link:hover, .cadre .cadre-item .cadre-info .details-link:hover {
   color: #106eea;
 }
-.portfolio .portfolio-item .portfolio-info .details-link {
+.cadre .cadre-item .cadre-info .details-link {
   right: 10px;
 }
-.portfolio .portfolio-item .portfolio-links {
+.cadre .cadre-item .cadre-links {
   opacity: 0;
   left: 0;
   right: 0;
@@ -617,73 +615,19 @@ section {
   position: absolute;
   transition: all ease-in-out 0.3s;
 }
-.portfolio .portfolio-item .portfolio-links a {
+.cadre .cadre-item .cadre-links a {
   color: #fff;
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
   transition: 0.3s;
 }
-.portfolio .portfolio-item .portfolio-links a:hover {
+.cadre .cadre-item .cadre-links a:hover {
   color: #6ba7f5;
 }
-.portfolio .portfolio-item:hover .portfolio-info {
+.cadre .cadre-item:hover .cadre-info {
   opacity: 1;
   bottom: 20px;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #106eea;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #106eea;
-}
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(34, 34, 34, 0.08);
-}
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.portfolio-details .portfolio-description p {
-  padding: 0;
 }
 
 /*--------------------------------------------------------------
