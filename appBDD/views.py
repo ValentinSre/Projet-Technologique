@@ -8,11 +8,6 @@ from flask import request, redirect
 
 app = Flask(__name__)
 
-# Config options - Make sure you created a 'config.py' file.
-app.config.from_object('config')
-# To get one variable, tape app.config['MY_VARIABLE']
-
-from .utils import find_content
 import codecs
 
 #Accueil
