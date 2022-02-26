@@ -48,7 +48,7 @@ def tp0_par1():
 def tp1_par1_1():
     return render_template('/tp1/part1-1.html', tp=1, part=1)
 
-#TP1 partie 1.2
+#TP1 partie 1.2 
 @app.route('/tp1/part1-2')
 def tp1_par1_2():
     return render_template('/tp1/part1-2.html', tp=1, part=1)
