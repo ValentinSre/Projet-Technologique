@@ -66,6 +66,8 @@
     buildQuiz();
   
     const slides = document.querySelectorAll(".slide");
+    console.log(slides);
+
     let currentSlide = 0;
     showSlide(currentSlide);
     submitButton.addEventListener('click', showResults);
